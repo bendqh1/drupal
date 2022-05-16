@@ -1,0 +1,7 @@
+name: globalrs
+type: theme
+core_version_requirement: ^8 || ^9
+description: globalrs
+base theme: *****BASE_THEME_NAME_COMES_HERE*****
+libraries:
+  - globalrs/resources

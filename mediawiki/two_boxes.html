@@ -1,0 +1,62 @@
+<html>
+	<style>
+		/* Centralize homepage headings */
+		/*
+		.rootpage-הנקודאי .mw-body h2 {
+				text-align: center;
+		}
+		*/
+
+		.mainpage_row {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-evenly;
+			padding: 0;
+		}
+
+		.mainpage_box {
+			box-sizing: border-box;
+			width: 100%;
+			padding: 10px;
+			/* margin: 5px; */
+			box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+			border: 1px solid #CCC;
+		}
+
+		/* Delete redundant details in "New pages" box */
+		.rootpage-הנקודאי .mw-userlink,
+		.rootpage-הנקודאי .mw-usertoollinks, 
+		.rootpage-הנקודאי .comment,
+		.rootpage-הנקודאי .mw-newpages-history,
+		.rootpage-הנקודאי .mw-newpages-edit,
+		.rootpage-הנקודאי .mw-newpages-length {
+				display: none;
+		}
+		
+		@media screen and (max-width: 980px) {
+			.mainpage_row {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				padding: 0;
+			}
+		}
+	</style>
+</html>
+
+<div class="mainpage_row">
+	<div class="mainpage_box" style="text-align: center;">יש כרגע באתר {{NUMBEROFARTICLES}} {{קתים}}</div>
+	<div class="mainpage_box" style="text-align: center;">[[מיוחד:דף אקראי|{{קת}} אקראי]]</div>
+</div>
+
+==מבחר {{קתים}}==
+<div class="mainpage_row">
+	<div class="mainpage_box">{{תבנית:בית 1}}</div>
+	<div class="mainpage_box">{{תבנית:בית 2}}</div>
+</div>
+
+==דפים חדשים==
+<div class="mainpage_row new_pages">
+	<div class="mainpage_box new_pages">{{Special:Newpages|limit=5}}</div>
+</div>
+<!-- <div style="text-align: center;">[https://hanekudai.com/robots.txt מדריך סורקים]</div> -->

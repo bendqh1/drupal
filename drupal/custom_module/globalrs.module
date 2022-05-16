@@ -1,0 +1,3 @@
+function globalrs_preprocess_page(&$variables) {
+  $variables['#attached']['library'][] = 'globalrs/globalrs';
+}
