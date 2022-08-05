@@ -1,4 +1,4 @@
-Install
+## Install
 
 ```shell
 # Configure DNS records
@@ -13,7 +13,7 @@ composer require drush/drush
 # Install Drupal from web browser
 ```
 
-Upgrade
+## Upgrade
 
 ```shell
 cd WEB_APPLICATION_DIR_NAME
