@@ -17,7 +17,7 @@ composer require drush/drush
 
 ```shell
 cd WEB_APPLICATION_DIR_NAME
-composer update "drupal/core-*" --with-all-dependencies
+composer update # "drupal/core-*" --with-all-dependencies
 drush updatedb
 drush cache:rebuild
 ```
