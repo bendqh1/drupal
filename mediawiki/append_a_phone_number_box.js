@@ -1,6 +1,6 @@
 /* כל הסקריפטים הנכתבים כאן ייטענו עבור כל המשתמשים בכל טעינת עמוד. */
 
-window.addEventListener('DOMContentLoaded', () => {
+window.addEventListener('DOMContentLoaded', ()=>{
 	newStyle = document.createElement("style");
 	newStyle.type = "text/css";
 	newStyle.innerHTML +=`
