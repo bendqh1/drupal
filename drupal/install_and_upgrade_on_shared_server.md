@@ -10,8 +10,13 @@ cd WEB_APPLICATION_DIR_NAME
 composer require drush/drush
 vendor/bin/drush site:install
 
+# Configure web_application_root (example.com/web)
 # Configure Drupal settings.php
 # Install Drupal from web browser
+
+composer require drupal/gutenberg
+vendor/bin/drush en gutenberg
+
 ```
 
 ## Upgrade
