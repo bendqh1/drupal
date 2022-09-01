@@ -10,7 +10,7 @@ cd WEB_APPLICATION_DIR_NAME
 composer require drush/drush
 vendor/bin/drush site:install
 
-# Configure web_application_root (example.com/web)
+# Configure web_application_root (example.com/web, done from "domains" in Cpanel)
 # Configure Drupal settings.php
 # Install Drupal from web browser
 
