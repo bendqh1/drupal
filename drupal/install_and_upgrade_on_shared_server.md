@@ -28,6 +28,6 @@ vendor/bin/drush en gutenberg
 ```shell
 cd WEB_APPLICATION_DIR_NAME
 composer update # "drupal/core-*" --with-all-dependencies
-drush updatedb
-drush cache:rebuild
+vendor/bin/drush updatedb
+vendor/bin/drush cache:rebuild
 ```
