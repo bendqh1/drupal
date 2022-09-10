@@ -14,7 +14,11 @@ vendor/bin/drush site:install
 # Configure Drupal settings.php
 # Install Drupal from web browser
 
+composer require drupal/webform
+composer require drupal/metatag
 composer require drupal/gutenberg
+vendor/bin/drush en webform
+vendor/bin/drush en metatag
 vendor/bin/drush en gutenberg
 
 ```
