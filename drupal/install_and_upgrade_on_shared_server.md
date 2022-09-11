@@ -17,9 +17,11 @@ vendor/bin/drush site:install
 composer require drupal/webform
 composer require drupal/metatag
 composer require drupal/gutenberg
+composer require drupal/asset_injector
 vendor/bin/drush en webform
 vendor/bin/drush en metatag
 vendor/bin/drush en gutenberg
+vendor/bin/drush en asset_injector
 
 ```
 
