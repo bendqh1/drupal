@@ -14,15 +14,16 @@ vendor/bin/drush site:install
 # Configure Drupal settings.php
 # Install Drupal from web browser
 
-composer require drupal/webform
+composer require drupal/redirect
 composer require drupal/metatag
-composer require drupal/gutenberg
+composer require drupal/webform
 composer require drupal/asset_injector
-vendor/bin/drush en webform
+composer require drupal/gutenberg
+vendor/bin/drush en redirect
 vendor/bin/drush en metatag
-vendor/bin/drush en gutenberg
+vendor/bin/drush en webform
 vendor/bin/drush en asset_injector
-
+vendor/bin/drush en gutenberg
 ```
 
 ## Upgrade
