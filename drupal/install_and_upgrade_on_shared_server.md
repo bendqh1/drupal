@@ -14,13 +14,13 @@ vendor/bin/drush site:install
 # Configure Drupal settings.php
 # Install Drupal from web browser
 
-composer require drupal/simple_sitemap
+composer require drupal/xmlsitemap
 composer require drupal/redirect
 composer require drupal/metatag
 composer require drupal/webform
 composer require drupal/asset_injector
 composer require drupal/gutenberg
-vendor/bin/drush en simple_sitemap
+vendor/bin/drush en xmlsitemap
 vendor/bin/drush en redirect
 vendor/bin/drush en metatag
 vendor/bin/drush en webform
