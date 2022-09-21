@@ -26,6 +26,10 @@ vendor/bin/drush en metatag
 vendor/bin/drush en webform
 vendor/bin/drush en asset_injector
 vendor/bin/drush en gutenberg
+
+composer require drupal/basic
+vendor/bin/drush theme:enable basic
+# vendor/bin/drush theme:uninstall basic
 ```
 
 ## Upgrade
