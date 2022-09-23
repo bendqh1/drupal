@@ -28,7 +28,7 @@ vendor/bin/drush en metatag
 vendor/bin/drush en webform
 vendor/bin/drush en asset_injector
 vendor/bin/drush en gutenberg
-vendor/bin/drush en context
+vendor/bin/drush en context && vendor/bin/drush en context_ui
 
 composer require drupal/basic
 vendor/bin/drush theme:enable basic
