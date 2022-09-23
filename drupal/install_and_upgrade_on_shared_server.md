@@ -20,12 +20,15 @@ composer require drupal/metatag
 composer require drupal/webform
 composer require drupal/asset_injector
 composer require drupal/gutenberg
+composer require drupal/context
+
 vendor/bin/drush en simple_sitemap
 vendor/bin/drush en redirect
 vendor/bin/drush en metatag
 vendor/bin/drush en webform
 vendor/bin/drush en asset_injector
 vendor/bin/drush en gutenberg
+vendor/bin/drush en context
 
 composer require drupal/basic
 vendor/bin/drush theme:enable basic
