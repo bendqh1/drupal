@@ -21,7 +21,7 @@ vendor/bin/drush site:install
 composer require drupal/simple_sitemap
 composer require drupal/redirect
 composer require drupal/metatag
-composer require drupal/webform
+composer require drupal/contact_block
 composer require drupal/asset_injector
 composer require drupal/gutenberg
 composer require drupal/context
@@ -29,9 +29,10 @@ composer require drupal/context
 vendor/bin/drush en simple_sitemap
 vendor/bin/drush en redirect
 vendor/bin/drush en metatag
-vendor/bin/drush en webform
+vendor/bin/drush en contact_block
 vendor/bin/drush en asset_injector
 vendor/bin/drush en gutenberg
+vendor/bin/drush en context
 
 composer require drupal/THEME_NAME
 vendor/bin/drush theme:enable THEME_NAME
