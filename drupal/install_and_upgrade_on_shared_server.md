@@ -21,6 +21,7 @@ composer require drupal/webform
 composer require drupal/asset_injector
 composer require drupal/gutenberg
 composer require drupal/context
+composer require drupal/panels
 
 vendor/bin/drush en simple_sitemap
 vendor/bin/drush en redirect
@@ -29,6 +30,7 @@ vendor/bin/drush en webform
 vendor/bin/drush en asset_injector
 vendor/bin/drush en gutenberg
 vendor/bin/drush en context && vendor/bin/drush en context_ui
+vendor/bin/drush en panels && vendor/bin/drush en panels_ipe
 
 composer require drupal/basic
 vendor/bin/drush theme:enable basic
