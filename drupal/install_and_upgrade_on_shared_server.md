@@ -1,4 +1,4 @@
-## Install
+## Setup Drupal
 
 ```shell
 # Configure DNS records
@@ -14,6 +14,8 @@ vendor/bin/drush site:install
 # Configure Drupal settings.php
 # Install Drupal from web browser
 
+## Setup modules
+
 composer require drupal/simple_sitemap
 composer require drupal/redirect
 composer require drupal/metatag
@@ -21,7 +23,6 @@ composer require drupal/webform
 composer require drupal/asset_injector
 composer require drupal/gutenberg
 composer require drupal/context
-composer require drupal/panels
 
 vendor/bin/drush en simple_sitemap
 vendor/bin/drush en redirect
@@ -29,8 +30,11 @@ vendor/bin/drush en metatag
 vendor/bin/drush en webform
 vendor/bin/drush en asset_injector
 vendor/bin/drush en gutenberg
-vendor/bin/drush en context && vendor/bin/drush en context_ui
-vendor/bin/drush en panels && vendor/bin/drush en panels_ipe
+
+## unsetup a module
+
+vendor/bin/drush un MODULE_NAME
+composer remove vendor/MODULE_NAME
 
 composer require drupal/basic
 vendor/bin/drush theme:enable basic
