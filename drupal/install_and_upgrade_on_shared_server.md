@@ -20,7 +20,7 @@ vendor/bin/drush site:install
 ```shell
 composer require drupal/simple_sitemap
 composer require drupal/redirect
-composer require drupal/metatag
+composer require drupal/simplemeta
 composer require drupal/contact_block
 composer require drupal/asset_injector
 composer require drupal/gutenberg
@@ -28,7 +28,7 @@ composer require drupal/context
 
 vendor/bin/drush en simple_sitemap
 vendor/bin/drush en redirect
-vendor/bin/drush en metatag
+vendor/bin/drush en simplemeta
 vendor/bin/drush en contact_block
 vendor/bin/drush en asset_injector
 vendor/bin/drush en gutenberg
