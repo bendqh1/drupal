@@ -41,14 +41,14 @@ vendor/bin/drush theme:enable THEME_NAME
 
 ```shell
 vendor/bin/drush un MODULE_NAME
-composer remove vendor/MODULE_NAME
+composer remove drupal/MODULE_NAME
 ```
 
 ## Unsetup a theme
 
 ```shell
 vendor/bin/drush theme:uninstall basic
-composer remove vendor/THEME_NAME
+composer remove drupal/THEME_NAME
 ```
 
 ## Upgrade
