@@ -15,7 +15,7 @@ vendor/bin/drush site:install
 # Install Drupal from web browser
 ```
 
-## Setup modules
+## Setup modules or themes
 
 ```shell
 composer require drupal/simple_sitemap
@@ -32,17 +32,23 @@ vendor/bin/drush en metatag
 vendor/bin/drush en webform
 vendor/bin/drush en asset_injector
 vendor/bin/drush en gutenberg
+
+composer require drupal/THEME_NAME
+vendor/bin/drush theme:enable THEME_NAME
 ```
 
-## unsetup a module
+## Unsetup a module
 
 ```shell
 vendor/bin/drush un MODULE_NAME
 composer remove vendor/MODULE_NAME
+```
 
-composer require drupal/basic
-vendor/bin/drush theme:enable basic
+## Unsetup a theme
+
+```shell
 # vendor/bin/drush theme:uninstall basic
+composer remove vendor/THEME_NAME
 ```
 
 ## Upgrade
