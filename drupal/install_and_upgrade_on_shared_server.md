@@ -47,7 +47,7 @@ composer remove vendor/MODULE_NAME
 ## Unsetup a theme
 
 ```shell
-# vendor/bin/drush theme:uninstall basic
+vendor/bin/drush theme:uninstall basic
 composer remove vendor/THEME_NAME
 ```
 
