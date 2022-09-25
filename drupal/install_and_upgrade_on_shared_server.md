@@ -18,6 +18,7 @@ vendor/bin/drush site:install
 ## Setup modules or themes
 
 ```shell
+composer require drupal/token
 composer require drupal/simple_sitemap
 composer require drupal/redirect
 composer require drupal/simplemeta
@@ -26,6 +27,7 @@ composer require drupal/asset_injector
 composer require drupal/gutenberg
 composer require drupal/context
 
+vendor/bin/drush en token
 vendor/bin/drush en simple_sitemap
 vendor/bin/drush en redirect
 vendor/bin/drush en simplemeta
