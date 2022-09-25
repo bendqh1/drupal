@@ -13,9 +13,11 @@ vendor/bin/drush site:install
 # Configure web_application_root (example.com/web, done from "domains" in Cpanel)
 # Configure Drupal settings.php
 # Install Drupal from web browser
+```
 
 ## Setup modules
 
+```shell
 composer require drupal/simple_sitemap
 composer require drupal/redirect
 composer require drupal/metatag
@@ -30,9 +32,11 @@ vendor/bin/drush en metatag
 vendor/bin/drush en webform
 vendor/bin/drush en asset_injector
 vendor/bin/drush en gutenberg
+```
 
 ## unsetup a module
 
+```shell
 vendor/bin/drush un MODULE_NAME
 composer remove vendor/MODULE_NAME
 
