@@ -15,7 +15,14 @@ vendor/bin/drush site:install
 # Install Drupal from web browser
 ```
 
-## Setup modules or themes
+## Setup themes
+
+```shell
+composer require drupal/THEME_NAME
+vendor/bin/drush theme:enable THEME_NAME
+```
+
+## Setup modules
 
 ```shell
 composer require drupal/simple_sitemap
@@ -33,9 +40,6 @@ vendor/bin/drush en contact_block
 vendor/bin/drush en asset_injector
 vendor/bin/drush en gutenberg
 vendor/bin/drush en context
-
-composer require drupal/THEME_NAME
-vendor/bin/drush theme:enable THEME_NAME
 ```
 
 ## Unsetup a module
