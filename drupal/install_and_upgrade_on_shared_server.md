@@ -42,18 +42,18 @@ vendor/bin/drush en gutenberg
 vendor/bin/drush en context
 ```
 
-## Unsetup a module
-
-```shell
-vendor/bin/drush un MODULE_NAME
-composer remove drupal/MODULE_NAME
-```
-
 ## Unsetup a theme
 
 ```shell
 vendor/bin/drush theme:uninstall basic
 composer remove drupal/THEME_NAME
+```
+
+## Unsetup a module
+
+```shell
+vendor/bin/drush un MODULE_NAME
+composer remove drupal/MODULE_NAME
 ```
 
 ## Upgrade
