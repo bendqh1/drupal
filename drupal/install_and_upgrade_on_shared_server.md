@@ -45,7 +45,7 @@ vendor/bin/drush en context
 ## Unsetup a theme
 
 ```shell
-vendor/bin/drush theme:uninstall basic
+vendor/bin/drush theme:uninstall THEME_NAME
 composer remove drupal/THEME_NAME
 ```
 
