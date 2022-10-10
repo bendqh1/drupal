@@ -56,7 +56,7 @@ vendor/bin/drush un MODULE_NAME
 composer remove drupal/MODULE_NAME
 ```
 
-## Upgrade
+## Minor upgrade
 
 ```shell
 cd WEB_APPLICATION_DIR_NAME
@@ -64,3 +64,7 @@ composer update # "drupal/core-*" --with-all-dependencies
 vendor/bin/drush updatedb
 vendor/bin/drush cache:rebuild
 ```
+
+## Major upgrade
+
+https://www.drupal.org/docs/upgrading-drupal/drupal-8-and-higher
