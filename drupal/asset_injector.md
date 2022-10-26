@@ -2,6 +2,7 @@
 
 ## CSS
 
+```css
 .node--view-mode-teaser h2 {
 	font-size: medium;
 }
@@ -32,4 +33,4 @@
 	display: inline-block;
 	margin-right: 10px;
 }
-
+```
