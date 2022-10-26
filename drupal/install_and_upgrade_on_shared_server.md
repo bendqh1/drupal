@@ -25,20 +25,12 @@ vendor/bin/drush theme:enable THEME_NAME
 ## Setup modules
 
 ```shell
-composer require drupal/simple_sitemap
 composer require drupal/redirect
-composer require drupal/simplemeta
 composer require drupal/asset_injector
-
-composer require drupal/mailsystem
 composer require drupal/sendgrid_integration
 
-vendor/bin/drush en simple_sitemap
 vendor/bin/drush en redirect
-vendor/bin/drush en simplemeta
 vendor/bin/drush en asset_injector
-
-vendor/bin/drush en mailsystem
 vendor/bin/drush en sendgrid_integration
 ```
 
