@@ -1,25 +1,14 @@
-/admin/config/development/asset-injector
-
-## CSS
-
-```css
-#header {
+.hero {
 	margin-bottom: 25px;
-}
-
-.node--view-mode-teaser h2 {
-	font-size: medium;
-}
-
-#block-hyrw {
 	background: url("https://benaharoni.com/sites/default/files/2022-09/ben_aharoni.jpg");
+	background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
 }
 
 .hero_text_area {
 	min-height: 500px;
-	background: rgba(1, 1, 1, 0.8);
-	background-position: unset;
-	background-size: cover;
+	background: rgba(1, 1, 1, 0.7);
 	text-align: center;
 	padding: 25px;
 }
@@ -46,4 +35,14 @@
 #block-mqdmtrymmnwsh h2, #block-mqdmtrymmnwsh p, #block-hyshtknyslkbyntrnt h2, #block-hyshtknyslkbyntrnt p {
 	color: #fff;
 }
-```
+
+.node--view-mode-teaser h2 {
+	font-size: medium;
+}
+
+/* Side images */
+.field--name-field-tmwnh-zddyt img {
+    float: left;
+    max-width: 300px;
+    margin-right: 10px;
+}
