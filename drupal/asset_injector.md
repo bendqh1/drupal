@@ -3,6 +3,10 @@
 ## CSS
 
 ```css
+#header {
+	margin-bottom: 25px;
+}
+
 .node--view-mode-teaser h2 {
 	font-size: medium;
 }
@@ -32,5 +36,14 @@
 .site-footer .menu li {
 	display: inline-block;
 	margin-right: 10px;
+}
+
+#block-mqdmtrymmnwsh {
+	padding: 25px;
+	background: #2494db;
+}
+
+#block-mqdmtrymmnwsh h2, #block-mqdmtrymmnwsh p {
+	color: #fff;
 }
 ```
