@@ -17,7 +17,7 @@
 
 .hero_text_area {
 	min-height: 500px;
-	background: rgba(1, 1, 1, 0.5);
+	background: rgba(1, 1, 1, 0.8);
 	background-position: unset;
 	background-size: cover;
 	text-align: center;
@@ -38,12 +38,12 @@
 	margin-right: 10px;
 }
 
-#block-mqdmtrymmnwsh {
+#block-mqdmtrymmnwsh, #block-hyshtknyslkbyntrnt {
 	padding: 25px;
 	background: #2494db;
 }
 
-#block-mqdmtrymmnwsh h2, #block-mqdmtrymmnwsh p {
+#block-mqdmtrymmnwsh h2, #block-mqdmtrymmnwsh p, #block-hyshtknyslkbyntrnt h2, #block-hyshtknyslkbyntrnt p {
 	color: #fff;
 }
 ```
