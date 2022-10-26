@@ -1,5 +1,9 @@
-.hero {
+#header {
 	margin-bottom: 25px;
+}
+
+.hero {
+	margin-bottom: 50px;
 	background: url("https://benaharoni.com/sites/default/files/2022-09/ben_aharoni.jpg");
 	background-size: cover;
   background-position: top;
