@@ -60,3 +60,6 @@ vendor/bin/drush cache:rebuild
 
 * https://www.drupal.org/docs/upgrading-drupal/drupal-8-and-higher
 * https://unix.stackexchange.com/questions/730301/understanding-the-composer-commands-for-upgrading-drupal-9-to-drupal-10
+* Joseph wrote: 
+
+> While D10 is considered a "minor" update from D9 in terms of what actually changed (e.g. introduced a few features, deprecated old APIs, remaining APIs mostly the same), it's still a major version bump (first digit change) if you're looking at it from a dependency management view (9.x.x -> 10.x.x). `composer update` only does minor and patch version bumps. Any major version bumps need `composer require`. Following semver guidelines, API removal counts towards a major version bump because that's a potentially breaking change.
