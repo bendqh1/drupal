@@ -58,4 +58,5 @@ vendor/bin/drush cache:rebuild
 
 ## Major upgrade
 
-https://www.drupal.org/docs/upgrading-drupal/drupal-8-and-higher
+* https://www.drupal.org/docs/upgrading-drupal/drupal-8-and-higher
+* https://unix.stackexchange.com/questions/730301/understanding-the-composer-commands-for-upgrading-drupal-9-to-drupal-10
