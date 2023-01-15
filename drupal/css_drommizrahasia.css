@@ -16,7 +16,7 @@
 
 .region--hero {
         background:
-url("https://drommizrahasia.com/sites/default/files/2022-11/pexels-photo-507929.jpeg");
+url("/sites/default/files/2022-11/pexels-photo-507929.jpeg");
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
@@ -63,7 +63,7 @@ url("https://drommizrahasia.com/sites/default/files/2022-11/pexels-photo-507929.
         color: #000;
         /* border-right: none !important; */
         /* background:
-url("https://drommizrahasia.com/sites/default/files/2022-11/china-wind-construction-confucian-temple-preview.jpg");
+url("/sites/default/files/2022-11/china-wind-construction-confucian-temple-preview.jpg");
 */
         /* background-size: cover; */
         /* background-repeat: no-repeat; */
