@@ -1,69 +1,71 @@
 .site-header__initial {
-	display: none;
+        display: none;
 }
 
 .social-bar {
-	display: none;
+        display: none;
 }
 
 #block-sitebranding {
-	background: #fff;	
+        background: #fff;
 }
 
 .main-content {
-	width: 100% !important;
+        width: 100% !important;
 }
 
 .region--hero {
-	background: url("https://drommizrahasia.com/sites/default/files/2022-11/pexels-photo-507929.jpeg");
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-position: center;
+        background:
+url("https://drommizrahasia.com/sites/default/files/2022-11/pexels-photo-507929.jpeg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
 }
 
 #block-blwqhyrwklly {
-	display: flex;
-	height: 300px;
-	padding: 25px;
-	background: rgba(0,0,0,0.5);
-	justify-content: center;
-	align-items: center;
+        display: flex;
+        height: 300px;
+        padding: 25px;
+        background: rgba(0,0,0,0.5);
+        justify-content: center;
+        align-items: center;
 }
 
 #block-blwqhyrwklly p {
-	line-height: 1em;
-	font-size: 40px;
-	color: orange;
+        line-height: 1em;
+        font-size: 40px;
+        color: orange;
 }
 
-
 .site-branding__name {
-	color: #000;
+        color: #000;
 }
 
 .site-branding__name a {
-	color: #000;
+        color: #000;
 }
 
 .site-branding__name a:hover {
-	color: red;
+        color: red;
 }
 
 .site-branding__name a:focus {
-	color: green;
+        color: green;
 }
 
 .site-branding__name a:active {
-	color: blue;
+        color: blue;
 }
 
 .site-footer {
-	border-right: solid 90px gold !important;
-	background: orange;
-	color: #000;
-	/* border-right: none !important; */
-	/* background: url("https://drommizrahasia.com/sites/default/files/2022-11/china-wind-construction-confucian-temple-preview.jpg"); */
-	/* background-size: cover; */
-	/* background-repeat: no-repeat; */
-	/* background-position: center; */
+        border-right: solid 90px gold !important;
+        background: orange;
+        color: #000;
+        /* border-right: none !important; */
+        /* background:
+url("https://drommizrahasia.com/sites/default/files/2022-11/china-wind-construction-confucian-temple-preview.jpg");
+*/
+        /* background-size: cover; */
+        /* background-repeat: no-repeat; */
+        /* background-position: center; */
 }
