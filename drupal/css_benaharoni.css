@@ -4,7 +4,7 @@
 
 .hero {
 	margin-bottom: 50px;
-	background: url("https://benaharoni.com/sites/default/files/2022-09/ben_aharoni.jpg");
+	background: url("/sites/default/files/2022-09/ben_aharoni.jpg");
 	background-size: cover;
   background-position: top;
   background-repeat: no-repeat;
