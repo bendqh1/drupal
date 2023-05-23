@@ -60,6 +60,8 @@ vendor/bin/drush cache:rebuild
 ## Major upgrade
 
 ```shell
+# Backup database
+# Backup filetree
 cd WEB_APPLICATION_DIR
 composer update
 chmod 777 web/sites/default
