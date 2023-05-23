@@ -12,6 +12,7 @@ vendor/bin/drush site:install
 
 # Configure web_application_root (example.com/web, done from "domains" in Cpanel)
 # Install Drupal from web browser
+# Consider disabling RSS feeds for taxonomy pages and frontpage
 ```
 
 ## Setup themes
