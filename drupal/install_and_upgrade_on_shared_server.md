@@ -4,8 +4,8 @@
 # Configure DNS records
 # Configure database (say, with PHPMyAdmin)
 
-cd WEB_APPLICATION_ROOT
-composer create-project drupal/recommended-project WEB_APPLICATION_DIR_NAME
+cd WEB_APPLICATION_ROOT_DIR
+composer create-project drupal/recommended-project WEB_APPLICATION_DIR
 cd WEB_APPLICATION_DIR_NAME
 composer require drush/drush
 vendor/bin/drush site:install
@@ -55,6 +55,22 @@ cd WEB_APPLICATION_DIR_NAME
 composer update # "drupal/core-*" --with-all-dependencies
 vendor/bin/drush updatedb
 vendor/bin/drush cache:rebuild
+```
+
+## Major upgrade
+
+```shell
+cd WEB_APPLICATION_DIR
+composer update
+chmod 777 web/sites/default
+chmod 666 web/sites/default/*settings.php
+chmod 666 web/sites/default/*services.yml
+composer require 'drupal/core-recommended:^10' 'drupal/core-composer-scaffold:^10' 'drupal/core-project-message:^10' --update-with-dependencies --no-update
+composer update
+drush updatedb
+chmod 755 web/sites/default
+chmod 644 web/sites/default/*settings.php
+chmod 644 web/sites/default/*services.yml
 ```
 
 ## Major upgrade
