@@ -1,5 +1,7 @@
 Templates number 2 don't rquire writing `content=` or `תוכן=` before a note's content.
 
+Instead `name` one might need to write `refname`.
+
 ## English 1
 
 ```wiki
