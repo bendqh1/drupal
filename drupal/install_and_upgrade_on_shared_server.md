@@ -18,7 +18,7 @@ vendor/bin/drush site:install
 ## Flush all caches
 
 ```shell
-vendor/bin/drush un
+vendor/bin/drush cache-rebuild
 ```
 
 ## Setup a theme
