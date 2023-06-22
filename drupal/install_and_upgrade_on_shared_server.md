@@ -57,6 +57,12 @@ vendor/bin/drush updatedb
 vendor/bin/drush cache:rebuild
 ```
 
+## Could not delete default.settings.php
+
+> Could not delete /home/hanekudai/public_html/benaharoni.com/web/sites/default/default.settings.php:
+
+Drupal users often need to run `chmod u+w web/sites/default` before `composer update` because `composer update` comes after `composer require` in which Drupal hardens the `web/sites/default` permissions.
+
 ## Major upgrade
 
 ```shell
