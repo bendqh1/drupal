@@ -33,10 +33,6 @@ vendor/bin/drush theme:enable THEME_NAME
 ```shell
 composer require drupal/MODULE_NAME
 vendor/bin/drush en MODULE_NAME
-
-redirect
-asset_injector
-sendgrid_integration
 ```
 
 ## Unsetup a theme
@@ -52,6 +48,12 @@ composer remove drupal/THEME_NAME
 vendor/bin/drush un MODULE_NAME
 composer remove drupal/MODULE_NAME
 ```
+
+## Commonly used modules
+
+* redirect
+* asset_injector
+* sendgrid_integration
 
 ## Minor upgrade
 
