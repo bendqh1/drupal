@@ -31,13 +31,12 @@ vendor/bin/drush theme:enable THEME_NAME
 ## Setup modules
 
 ```shell
-composer require drupal/redirect
-composer require drupal/asset_injector
-composer require drupal/sendgrid_integration
+composer require drupal/MODULE_NAME
+vendor/bin/drush en MODULE_NAME
 
-vendor/bin/drush en redirect
-vendor/bin/drush en asset_injector
-vendor/bin/drush en sendgrid_integration
+redirect
+asset_injector
+sendgrid_integration
 ```
 
 ## Unsetup a theme
