@@ -15,6 +15,12 @@ vendor/bin/drush site:install
 # Consider disabling RSS feeds for taxonomy pages and frontpage
 ```
 
+## Flush all caches
+
+```shell
+vendor/bin/drush un
+```
+
 ## Setup themes
 
 ```shell
