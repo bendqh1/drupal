@@ -21,14 +21,14 @@ vendor/bin/drush site:install
 vendor/bin/drush un
 ```
 
-## Setup themes
+## Setup a theme
 
 ```shell
 composer require drupal/THEME_NAME
 vendor/bin/drush theme:enable THEME_NAME
 ```
 
-## Setup modules
+## Setup a module
 
 ```shell
 composer require drupal/MODULE_NAME
