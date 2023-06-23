@@ -70,6 +70,8 @@ vendor/bin/drush cache:rebuild
 
 Drupal users often need to run `chmod u+w web/sites/default` before `composer update` because `composer update` comes after `composer require` in which Drupal hardens the `web/sites/default` permissions.
 
+[More information here](https://drupal.stackexchange.com/questions/314209/when-does-system-requirements-function-runs).
+
 ## Major upgrade
 
 ```shell
