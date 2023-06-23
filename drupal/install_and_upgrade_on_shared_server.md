@@ -79,6 +79,7 @@ Drupal users often need to run `chmod u+w web/sites/default` before `composer up
 # Minorly upgrade Drupal and/or PHP and/or MySQL
 # Backup database
 # Backup filetree
+
 cd WEB_APPLICATION_DIR
 composer update
 chmod 777 web/sites/default
