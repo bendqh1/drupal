@@ -6,6 +6,19 @@ https://www.drupal.org/project/asset_injector/issues/3314720
 
 As long as you don't have JS or CSS aggregation turned on, you shouldn't have to clear cache to see your changes to existing files.
 
+## jQuery UI
+
+If jQuery modules are deleted by mistake install them.
+
+```shell
+jquery_ui
+jquery_ui_draggable
+jquery_ui_droppable
+```
+
+Then update database and flush all caches.
+
+
 ## Misc
 
 Drupal uncustomized core 9.5.3 upgraded to 9.5.9 (first version was probably 9.4.5).
