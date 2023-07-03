@@ -1,3 +1,9 @@
+## Avoid clearing cache after each CSS and/or JS change
+
+As long as you don't have JS or CSS aggregation turned on, you shouldn't have to clear cache to see your changes to existing files.
+
+## Misc
+
 Drupal uncustomized core 9.5.3 upgraded to 9.5.9 (first version was probably 9.4.5).
 
 I thought that a node has a taxonomy term but the taxonomy-term-webpage doesn't mention this node.<br>
