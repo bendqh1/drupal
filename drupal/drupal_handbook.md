@@ -10,11 +10,13 @@ https://www.drupal.org/project/asset_injector/issues/3314720
 
 ## Reset a user password with Drush
 
+```shell
 vendor/bin/drush user:password USERNAME "SOMEPASSWORD"
+```
 
 ## Hide a Drupal homepage heading
 
-Structure > Blocks > Content Above > 	כותרת דף > Settings > Pages > Hide for the listed pages > /node/1
+**Structure > Blocks > Content Above > 	כותרת דף > Settings > Pages > Hide for the listed pages > /node/1**
 
 ## Avoid clearing cache after each CSS and/or JS change
 
