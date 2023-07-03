@@ -2,6 +2,10 @@
 
 https://www.drupal.org/project/asset_injector/issues/3314720
 
+## Set default text format
+
+/admin/config/content/formats
+
 ## Hide a Drupal homepage heading
 
 Structure > Blocks > Content Above > 	כותרת דף > Settings > Pages > Hide for the listed pages > /node/1
