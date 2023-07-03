@@ -4,7 +4,13 @@ https://www.drupal.org/project/asset_injector/issues/3314720
 
 ## Set default text format
 
+```shell
 /admin/config/content/formats
+```
+
+## Reset a user password with Drush
+
+vendor/bin/drush user:password USERNAME "SOMEPASSWORD"
 
 ## Hide a Drupal homepage heading
 
