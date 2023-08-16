@@ -2,4 +2,4 @@ In `/themes/globalrs` add the files available in this directory (and edit accord
 
 * YAML files can't contain tabulations, only whitespaces.
 * Flush all caches before testing.
-* Don't forget to **both** install the theme and set it as default. Just installing isn't enough !!!
+* Don't forget to **both** install the sub theme and set it as default.
