@@ -1,3 +1,9 @@
+## Redirect module
+
+* Deleting it caused me to lose about 15 **alias-to-alias** redirects.
+* I have also noticed that now after deletion, if I visit `/node/1` and click a link in it to `/node/2`, the URL of `/node/2` is `/node/2` instead of its alias `/node/my-second-node`.<br>
+This is not to be confused with route normalization which is redirecting to the canonical URL of any page. That includes redirecting to an alias if existing, removing trailing slashes, ensure the language prefix is set and similar clean-up.
+
 ## Asset injector
 
 https://www.drupal.org/project/asset_injector/issues/3314720
