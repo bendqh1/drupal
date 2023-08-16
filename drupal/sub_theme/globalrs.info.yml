@@ -2,6 +2,6 @@ name: globalrs
 type: theme
 core_version_requirement: ^8 || ^9
 description: Global resources
-base theme: *****BASE_THEME_NAME_COMES_HERE*****
+base theme: Olivero
 libraries:
   - globalrs/resources
