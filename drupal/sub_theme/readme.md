@@ -9,8 +9,10 @@ To do that, go to `/core/themes/THEME/THEME.info.yml` and copy the following:
 
 ```
 regions:
-header: Header
-...
+  header: Header
+  ...
 ```
 
 into `/themes/globalrs/globalrs.info.yml`.
+
+* Note that you need to indent region-values with two whitespaces
