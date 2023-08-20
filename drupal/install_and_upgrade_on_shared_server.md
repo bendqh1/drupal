@@ -52,7 +52,6 @@ composer remove drupal/MODULE_NAME
 ## Commonly used modules
 
 * redirect
-* asset_injector
 * sendgrid_integration
 
 ## Minor upgrade
