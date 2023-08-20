@@ -1,3 +1,9 @@
+## Flush all caches
+
+```shell
+vendor/bin/drush cache-rebuild
+```
+
 ## Common modules
 
 * Redirect
