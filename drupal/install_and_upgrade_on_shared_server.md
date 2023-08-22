@@ -63,8 +63,6 @@ Drupal users often need to run `chmod u+w web/sites/default` before `composer up
 ## Major upgrade
 
 ```shell
-# Wait for at least 3 months after first new major release as bugs are being reported and solved
-# Minorly upgrade Drupal and/or PHP and/or MySQL
 # Backup database
 # Backup filetree
 
