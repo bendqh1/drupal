@@ -7,12 +7,12 @@
 cd WEB_APPLICATION_ROOT_DIR
 composer create-project drupal/recommended-project WEB_APPLICATION_DIR
 cd WEB_APPLICATION_DIR_NAME
-composer require drush/drush
+composer require drush/drush ### ### ### Please upgrade my PHP version to the latest possible for the entire cPanel account and for this change to be visible in Terminal.
 vendor/bin/drush site:install
 
 # Configure web_application_root (example.com/web, done from "domains" in Cpanel)
 # Install Drupal from web browser
-# Consider disabling RSS feeds for taxonomy pages and frontpage
+# Consider disabling RSS feeds for taxonomy pages and frontpage via disabling the relevant View (?)
 ```
 
 ## Setup a theme
