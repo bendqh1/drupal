@@ -8,7 +8,7 @@ cd WEB_APPLICATION_ROOT_DIR_NAME
 composer create-project drupal/recommended-project WEB_APPLICATION_DIR
 cd WEB_APPLICATION_DIR_NAME
 composer require drush/drush # If needed upgrade PHP version to the latest possible for the entire cPanel account and for this change to be visible in Terminal.
-vendor/bin/drush site:install
+# vendor/bin/drush site:install # Skip this and install from browser.
 
 # Configure web_application_root (example.com/web, done from "domains" in Cpanel)
 # Install Drupal from web browser
