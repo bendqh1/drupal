@@ -1,3 +1,7 @@
+## In case there are no minimal URLs
+
+Login as `?example.com/q=user`
+
 ## Flush all caches
 
 ```shell
