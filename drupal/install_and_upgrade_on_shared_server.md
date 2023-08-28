@@ -13,6 +13,14 @@ composer require drush/drush # If needed upgrade PHP version to the latest possi
 # Consider disabling RSS feeds for taxonomy pages and frontpage via disabling the relevant View (?)
 ```
 
+## Known issues
+
+If you get:
+
+> The libmysqlclient driver version 3.1.21 is less than the minimum required version. Upgrade to libmysqlclient version 5.5.3 or up, or alternatively switch mysql drivers to MySQLnd version 5.0.9 or up.
+
+change the PHP library from `libmysqlclient` to `MySQLnd` -- that is, enabling `nd_pdo_mysql` instead of `pdo_mysql`.
+
 ## Setup a theme
 
 ```shell
