@@ -1,4 +1,4 @@
-## Setup latest Drupal
+## Setup Drupal
 
 ```shell
 # Configure DNS records
@@ -13,7 +13,7 @@ composer require drush/drush # If needed upgrade PHP version to the latest possi
 # Consider disabling RSS feeds for taxonomy pages and frontpage via disabling the relevant View (?)
 ```
 
-## Known issues
+### Known issues
 
 If you get:
 
@@ -21,7 +21,7 @@ If you get:
 
 change the PHP library from `libmysqlclient` to `MySQLnd` -- that is, enabling `nd_pdo_mysql` instead of `pdo_mysql`.
 
-## Setup specific Drupal
+### Setup specific Drupal
 
 ```shell
 composer create-project drupal/recommended-project:9.0.0 WEB_APPLICATION_DIR_NAME
