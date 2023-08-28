@@ -4,8 +4,8 @@
 # Configure DNS records
 # Configure database (say, with PHPMyAdmin)
 
-cd WEB_APPLICATION_ROOT_DIR_NAME
-composer create-project drupal/recommended-project WEB_APPLICATION_DIR
+cd WEB_APPLICATION_ROOT
+composer create-project drupal/recommended-project WEB_APPLICATION_DIR_NAME
 cd WEB_APPLICATION_DIR_NAME
 composer require drush/drush # If needed upgrade PHP version to the latest possible for the entire cPanel account and for this change to be visible in Terminal.
 # Configure web_application_root (public_html/example.com/web, done from "domains" in Cpanel)
