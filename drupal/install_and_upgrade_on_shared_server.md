@@ -1,4 +1,4 @@
-## Setup Drupal
+## Setup latest Drupal
 
 ```shell
 # Configure DNS records
@@ -20,6 +20,16 @@ If you get:
 > The libmysqlclient driver version 3.1.21 is less than the minimum required version. Upgrade to libmysqlclient version 5.5.3 or up, or alternatively switch mysql drivers to MySQLnd version 5.0.9 or up.
 
 change the PHP library from `libmysqlclient` to `MySQLnd` -- that is, enabling `nd_pdo_mysql` instead of `pdo_mysql`.
+
+## Setup specific Drupal
+
+```shell
+composer create-project drupal/recommended-project:9.0.0 WEB_APPLICATION_DIR_NAME
+cd WEB_APPLICATION_DIR_NAME
+composer require drush/drush
+composer update
+vendor/bin/drush updatedb
+```
 
 ## Setup a theme
 
