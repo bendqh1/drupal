@@ -7,6 +7,11 @@
 * https://decoder.link/sslchecker/example.com/443
 * https://decoder.link/sslchecker/www.example.com/443
 
+### SSL redirects
+
+http://example.com SHOULD REDIRECT TO https://example.com
+http://www.example.com SHOULD REDIRECT TO https://www.example.com
+
 ## Load order and speed tests
 
 * https://pagespeed.web.dev
