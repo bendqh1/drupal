@@ -2,7 +2,7 @@
 
 * https://dnschecker.org/
 
-* ## SSL checker
+* ## SSL tests
 
 * https://decoder.link/sslchecker/example.com/443
 * https://decoder.link/sslchecker/www.example.com/443
@@ -12,3 +12,7 @@
 * https://pagespeed.web.dev
 * https://gtmetrix.com
 * https://tools.pingdom.com/
+
+## Security tests
+
+* https://sitecheck.sucuri.net/results/example.com
