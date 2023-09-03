@@ -78,6 +78,12 @@ Drupal users often need to run `chmod u+w web/sites/default` before `composer up
 
 [More information here](https://drupal.stackexchange.com/questions/314209/when-does-system-requirements-function-runs).
 
+### "Composer detected issues in your platform: Your Composer dependencies require a PHP version ">= x.x.x"
+
+A problem common when hosting Drupal on shared hosting.
+
+If, from `php -v` and from `composer -vvv about` the PHP version is higher then listed, then a resetting the PHP version to the highest version possible for an entire Cpanel (and probably also for a specific domain in Cpanel) is needed. Other action/s may be needed as well. The web hosting support staff should take care of this.
+
 ## Major upgrade
 
 ```shell
