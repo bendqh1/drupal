@@ -63,6 +63,7 @@ composer remove drupal/MODULE_NAME
 
 ```shell
 cd WEB_APPLICATION_DIR_NAME
+chmod u+w web/sites/default # Explanation below.
 composer update # "drupal/core-*" --with-all-dependencies
 vendor/bin/drush updatedb
 vendor/bin/drush cache:rebuild
