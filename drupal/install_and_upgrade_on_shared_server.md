@@ -67,6 +67,7 @@ chmod u+w web/sites/default # Explanation below.
 composer update # "drupal/core-*" --with-all-dependencies
 vendor/bin/drush updatedb
 vendor/bin/drush cache:rebuild
+vendor/bin/drush status # Validate new version
 ```
 
 ### Could not delete default.settings.php
@@ -84,7 +85,7 @@ Drupal users often need to run `chmod u+w web/sites/default` before `composer up
 # Backup filetree
 
 cd WEB_APPLICATION_DIR
-composer update
+# Do minor upgrade
 chmod 777 web/sites/default
 chmod 666 web/sites/default/*settings.php
 chmod 666 web/sites/default/*services.yml
