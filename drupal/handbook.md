@@ -55,6 +55,29 @@ jquery_ui_droppable
 
 Then update database and flush all caches.
 
+## Add a automatically updated `current year` to the bottomost part of a Drupal website
+
+One way is creating a block with this content.
+
+```html
+<p style="text-align: center;"><script>document.write( new Date().getFullYear() );</script></p>
+```
+
+SEOwise this approach is wrong because not necessarily any search engine crawler will wait for JavaScript scripts to track down structure and content created with JavaScript.
+
+### Sub-theme
+
+Let's say that the theme is a sub-theme of Olivero.
+
+Copy `/core/themes/olivero/templates/layout/region--footer-bottom.html.twig` to `/themes/subtheme/templates/region--footer-bottom.html.twig` and then add in the end of it the following code:
+
+```
+<p style="text-align: center;">{{ 'now' | date('Y') }}</p>
+```
+
+© כל הזכויות שמורות - X. אין להעתיק תוכן ללא אישור מפורש מבעל האתר.
+
+
 ## Misc
 
 Drupal uncustomized core 9.5.3 upgraded to 9.5.9 (first version was probably 9.4.5).
