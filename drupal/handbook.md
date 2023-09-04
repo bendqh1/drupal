@@ -60,7 +60,7 @@ Then update database and flush all caches.
 One way is creating a block with this content.
 
 ```html
-<p style="text-align: center;"><script>document.write( new Date().getFullYear() );</script></p>
+<span style="text-align: center;"><script>document.write( new Date().getFullYear() );</script></span>
 ```
 
 SEOwise this approach is wrong because not necessarily any search engine crawler will wait for JavaScript scripts to track down structure and content created with JavaScript.
