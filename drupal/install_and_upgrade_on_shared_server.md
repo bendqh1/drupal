@@ -108,6 +108,30 @@ chmod 644 web/sites/default/*services.yml
 
 Small old Drupal websites (versions 1-7) of up to say 10 webpages are best upgraded manually by saving webpage copy (right mouse click >> Save as HTML named `1.html` up to `10.html` with the directories) and then pasting data from copies in a fresh Drupal.
 
+## Fixing the trusted hosts error
+
+### Phase 1
+
+```shell
+chmod 777 web/sites/default
+chmod 666 web/sites/default/*settings.php
+```
+
+### Phase 2
+
+Add in settings.php
+
+ $settings['trusted_host_patterns'] = array(
+   '^www\.example\.com$',
+ );
+
+### Phase 3
+
+```shell
+chmod 755 web/sites/default
+chmod 644 web/sites/default/*settings.php
+```
+
 ## More information
 
 * https://www.drupal.org/docs/upgrading-drupal/drupal-8-and-higher
