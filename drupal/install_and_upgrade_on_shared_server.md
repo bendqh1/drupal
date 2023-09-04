@@ -139,6 +139,28 @@ chmod 644 web/sites/default/*settings.php
 
 * https://drupal.stackexchange.com/questions/145286/what-does-the-provided-host-name-is-not-valid-for-this-server-mean
 
+## Fix REPEATABLE-READ warning
+
+### Phase 1
+
+```shell
+chmod 777 web/sites/default
+chmod 666 web/sites/default/*settings.php
+```
+
+### Phase 2
+
+'init_commands' => [
+	'isolation_level' => 'SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED',
+];
+
+### Phase 3
+
+```shell
+chmod 755 web/sites/default
+chmod 644 web/sites/default/*settings.php
+```
+
 ## More information
 
 * https://www.drupal.org/docs/upgrading-drupal/drupal-8-and-higher
