@@ -123,8 +123,7 @@ Add in settings.php
 
 ```php
 $settings['trusted_host_patterns'] = array(
-    '^example\.com$',
-    '^www\.example\.com$',
+  '^example\.com$',
 );
 ```
 
