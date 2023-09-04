@@ -121,9 +121,12 @@ chmod 666 web/sites/default/*settings.php
 
 Add in settings.php
 
- $settings['trusted_host_patterns'] = array(
-   '^www\.example\.com$',
- );
+```php
+$settings['trusted_host_patterns'] = array(
+    '^example\.com$',
+    '^www\.example\.com$',
+);
+```
 
 ### Phase 3
 
