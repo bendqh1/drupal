@@ -119,11 +119,12 @@ chmod 666 web/sites/default/*settings.php
 
 ### Phase 2
 
-Add in settings.php
+Add the following in the end of `/sites/default/settings.php` (note the two commas instead a comma and a semicolon and change `example` to the domain name you use). 
 
 ```php
 $settings['trusted_host_patterns'] = array(
   '^example\.com$',
+  '^www\.example\.com$',
 );
 ```
 
@@ -133,6 +134,10 @@ $settings['trusted_host_patterns'] = array(
 chmod 755 web/sites/default
 chmod 644 web/sites/default/*settings.php
 ```
+
+### Further reading
+
+* https://drupal.stackexchange.com/questions/145286/what-does-the-provided-host-name-is-not-valid-for-this-server-mean
 
 ## More information
 
