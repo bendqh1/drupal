@@ -55,7 +55,7 @@ jquery_ui_droppable
 
 Then update database and flush all caches.
 
-## Add a automatically updated `current year` to the bottomost part of a Drupal website
+## How to add a automatically updated `current year` to the bottomost part of a Drupal website
 
 One way is creating a block with this content.
 
