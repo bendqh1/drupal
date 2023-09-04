@@ -55,7 +55,6 @@ jquery_ui_droppable
 
 Then update database and flush all caches.
 
-
 ## Misc
 
 Drupal uncustomized core 9.5.3 upgraded to 9.5.9 (first version was probably 9.4.5).
@@ -66,3 +65,10 @@ I believed that this problem is part of a broader problem in which taxonomy-term
 I was wrong.<br>
 the taxonomy-term-page did mentioned this node.<br>
 I didn't notice that due to it having only one value, the value text was very generic and short `תכנים אחרונים` and no link styling was directly apparent.
+
+### Chapters in articles
+
+* הערות כלליות (עם ul)
+* הערות ספציפיות (עם ol)
+* לקריאה נוספת
+* קישורים חיצוניים
