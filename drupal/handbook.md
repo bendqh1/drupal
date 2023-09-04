@@ -75,8 +75,9 @@ Copy `/core/themes/olivero/templates/layout/region--footer-bottom.html.twig` to 
 <p style="text-align: center;">{{ 'now' | date('Y') }}</p>
 ```
 
-© כל הזכויות שמורות - X. אין להעתיק תוכן ללא אישור מפורש מבעל האתר.
+#### Chapter note
 
+© כל הזכויות שמורות - X. אין להעתיק תוכן ללא אישור מפורש מבעל האתר.
 
 ## Misc
 
