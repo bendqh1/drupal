@@ -69,7 +69,7 @@ SEOwise this approach is wrong because not necessarily any search engine crawler
 
 Let's say that the theme is a sub-theme of Olivero.
 
-Copy `/core/themes/olivero/templates/layout/region--footer-bottom.html.twig` to `/themes/subtheme/templates/region--footer-bottom.html.twig` and then add in the end of it the following code:
+Copy `/core/themes/olivero/templates/layout/region--footer-bottom.html.twig` to `/themes/subtheme/templates/region--footer-bottom.html.twig` and then add **in the end of it** the following code:
 
 ```
 <p style="text-align: center;">{{ 'now' | date('Y') }}</p>
