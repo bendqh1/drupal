@@ -34,6 +34,8 @@ vendor/bin/drush updatedb
 ## Setup a theme
 
 ```shell
+composer update
+vendor/bin/drush updatedb
 composer require drupal/THEME_NAME
 vendor/bin/drush theme:enable THEME_NAME
 ```
@@ -41,6 +43,8 @@ vendor/bin/drush theme:enable THEME_NAME
 ## Setup a module
 
 ```shell
+composer update
+vendor/bin/drush updatedb
 composer require drupal/MODULE_NAME
 vendor/bin/drush en MODULE_NAME
 ```
@@ -48,6 +52,8 @@ vendor/bin/drush en MODULE_NAME
 ## Unsetup a theme
 
 ```shell
+composer update
+vendor/bin/drush updatedb
 vendor/bin/drush theme:uninstall THEME_NAME
 composer remove drupal/THEME_NAME
 ```
@@ -55,6 +61,8 @@ composer remove drupal/THEME_NAME
 ## Unsetup a module
 
 ```shell
+composer update
+vendor/bin/drush updatedb
 vendor/bin/drush un MODULE_NAME
 composer remove drupal/MODULE_NAME
 ```
