@@ -158,9 +158,11 @@ chmod 666 web/sites/default/*settings.php
 
 ### Phase 2
 
+```php
 'init_commands' => [
 	'isolation_level' => 'SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED',
 ];
+```
 
 ### Phase 3
 
