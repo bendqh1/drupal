@@ -4,13 +4,15 @@
 
 * ## SSL tests
 
-* https://decoder.link/sslchecker/example.com/443
+* https://decoder.link/sslchecker/example.com/443<br>
 * https://decoder.link/sslchecker/www.example.com/443
 
 ### SSL redirects
 
-http://example.com SHOULD REDIRECT TO https://example.com
+http://example.com SHOULD REDIRECT TO https://example.com<br>
 http://www.example.com SHOULD REDIRECT TO https://www.example.com
+
+This should happen both from desktopcomp/laptopcomp and from comptablet/compphone
 
 ## Load order and speed tests
 
