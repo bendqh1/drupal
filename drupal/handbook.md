@@ -75,6 +75,10 @@ Copy `/core/themes/olivero/templates/layout/region--footer-bottom.html.twig` to 
 <div style="text-align: center; font-weight: bold;">{{ 'now' | date('Y') }}</div>
 ```
 
+## RSS feed
+
+Keep the "Frontpage" View on, for RSS feeds.
+
 #### Chapter note
 
 © כל הזכויות שמורות - X. אין להעתיק תוכן ללא אישור מפורש מבעל האתר.
