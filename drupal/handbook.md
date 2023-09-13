@@ -75,6 +75,10 @@ Copy `/core/themes/olivero/templates/layout/region--footer-bottom.html.twig` to 
 <div style="text-align: center; font-weight: bold;">{{ 'now' | date('Y') }}</div>
 ```
 
+If you have added a "Call now" triangle of say 50px height, add this instead:
+
+<div style="min-height: 50px; text-align: center; font-weight: bold;">{{ 'now' | date('Y') }}</div>
+
 ## RSS feed
 
 Keep the "Frontpage" View on, for RSS feeds.
