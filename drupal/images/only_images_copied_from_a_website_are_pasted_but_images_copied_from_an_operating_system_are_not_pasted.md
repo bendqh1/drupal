@@ -13,7 +13,6 @@ I have tried to copy-paste the following image not from a webpage, but from Wind
 Here are screenshots of my CKEditor 5 image uploading tool:
 
 [![enter image description here][2]][2]
-
 [![enter image description here][3]][3]
 
 ## Interim note
@@ -30,21 +29,19 @@ To solve the problem I went to `/admin/config/content/formats/manage/full_html`,
 
 ## Before:
 
-[![enter image description here][1]][1]
+[![enter image description here][4]][4]
 
 ## After:
 
-[![enter image description here][2]][2]
+[![enter image description here][5]][5]
 
 <hr>
 
 After doing that, I could copy-paste images from the operating system directly (i.e not from a webpage) without any problem.
 
 
-  [1]: https://i.stack.imgur.com/NrYBn.png
-  [2]: https://i.stack.imgur.com/dconZ.png
-
-
-  [1]: https://i.stack.imgur.com/6H9LZ.png
-  [2]: https://i.stack.imgur.com/eFAmo.png
-  [3]: https://i.stack.imgur.com/vLIOx.png
+  [1]: https://i.stack.imgur.com/vTbod.png
+  [2]: https://i.stack.imgur.com/sE70H.png
+  [3]: https://i.stack.imgur.com/na3YG.png
+  [4]: https://i.stack.imgur.com/6Zv1y.png
+  [5]: https://i.stack.imgur.com/ML8n0.png
