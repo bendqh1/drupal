@@ -1,10 +1,10 @@
-# Problem
+# Images copied from a website are pasted but images copied from an operating system are not pasted
 
 I have the problem that after upgrading Drupal 9 to Drupal 10 with CKEditor 5, I can no longer paste clipboard-copied images into CKEditor unless they are copied from a a webpage.
 
 ## Use case
 
-I have tried to copy-paste the following image not from a webpage, but from Windows 11 [Photos][1] application.
+I have tried to copy-paste the following image not from a webpage, but from Windows 11 [Photos][1] application, but failed.
 
 [![enter image description here][1]][1]
 
