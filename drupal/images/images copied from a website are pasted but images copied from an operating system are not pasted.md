@@ -13,6 +13,7 @@ I have tried to copy-paste the following image not from a webpage, but from Wind
 Here are screenshots of my CKEditor 5 image uploading tool:
 
 [![enter image description here][2]][2]
+<br>
 [![enter image description here][3]][3]
 
 ## Interim note
