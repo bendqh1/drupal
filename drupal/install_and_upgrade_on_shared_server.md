@@ -116,7 +116,7 @@ chmod 644 web/sites/default/*services.yml
 
 Small old Drupal websites (versions 1-7) of up to say 10 webpages are best upgraded manually by saving webpage copy (right mouse click >> Save as HTML named `1.html` up to `10.html` with the directories) and then pasting data from copies in a fresh Drupal.
 
-## Fixing the trusted hosts error
+## Fix Trusted Hosts error
 
 ### Phase 1
 
