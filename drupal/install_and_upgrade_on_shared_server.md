@@ -1,4 +1,4 @@
-## Setup Drupal on a LAMP-Cpanel environment
+## Setup Drupal
 
 ```shell
 # Configure DNS records
