@@ -125,7 +125,9 @@ chmod 666 web/sites/default/*settings.php
 
 ### Phase 2
 
-Add the following in the end of `/sites/default/settings.php` (note the two commas instead a comma and a semicolon and change `example` to the domain name you use). 
+Add the following in the end of `/sites/default/settings.php`.
+
+Note the two commas instead a comma and a semicolon and change `example` to the domain name you use. 
 
 ```php
 $settings['trusted_host_patterns'] = array(
