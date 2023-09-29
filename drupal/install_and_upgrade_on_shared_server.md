@@ -1,9 +1,7 @@
-## Setup Drupal
+## Setup Drupal on a LAMP-Cpanel environment
 
 ```shell
 # Configure DNS records
-# Configure database (say, with PHPMyAdmin)
-
 cd WEB_APPLICATION_ROOT
 composer create-project drupal/recommended-project WEB_APPLICATION_DIR_NAME
 cd WEB_APPLICATION_DIR_NAME
