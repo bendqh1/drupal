@@ -83,6 +83,10 @@ If you have added a "Call now" triangle of say 50px height, add this instead:
 
 Keep the "Frontpage" View on, for RSS feeds.
 
+## Copying images to Drupal blocks
+
+Copy compressed images as files, don't copy a compressed image after opening it with a photo viewer as the photo viewer may improve it's quality and double its file weight.
+
 #### Chapter note
 
 © כל הזכויות שמורות - X. אין להעתיק תוכן ללא אישור מפורש מבעל האתר.
