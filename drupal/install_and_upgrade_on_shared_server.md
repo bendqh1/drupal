@@ -74,6 +74,7 @@ composer update # "drupal/core-*" --with-all-dependencies
 vendor/bin/drush updatedb
 vendor/bin/drush cache:rebuild
 vendor/bin/drush status # Validate new version
+chmod u-w web/sites/default # Explanation below.
 ```
 
 ### Could not delete default.settings.php
