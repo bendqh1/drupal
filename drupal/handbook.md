@@ -91,6 +91,20 @@ Copy compressed images as files, don't copy a compressed image after opening it 
 
 © כל הזכויות שמורות - X. אין להעתיק תוכן ללא אישור מפורש מבעל האתר.
 
+## Hidden headings for taxonomy term pages and double headings for view-pages
+
+Put the core "Page Title" block in the "Content Above" region and then:
+
+Don't put any restriction by content type.
+
+Only restrict the pages in which you want the natural H1 not to appear, so choose "Hide for the listed pages" (but not "Content Type") and list these pages, for example: 
+
+```
+<front>
+/blog
+/category-page
+```
+
 ## Misc
 
 Drupal uncustomized core 9.5.3 upgraded to 9.5.9 (first version was probably 9.4.5).
