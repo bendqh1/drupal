@@ -97,9 +97,7 @@ Copy compressed images as files, don't copy a compressed image after opening it 
 
 Put the core "Page Title" block in the "Content Above" region and then:
 
-Don't put any restriction by content type.
-
-Only restrict the pages in which you want the natural H1 not to appear, so choose "Hide for the listed pages" (but not "Content Type") and list these pages, for example: 
+Don't put any restriction by **content type**, rather, only restrict the pages in which you don't want the natural H1 to appear, so choose **Hide for the listed pages** (but not "Content Type") and list these pages this way, for example:
 
 ```
 <front>
