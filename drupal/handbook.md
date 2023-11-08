@@ -77,7 +77,9 @@ Copy `/core/themes/olivero/templates/layout/region--footer-bottom.html.twig` to 
 
 If you have added a "Call now" triangle of say 50px height, add this instead:
 
+```php
 <div style="min-height: 50px; text-align: center; font-weight: bold;">{{ 'now' | date('Y') }}</div>
+```
 
 ## RSS feed
 
