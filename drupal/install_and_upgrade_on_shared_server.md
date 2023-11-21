@@ -70,11 +70,13 @@ composer remove drupal/MODULE_NAME
 ```shell
 cd WEB_APPLICATION_DIR_NAME
 chmod u+w web/sites/default # Explanation below.
-composer update # "drupal/core-*" --with-all-dependencies
+composer update
 vendor/bin/drush updatedb
 vendor/bin/drush cache:rebuild
-vendor/bin/drush status # Validate new version
 chmod u-w web/sites/default # Explanation below.
+vendor/bin/drush status # Validate new version
+# chmod commands explanation below.
+# composer update || "drupal/core-*" --with-all-dependencies
 ```
 
 ### Could not delete default.settings.php
