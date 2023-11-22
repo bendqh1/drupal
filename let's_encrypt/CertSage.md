@@ -1,5 +1,5 @@
 1. Download Certsage.txt
-1. Upload certsage.txt into the webroot directory of your website (often something like public_html) that contains the content that you access when you visit http://example.com.
+1. Upload certsage.txt to the website directory.
 1. Rename certsage.txt to certsage.php.
 1. Visit http://example.com/certsage.php
 
