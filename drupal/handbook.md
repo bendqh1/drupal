@@ -105,6 +105,10 @@ Don't put any restriction by **content type**, rather, only restrict the pages i
 /category-page
 ```
 
+## Make a header of a view page to appear only in the view's first page
+
+* [Discussion](https://drupal.stackexchange.com/questions/317627/make-a-header-of-a-view-page-to-appear-only-in-the-views-first-page/317628#317628)
+
 ## Misc
 
 Drupal uncustomized core 9.5.3 upgraded to 9.5.9 (first version was probably 9.4.5).
