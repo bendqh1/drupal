@@ -54,6 +54,7 @@ Use a command like this (check for updates in https://www.drupal.org/project/con
 ```shell
 composer require 'drupal/context:^5.0@RC'
 vendor/bin/drush en context
+vendor/bin/drush en context_ui
 ```
 
 ## Unsetup a theme
@@ -79,6 +80,7 @@ composer remove drupal/MODULE_NAME
 Use a command like this (check for updates in https://www.drupal.org/project/context):
 
 ```shell
+vendor/bin/drush un context_ui
 vendor/bin/drush un context
 composer remove 'drupal/context:^5.0@RC'
 ```
