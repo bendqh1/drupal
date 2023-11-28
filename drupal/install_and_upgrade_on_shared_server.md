@@ -53,6 +53,7 @@ Use a command like this (check for updates in https://www.drupal.org/project/con
 
 ```shell
 composer require 'drupal/context:^5.0@RC'
+vendor/bin/drush en context
 ```
 
 ## Unsetup a theme
@@ -71,6 +72,15 @@ composer update
 vendor/bin/drush updatedb
 vendor/bin/drush un MODULE_NAME
 composer remove drupal/MODULE_NAME
+```
+
+### Setup the module Context
+
+Use a command like this (check for updates in https://www.drupal.org/project/context):
+
+```shell
+vendor/bin/drush un context
+composer remove 'drupal/context:^5.0@RC'
 ```
 
 ## Minor upgrade
