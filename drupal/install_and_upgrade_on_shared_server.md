@@ -52,7 +52,7 @@ vendor/bin/drush en MODULE_NAME
 Use a command like this (check for updates in https://www.drupal.org/project/context):
 
 ```shell
-composer require 'drupal/context:^4.1'
+composer require 'drupal/context:^5.0@RC'
 ```
 
 ## Unsetup a theme
