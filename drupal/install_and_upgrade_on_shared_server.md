@@ -75,7 +75,7 @@ vendor/bin/drush un MODULE_NAME
 composer remove drupal/MODULE_NAME
 ```
 
-### Setup the module Context
+### Unsetup the module Context
 
 Use a command like this (check for updates in https://www.drupal.org/project/context):
 
