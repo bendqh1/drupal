@@ -49,7 +49,7 @@ vendor/bin/drush en MODULE_NAME
 
 ### Setup the module Context
 
-Use a command like this (check for updates in [https://www.drupal.org/project/context]):
+Use a command like this (check for updates in https://www.drupal.org/project/context):
 
 ```shell
 composer require 'drupal/context:^4.1'
