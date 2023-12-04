@@ -84,7 +84,7 @@ composer remove drupal/MODULE_NAME
 
 ### Unsetup the module layout_builder_modal
 
-`shell
+```shell
 vendor/bin/drush un layout_builder_modal
 composer remove 'drupal/layout_builder_modal:^1.2'
 ```
