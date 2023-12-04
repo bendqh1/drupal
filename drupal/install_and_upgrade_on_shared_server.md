@@ -47,6 +47,11 @@ composer require drupal/MODULE_NAME
 vendor/bin/drush en MODULE_NAME
 ```
 
+### Setup the module layout_builder_modal
+
+composer require 'drupal/layout_builder_modal:^1.2'
+vendor/bin/drush en layout_builder_modal
+
 ### Setup the module Context
 
 Use a command like this (check for updates in https://www.drupal.org/project/context):
@@ -74,6 +79,11 @@ vendor/bin/drush updatedb
 vendor/bin/drush un MODULE_NAME
 composer remove drupal/MODULE_NAME
 ```
+
+### Unsetup the module layout_builder_modal
+
+vendor/bin/drush un layout_builder_modal
+composer remove 'drupal/layout_builder_modal:^1.2'
 
 ### Unsetup the module Context
 
