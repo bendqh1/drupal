@@ -23,6 +23,7 @@ Add this to the HTML if you don't want to add a button by mere JavaScript:
 	bottom: 0;
 	left: 0;
 	z-index: 2147483647;
+        max-height: 36px;
 	text-decoration: none;
 	font-size: 120%;
 	font-weight: bold;
