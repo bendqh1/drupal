@@ -19,10 +19,11 @@ newStyle.innerHTML +=`
 	bottom: 0;
         left: 0;
         z-index: 2147483647;
+        max-height: 36px;
         text-decoration: none;
         font-size: 120%;
         font-weight: bold;
-	background: linear-gradient(-160deg,#2494db 0%,#0d7ab8 78.66%) // #149714;
+	background: linear-gradient(-160deg,#2494db 0%,#0d7ab8 78.66%);
     }
     .cbwtphone_link {
     	display: inline; // Drupal fix
@@ -40,4 +41,5 @@ newStyle.innerHTML +=`
 	color: #fff;
     }
 `;
+
 document.head.appendChild(newStyle);
