@@ -1,0 +1,796 @@
+:root {
+
+	/* basic colors */
+
+	--p: dodgerblue;
+	--s: linen;
+	--a: darkorange;
+
+	/* minor inner spacing */
+
+	--minoris: 25px;
+
+	/* major inner spacing */
+
+	--majoris: 50px;
+}
+
+/* ---------- */
+/* ---------- */
+/* ---------- */
+/* ---------- */
+/* ---------- */
+/* MOST PROBLEMATIC OLIVERO FEATURE IS USE OF SHORTHAND PROPERTIES */
+/* ---------- */
+/* ---------- */
+/* ---------- */
+/* ---------- */
+/* ---------- */
+
+/*
+* {
+	margin-block: 0;
+	margin-block-start: 0;
+	margin-block-end: 0;
+
+	padding-block: 0;
+	padding-block-start: 0;
+	padding-block-end: 0;
+
+	border-block: 0;
+	border-block-start: 0;
+	border-block-end: 0;
+}
+*/
+
+.region > * {
+	margin-block-end: 0 !important;
+}
+
+.main-content__container {
+	padding-block-start: 0 !important;
+}
+
+/* ---------- */
+/* ---------- */
+/* ---------- */
+/* ---------- */
+/* ---------- */
+/* GENERAL CSS RESETS */
+/* ---------- */
+/* ---------- */
+/* ---------- */
+/* ---------- */
+/* ---------- */
+
+body {
+	background-image: none !important; 
+}
+
+* {
+	font-family: arial !important;
+}
+
+#header {
+	margin-bottom: 50px;
+}
+
+li::marker {
+	font-weight: bold;
+}
+
+h1 {
+	line-height: 1em;
+}
+
+h2, h3, h4, h5, h6 {
+	margin-top: 25px;
+	margin-bottom: 25px;
+	margin-right: 0;
+	margin-left: 0;
+
+	padding-top: 0;
+	padding-bottom: 0;
+	padding-right: 0;
+	padding-left: 0;
+}
+
+p, b, i, u, strong {	
+	margin-top: 0;
+	margin-bottom: 25px;
+	margin-right: 0;
+	margin-left: 0;
+
+	padding-top: 0;
+	padding-bottom: 0;
+	padding-right: 0;
+	padding-left: 0;
+}
+
+/*
+ul, ol, li {
+	margin-top: 0;
+	margin-bottom: 0;
+	margin-right: 0;
+	margin-left: 0;
+
+	padding-top: 0;
+	padding-bottom: 0;
+	padding-right: 0;
+	padding-left: 0;
+}
+*/
+
+ul, ol {
+	list-style-position: inside;
+}
+
+pre {
+	overflow:scroll;
+	background: var(--p);
+	color: #fff;
+}
+
+/* ---------- */
+/* ---------- */
+/* ---------- */
+/* ---------- */
+/* ---------- */
+/* WRAPPER, REGION AND LAYOUT SETTINGS */
+/* ---------- */
+/* ---------- */
+/* ---------- */
+/* ---------- */
+/* ---------- */
+
+.page-wrapper {
+	max-width: 100%;
+}
+
+.page-wrapper img:not(.whatsapp_icon) {
+	/* whatsapp button is outside of wrapper, region and layout settings */
+	margin-top: 0;
+	margin-bottom: 0;
+	margin-right: 0;
+	margin-left: 0;
+
+	padding-top: 0;
+	padding-bottom: 0;
+	padding-right: 0;
+	padding-left: 0;
+}
+
+.region {
+	justify-content: start;
+
+	margin-top: 0;
+	margin-bottom: 0;
+	margin-right: 0;
+	margin-left: 0;
+
+	padding-top: 0;
+	padding-bottom: 0;
+	padding-right: 0;
+	padding-left: 0;
+}
+
+.layout {
+	margin-top: 0;
+	margin-bottom: 0;
+	margin-right: 0;
+	margin-left: 0;
+
+	padding-top: 0;
+	padding-bottom: 0;
+	padding-right: 0;
+	padding-left: 0;
+}
+
+/* ---------- */
+/* ---------- */
+/* ---------- */
+/* ---------- */
+/* ---------- */
+/* WRAPPER-REGION SETTINGS */
+/* ---------- */
+/* ---------- */
+/* ---------- */
+/* ---------- */
+/* ---------- */
+
+.region .block:not(.search-block-form) {
+	margin-top: var(--minoris);
+	margin-bottom: var(--minoris);
+}
+
+.layout .block {
+	margin-right: 25px; /* RTL fix */
+}
+
+/* ---------- */
+/* ---------- */
+/* ---------- */
+/* ---------- */
+/* ---------- */
+/* GENERAL BLOCK SETTINGS */
+/* ---------- */
+/* ---------- */
+/* ---------- */
+/* ---------- */
+/* ---------- */
+
+.block__title {
+	margin-top: 25px;
+	margin-bottom: 25px;
+	margin-right: 0;
+	margin-left: 0;
+
+	padding-top: 0;
+	padding-bottom: 0;
+	padding-right: 0;
+	padding-left: 0;
+}
+
+.site-main .block__title {	
+	margin-top: 0;
+	margin-bottom: 0;
+	margin-right: 0;
+	margin-left: 0;
+
+	padding-top: 0;
+	padding-bottom: 0;
+	padding-right: 0;
+	padding-left: 0;
+}
+
+/* ---------- */
+/* ---------- */
+/* ---------- */
+/* ---------- */
+/* ---------- */
+/* FIRST HERO REGION SETTINGS */
+/* ---------- */
+/* ---------- */
+/* ---------- */
+/* ---------- */
+/* ---------- */
+
+/**/
+
+/* ---------- */
+/* ---------- */
+/* ---------- */
+/* ---------- */
+/* ---------- */
+/* SECOND HERO REGION SETTINGS */
+/* ---------- */
+/* ---------- */
+/* ---------- */
+/* ---------- */
+/* ---------- */
+
+.region--second-hero {
+	padding: var(--minoris);
+	background: var(--s);
+}
+
+.region--second-hero * {
+	margin: 0 auto 0 !important;
+	text-align: center;
+}
+
+/* ---------- */
+/* ---------- */
+/* ---------- */
+/* ---------- */
+/* ---------- */
+/* HIGHLIGHTED REGION SETTINGS */
+/* ---------- */
+/* ---------- */
+/* ---------- */
+/* ---------- */
+/* ---------- */
+
+.region--highlighted {
+	display: none;
+}
+
+/* ---------- */
+/* ---------- */
+/* ---------- */
+/* ---------- */
+/* ---------- */
+/* PRIMARY MENU, SECONDARY MENU, TABS AND BREADCRUMBS REGION SETTINGS */
+/* ---------- */
+/* ---------- */
+/* ---------- */
+/* ---------- */
+/* ---------- */
+
+.region--breadcrumb {
+	overflow: visible;
+	
+	margin-top: var(--majoris);
+	margin-bottom: var(--majoris);
+	margin-right: 0;
+	margin-left: 0;
+
+	padding-top: 0;
+	padding-bottom: 0;
+	padding-right: 0;
+	padding-left: 0;
+}
+
+/* ---------- */
+/* ---------- */
+/* ---------- */
+/* ---------- */
+/* ---------- */
+/* MAIN CONTENT REGION SETTINGS */
+/* ---------- */
+/* ---------- */
+/* ---------- */
+/* ---------- */
+/* ---------- */
+
+.main-content__container .container {
+	padding-inline: initial;
+}
+
+#main > div.main-content > div {
+	max-width: 100% !important;
+}
+
+.grid-full {
+    display: grid !important;
+    grid-template-columns: auto !important;
+    grid-column-gap: unset !important;
+}
+
+.region--content-above {
+	margin-top: 0;
+	margin-bottom: 0;
+	margin-right: 0;
+	margin-left: 0;
+
+	padding-top: 0;
+	padding-bottom: 0;
+	padding-right: 0;
+	padding-left: 0;
+}
+
+.region--content {
+	margin-top: 0;
+	margin-bottom: 0;
+	margin-right: 0;
+	margin-left: 0;
+
+	padding-top: 0;
+	padding-bottom: 0;
+	padding-right: 0;
+	padding-left: 0;
+}
+
+/* ---------- */
+/* ---------- */
+/* ---------- */
+/* ---------- */
+/* ---------- */
+/* SIDEBAR REGION SETTINGS */
+/* ---------- */
+/* ---------- */
+/* ---------- */
+/* ---------- */
+/* ---------- */
+
+.region--sidebar {
+	margin-top: 0;
+	margin-bottom: 0;
+	margin-right: 0;
+	margin-left: 0;
+
+	padding-top: 0;
+	padding-bottom: 0;
+	padding-right: 25px !important;
+	padding-left: 25x !important;
+}
+
+.region--sidebar * {
+	text-align: center;
+}
+
+.region--sidebar .block {
+	margin-top: var(--minoris) !important;
+	margin-bottom: var(--minoris) !important;
+
+	padding-top: var(--minoris) !important;
+	padding-bottom: var(--minoris) !important;
+}
+
+.region--sidebar .block__title {
+	margin-top: 0;
+	margin-bottom: 37.5px;
+	font-size: 2em;
+	line-height: 1em;
+}
+
+/* delete olivero redundant lines near menu links */
+.menu--sidebar .menu__link::after {
+	display: none;
+}
+
+/* ---------- */
+/* ---------- */
+/* ---------- */
+/* ---------- */
+/* ---------- */
+/* IN BETWEEN SIDEBAR AND FOOTER REGION SETTINGS */
+/* ---------- */
+/* ---------- */
+/* ---------- */
+/* ---------- */
+/* ---------- */
+
+.region--content-below, .region--third-hero, .region--fourth-hero {
+	padding: var(--majoris);
+	margin-bottom: var(--majoris);
+	background: var(--s);
+}
+
+/* two buttons in fourth-hero */
+
+#block-globalrs-blwqstytybwtbhyrwthtwntknymshstnwlhrwnhwlhtqsrly .block__title {
+	text-align: center;
+	font-size: 24px;
+}
+
+#block-globalrs-blwqstytybwtbhyrwthtwntknymshstnwlhrwnhwlhtqsrly .block__content p {
+	text-align: center;
+	font-size: 24px;
+}
+
+#block-globalrs-blwqstytybwtbhyrwthtwntknymshstnwlhrwnhwlhtqsrly .block__content a {
+	text-align: center;
+	font-size: 24px;
+}
+
+/* ---------- */
+/* ---------- */
+/* ---------- */
+/* ---------- */
+/* ---------- */
+/* FOOTER REGION SETTINGS */
+/* ---------- */
+/* ---------- */
+/* ---------- */
+/* ---------- */
+/* ---------- */
+
+.site-footer {
+	text-align: center;
+}
+
+#page > footer > div {
+	max-width: 100% !important;
+}
+
+.site-footer__inner {
+	display: grid !important;
+	justify-content: center !important;
+	padding-block: var(--minoris) !important;
+	max-width: 100% !important;
+}
+
+.region--top {
+	margin-top: 0;
+	margin-bottom: 0;
+	margin-right: 0;
+	margin-left: 0;
+
+	padding-top: 0;
+	padding-bottom: 0;
+	padding-right: 0;
+	padding-left: 0;
+}
+
+.region--footer-bottom {
+	margin-top: 0;
+	margin-bottom: 0;
+	margin-right: 0;
+	margin-left: 0;
+
+	padding-top: 0;
+	padding-bottom: 0;
+	padding-right: 0;
+	padding-left: 0;
+}
+
+.region--footer-bottom .block__title {
+	color: var(--a);
+}
+
+.region--footer-bottom .block__content {
+	color: #fff;
+}
+
+.region--footer-bottom a:hover {
+	color: var(--p) !important;
+}
+
+#block-globalrs-blwqmwdwlrybpwtrthtwnslstymwdwttqstwtmwnh > h2,
+#block-globalrs-blwqmwdwlrybpwtrthtwnslstymwdwttqstwtmwnh > div.block__content > div > div.layout__region.layout__region--first > div > div {
+	text-align: right;
+}
+
+.globalrs_dynamic_year {
+	min-height: 50px;
+	font-weight: bold;
+	color: #fff
+}
+
+/* ---------- */
+/* ---------- */
+/* ---------- */
+/* ---------- */
+/* ---------- */
+/* NODE SETTINGS */
+/* ---------- */
+/* ---------- */
+/* ---------- */
+/* ---------- */
+/* ---------- */
+
+.node__content {	
+	margin-top: 0;
+	margin-bottom: 0;
+	margin-right: 0;
+	margin-left: 0;
+
+	padding-top: 0;
+	padding-bottom: 0;
+	padding-right: 0;
+	padding-left: 0;
+}
+
+/* about node */
+
+#block-globalrs-content > div > article > div > div.layout.layout--twocol-section.layout--twocol-section--50-50 {
+	background: var(--s);
+}
+
+#block-globalrs-content > div > article > div > div.layout.layout--twocol-section.layout--twocol-section--50-50 img {
+	max-width: 500px;
+	margin: 0 auto 0 !important;
+}
+
+.ben_aharoni_about_me_image {
+    border-radius: 50%;
+}
+
+/* contact node */
+
+.page-node-type-dp-yzyrt-qsr .node__content {
+	display: none;
+}
+
+.page-node-type-dp-yzyrt-qsr .block-system-main-block {
+	display: none;
+}
+
+/* ---------- */
+/* ---------- */
+/* ---------- */
+/* ---------- */
+/* ---------- */
+/* VIEWS SETTINGS */
+/* ---------- */
+/* ---------- */
+/* ---------- */
+/* ---------- */
+/* ---------- */
+
+/* Hide blog view teasers */
+
+.node--view-mode-teaser .node__content {
+	display: none;
+}
+
+/* ---------- */
+/* ---------- */
+/* ---------- */
+/* ---------- */
+/* ---------- */
+/* PRIMARY COLOR SUGGESTION TO ACTION BUTTON */
+/* ---------- */
+/* ---------- */
+/* ---------- */
+/* ---------- */
+/* ---------- */
+
+.custom_button {
+	display: flex !important;
+	justify-content: space-around !important;
+	align-items: center !important;
+	margin-top: 25px !important;
+	margin-bottom: 0;
+	padding: 10px !important;
+	width: max-content !important;
+	text-align: center !important;
+	border-radius: 10px !important;
+	font-weight: bold !important;
+	background: var(--a) !important;
+	color: #fff !important;
+	text-decoration: none !important;
+	-webkit-text-decoration: none !important;
+	box-shadow: none !important;
+	font-size: 24px !important;
+}
+
+.custom_button:hover {
+	transition: unset !important;
+	transition-duration: 0 !important;
+	box-shadow: unset !important;
+	text-decoration: none !important;
+	background: #000 !important;
+	color: #fff !important;
+}
+
+/* ---------- */
+/* ---------- */
+/* ---------- */
+/* ---------- */
+/* ---------- */
+/* WHATSAPP BUTTON SETTINGS */
+/* ---------- */
+/* ---------- */
+/* ---------- */
+/* ---------- */
+/* ---------- */
+
+.whatsapp_link {
+	display: inline-block;
+	transition: none !important;
+	box-shadow: none !important;
+	text-decoration: none !important;
+}
+
+.whatsapp_link:hover {
+	text-decoration: none !important;
+}
+
+.whatsapp_icon {
+	display: inline;
+	vertical-align: middle;
+	width: 36px;
+	height: 36px;
+	max-width: 36px;
+	max-height: 36px;
+}
+
+.whatsapp_text {
+	display: inline;
+	vertical-align: middle;
+}
+
+/* ---------- */
+/* ---------- */
+/* ---------- */
+/* ---------- */
+/* ---------- */
+/* SPECIAL BLOCKS */
+/* ---------- */
+/* ---------- */
+/* ---------- */
+/* ---------- */
+/* ---------- */
+
+/* first hero homepage block-1 */
+
+#block-globalrs-hyrw .block__content {
+	padding: var(--majoris);
+	background: linear-gradient( rgba(0, 0, 0, 0.10), rgba(0, 0, 0, 0.10) ), url("https://benaharoni.com/sites/default/files/2023-10/ben_aharoni_homepage_hero_image.jpg");
+	background-size: cover;
+	background-position: top;
+	background-repeat: no-repeat;
+}
+
+#block-globalrs-hyrw .block__content * {
+	text-align: center;
+	color: #fff;
+}
+
+.region--first-hero .layout--threecol-section {
+	display: flex;
+	align-items: center;
+	text-align: center;
+}
+
+/* first hero homepage block-2 */
+
+#block-globalrs-blwqprtymhyrwyzyrtqsrbdphbyt {
+	padding: var(--majoris);
+}
+
+/* first hero homepage block-3 */
+
+#block-globalrs-blwqtwknlywnbsyhtmzytmhwshmqdmtrymbdphbyt > div.block__content > div {
+	padding: var(--majoris);
+	background: linear-gradient( rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75) ), url("https://benaharoni.com/sites/default/files/2023-11/ben_aharoni_homepage_after_hero_regular.jpg");
+	background-size: cover;
+	background-position: top;
+	background-repeat: no-repeat;
+}
+
+#block-globalrs-blwqtwknlywnbsyhtmzytmhwshmqdmtrymbdphbyt .block__content * {
+	text-align: center;
+	color: #fff;
+}
+
+/* homepage middle block */
+
+#block-globalrs-content > div > article > div > div:nth-child(4) {
+	padding: var(--majoris);
+}
+
+/* ---------- */
+/* ---------- */
+/* ---------- */
+/* ---------- */
+/* ---------- */
+
+/* Ben Aharoni for your service block */
+
+#block-globalrs-hyshtknyslkbyntrnt {
+	padding: var(--majoris);
+	border-radius: 10px;
+	background: var(--p)
+}
+
+#block-globalrs-hyshtknyslkbyntrnt .block__title {
+	color: #fff;
+}
+#block-globalrs-hyshtknyslkbyntrnt > div.block__content > div > p:nth-child(1) {
+	color: #fff
+}
+
+/* ---------- */
+/* ---------- */
+/* ---------- */
+/* ---------- */
+/* ---------- */
+
+/* footer block short about */
+
+#block-globalrs-blwqyswqymnwspymmwpybmgwwnzwrym-2 {
+	padding: var(--minoris);
+}
+
+/* footer block menus */
+
+#block-globalrs-blwqtprytpwtrlywn {
+	padding: var(--minoris);
+}
+
+/* footer block text and image */
+
+#block-globalrs-blwqmwdwlrybpwtrthtwnslstymwdwttqstwtmwnh {
+	padding: var(--minoris);
+}
+
+/* footer block contact */
+
+#block-globalrs-blwqpwtrthtwnmwdwlry {
+	padding: var(--minoris);
+}
+
+/* footer block free menu */
+
+#block-globalrs-blwqtprytpwtrhwpsykllylsyyklmrkthtprytymbzwrpwtrthtwn {
+	padding: var(--minoris);
+}
+
+/* footer block ending */
+
+#block-globalrs-klhzkwywtsmwrwt {
+	padding: var(--minoris);
+}
