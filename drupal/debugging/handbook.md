@@ -12,4 +12,4 @@ In the SQL watchdog table I only see a few **"Page not found"** errors without f
                                                      /home/USERNAME/WEB_APPLICATION_ROOT/example.com/web/themes/contrib/basic/templates/layout/html.html.twig).
 ```
 
-The theme I made the Context reaction about is named [Basic][2], so this is probably related.
+The theme I made the Context reaction about is named Basic, so this is probably related.
