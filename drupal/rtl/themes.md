@@ -1,6 +1,6 @@
-## Bartik
+## [Bartik](https://www.drupal.org/project/bartik)
 
-[The good old Bartik](https://www.drupal.org/project/bartik).
+The good old Bartik.
 
 ## [Seeds Coat](https://www.drupal.org/project/seeds_coat)
 
