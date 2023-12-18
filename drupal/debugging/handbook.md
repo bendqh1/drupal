@@ -1,9 +1,11 @@
 ## Apache logs and PHP logs
 
-If possible (in cases of shared hosting this may not be possible at least without opening a support ticket), try:
+Try:
 
 * `cat /var/log/apache2/error_log` or `cat /usr/local/apache/logs/error_log`
 * `php --info | grep error`
+
+In cases of shared hosting a support ticket to the team to check this might be needed.
 
 ## Watchdog
 
