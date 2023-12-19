@@ -32,7 +32,7 @@ window.addEventListener('keydown', function(event) {
 });
 ```
 
-## Go to primary buttons area
+## Go to primary buttons area inside the Layout Builder edit page
 
 ```js
 window.addEventListener('keydown', function(event) {
