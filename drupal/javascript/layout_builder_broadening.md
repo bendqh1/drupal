@@ -1,4 +1,4 @@
-A workaround that solves this problem is running the following code with a user script manager (such as Greasemonkey or Tampermonkey).
+Run the following code with a user script manager (such as Greasemonkey or Tampermonkey).
 
 ```js
 // ==UserScript==
