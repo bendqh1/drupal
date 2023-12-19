@@ -27,11 +27,7 @@ window.addEventListener('keydown', function(event) {
 ```js
 window.addEventListener('keydown', function(event) {
   if (event.altKey && event.shiftKey && event.key === 'G') {
-  document.querySelector("#layout-builder").forEach( (element)=>{
-  	element.scrollIntoView({
-  	  behavior: 'smooth'
-    });
-  });
+      document.querySelector('#layout-builder').scrollIntoView({behavior: 'smooth'});
   }
 });
 ```
