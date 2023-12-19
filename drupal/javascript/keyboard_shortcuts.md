@@ -31,3 +31,13 @@ window.addEventListener('keydown', function(event) {
   }
 });
 ```
+
+## Go to primary buttons area
+
+```js
+window.addEventListener('keydown', function(event) {
+    if (event.altKey && event.shiftKey && event.key === 'U') {
+        document.querySelectorAll('h1')[1].scrollIntoView({behavior: 'smooth'});
+    }
+});
+```
