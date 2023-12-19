@@ -1,4 +1,4 @@
-## Edit primary tab
+## Click Edit primary tab
 
 ```js
 window.addEventListener('keydown', function(event) {
@@ -10,7 +10,7 @@ window.addEventListener('keydown', function(event) {
 // event.key === 'e' didn't work event.key === 'E' did work;
 ```
 
-## Layout primary tab
+## Click Layout primary tab
 
 ```js
 window.addEventListener('keydown', function(event) {
@@ -21,3 +21,15 @@ window.addEventListener('keydown', function(event) {
 
 // event.key === 'e' didn't work event.key === 'E' did work;
 ```
+
+## Go to Layout Builder area
+
+window.addEventListener('keydown', function(event) {
+  if (event.altKey && event.shiftKey && event.key === 'G') {
+  document.querySelector("#layout-builder").forEach( (element)=>{
+  	element.scrollIntoView({
+  	  behavior: 'smooth'
+    });
+  });
+  }
+});
