@@ -24,6 +24,7 @@ window.addEventListener('keydown', function(event) {
 
 ## Go to Layout Builder area
 
+```js
 window.addEventListener('keydown', function(event) {
   if (event.altKey && event.shiftKey && event.key === 'G') {
   document.querySelector("#layout-builder").forEach( (element)=>{
@@ -33,3 +34,4 @@ window.addEventListener('keydown', function(event) {
   });
   }
 });
+```
