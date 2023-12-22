@@ -32,7 +32,7 @@ An opener template for a pages such as requests from administrators
 
 <!-- <includeonly> requires <br> above it -->
 <br>
-<includeonly><small>[[תבנית:פתיח דף בקשות ממפעילים|לעריכת תבנית זו]]</small></includeonly><noinclude><small>[[אקו-ויקי:בקשות ממפעילים|חזרה לדף אקו-ויקי:בקשות ממפעילים]]</small></noinclude><noinclude>[[קטגוריה:תבניות עריכה]]</noinclude>
+<includeonly><small>[[תבנית:פתיח דף בקשות ממפעילים|לעריכת תבנית זו]]</small></includeonly><noinclude><small>[[סאו-ויקי:בקשות ממפעילים|חזרה לדף סאו-ויקי:בקשות ממפעילים]]</small></noinclude><noinclude>[[קטגוריה:תבניות עריכה]]</noinclude>
 </div>
 ```
 
