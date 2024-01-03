@@ -144,7 +144,7 @@ p:last-child {
 }
 
 @media screen and (min-width: 480px) {
-	#toolbar-bar, .toolbar-menu li {
+	.user-logged-in #toolbar-bar, .user-logged-in .toolbar-menu li {
 		margin-right: 10px;
 	}
 }
