@@ -6,10 +6,23 @@
 	--s: linen;
 	--a: darkorange;
 
-	/* spacing */
+	/* general spacing */
 
 	--minoris: 25px;
 	--majoris: 50px;
+
+	/* contact widget and dynamic year ender spacing */
+
+	--contactWidget: 50px;
+	--dynamicYear: 100px;
+}
+
+.page-node-type-dp-ltr {
+	direction: ltr;
+}
+
+.page-node-type-dp-ltr .feed-icon {
+	display: none; /* fix feed-icon flowing above text */
 }
 
 /* ---------- */
@@ -73,34 +86,24 @@ body {
 }
 
 h1 {
+	margin-top: 0;
+	margin-bottom: var(--minoris);
 	line-height: 1em;
 }
 
-p:first-child {
-	font-weight: bold;
+h2:first-child, h3:first-child, h4:first-child, h5:first-child, h6:first-child {
+	margin-top: var(--minoris);
 }
 
-/*
 h2, h3, h4, h5, h6 {
-	margin-top: 25px !important;
-	margin-bottom: 25px !important;
-	margin-right: 0;
-	margin-left: 0;
-
-	padding-top: 0;
-	padding-bottom: 0;
-	padding-right: 0;
-	padding-left: 0;
+	margin-top: var(--minoris);
+	margin-bottom: var(--minoris);
 }
-*/
 
-h2 {
-	display: block;
-	margin-block-start: 0;
-	margin-block-end: 1em;
-	margin-inline-start: 0px;
-	margin-inline-end: 0px;
+h2:last-child, h3:last-child, h4:last-child, h5:last-child, h6:last-child {
+	margin-bottom: var(--minoris);
 }
+
 
 /*
 p, b, i, u, strong {	
@@ -116,12 +119,26 @@ p, b, i, u, strong {
 }
 */
 
-p {
+article p:first-child {
+	font-weight: bold;
+}
+
+p, .text-content p, .cke_editable p {
 	display: block;
-    margin-block-start: 0;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+p:last-child {
+	font-weight: normal;
+}
+
+ul {
+	margin-block-start: 0;
+	margin-block-end: 0;
+	margin-inline-start: 0;
+	margin-inline-end: 0;
+	padding-inline-start: 0; 
 }
 
 /*
@@ -150,15 +167,15 @@ li::marker {
 	font-weight: bold;
 }
 
-ul li:last-child, ol li:last-child {
-	margin-bottom: var(--minoris);
-}
-
 pre {
 	padding: var(--minoris);
 	overflow:scroll;
 	background: darkblue;
 	color: #fff;
+}
+
+hr {
+	border: 1px solid var(--p);
 }
 
 /* ---------- */
@@ -181,11 +198,13 @@ pre {
 	/* whatsapp button is outside of wrapper, region and layout settings */
 	margin-top: 0;
 	margin-bottom: 0;
+
 	margin-right: 0;
 	margin-left: 0;
 
 	padding-top: 0;
 	padding-bottom: 0;
+
 	padding-right: 0;
 	padding-left: 0;
 }
@@ -251,29 +270,7 @@ article {
 /* ---------- */
 /* ---------- */
 
-.block__title {
-	margin-top: 25px !important; 
-	margin-bottom: 25px !important;
-	margin-right: 0;
-	margin-left: 0;
-
-	padding-top: 0;
-	padding-bottom: 0;
-	padding-right: 0;
-	padding-left: 0;
-}
-
-.site-main .block__title {	
-	margin-top: 0;
-	margin-bottom: 0;
-	margin-right: 0;
-	margin-left: 0;
-
-	padding-top: 0;
-	padding-bottom: 0;
-	padding-right: 0;
-	padding-left: 0;
-}
+/**/
 
 /* ---------- */
 /* ---------- */
@@ -353,6 +350,10 @@ article {
 	padding-left: 0;
 }
 
+.breadcrumb__content {
+	overflow: visible;
+}
+
 /* ---------- */
 /* ---------- */
 /* ---------- */
@@ -415,46 +416,65 @@ article {
 /* ---------- */
 /* ---------- */
 
+main {
+	margin-bottom: var(--majoris);
+}
+
 .region--sidebar {
 	margin-top: 0;
 	margin-bottom: 0;
-	margin-right: 0;
-	margin-left: 0;
+	margin-right: var(--minoris);
+	margin-left: var(--minoris);
 
 	padding-top: 0;
 	padding-bottom: 0;
-	padding-right: 25px !important;
-	padding-left: 25x !important;
+	/* padding-right: var(--minoris); */
+	/* padding-left: var(--minoris); */
+	
+	background: var(--s);
 }
 
 .region--sidebar * {
 	text-align: center;
 }
 
-.region--sidebar .block {
-	padding-top: var(--minoris);
-	padding-bottom: var(--minoris);
+.region--sidebar img:not(.whatsapp_icon) {
+	margin-top: 0;
+	margin-right: 0;
+	margin-bottom: var(--minoris) !important;
+	margin-left: var(--minoris) !important;
+}
+
+@media screen and (max-width: 480px) {
+	.region--sidebar {
+		/*
+		border-top: 2px solid var(--p);
+		border-bottom: 2px solid var(--p);
+		*/
+		padding: var(--minoris);
+	}
 }
 
 .region--sidebar .block:first-child {
-	margin-top: 0;
-	margin-bottom: var(--minoris);
-	padding-top: 0;
-	padding-bottom: var(--minoris);
-}
-
-.region--sidebar .block:last-child {
-	margin-top: var(--minoris);
 	margin-bottom: 0;
-	padding-top: var(--minoris);
 	padding-bottom: 0;
 }
 
-.region--sidebar .block__title {
+.region--sidebar .block {
 	margin-top: 0;
-	margin-bottom: 37.5px;
+	margin-bottom: 0;
+	padding-top: 0;
+	padding-bottom: 0;
+}
+
+.region--sidebar .block:last-child {
+	margin-bottom: var(--minoris);
+	padding-bottom: var(--minoris);
+}
+
+.region--sidebar .block__title {
 	font-size: 2em;
-	line-height: 1em;
+	line-height: 1.25em;
 }
 
 /* delete olivero redundant lines near menu links */
@@ -479,6 +499,14 @@ article {
 	padding: var(--majoris);
 	margin-bottom: var(--majoris);
 	background: var(--s);
+}
+
+.region--content-below img, .region--third-hero img, .region--fourth-hero img {
+	background: var(--s);
+}
+
+#block-globalrs-dpzhwsqbntwrwptyhwlknnymzhyrmrs > h2 {
+	text-align: center;
 }
 
 /* two buttons in fourth-hero */
@@ -561,14 +589,12 @@ article {
 	color: var(--p) !important;
 }
 
-#block-globalrs-blwqmwdwlrybpwtrthtwnslstymwdwttqstwtmwnh > div.block__content > div > div.layout__region.layout__region--first > div > div {
+#block-globalrs-blwqmwdwlrybpwtrthtwnslstymwdwttqstwtmwnh p, #block-globalrs-blwqmwdwlrybpwtrthtwnslstymwdwttqstwtmwnh h2 {
 	text-align: right;
 }
 
-.globalrs_dynamic_year {
-	min-height: 50px;
-	font-weight: bold;
-	color: #fff
+#block-globalrs-blwqmwdwlrybpwtrthtwnslstymwdwttqstwtmwnh p, #block-globalrs-blwqmwdwlrybpwtrthtwnslstymwdwttqstwtmwnh img {
+	margin: 0 auto 0;
 }
 
 /* ---------- */
@@ -600,6 +626,10 @@ article {
 }
 
 /* about node */
+
+.node-275 p:first-child {
+	font-weight: normal !important;
+}
 
 .node-275 .layout__region--second {
 	padding: var(--minoris);
@@ -651,23 +681,36 @@ article {
 /* ---------- */
 /* ---------- */
 
+* > .custom_button {
+	word-break: break-word;
+}
+
 .custom_button {
-	display: flex !important;
+	display: inline-flex !important;
 	justify-content: space-around !important;
 	align-items: center !important;
-	margin-top: 25px !important;
-	margin-bottom: 0;
-	padding: 10px !important;
-	width: max-content !important;
-	text-align: center !important;
+	margin: 25px auto 0 !important;
 	border-radius: 10px !important;
-	font-weight: bold !important;
+	padding: 10px !important;
+
+	/*
+	word-break: break-word !important;
+	width: max-content !important;
+	word-wrap: break-word !important;
+	white-space: pre-wrap !important;
+	overflow: hidden !important;
+	text-overflow: ellipsis !important;
+	*/
+
+	text-align: center !important;
 	background: var(--a) !important;
 	color: #fff !important;
+	font-size: 24px !important;
+	font-weight: bold !important;
+
 	text-decoration: none !important;
 	-webkit-text-decoration: none !important;
 	box-shadow: none !important;
-	font-size: 24px !important;
 }
 
 .custom_button:hover {
@@ -684,43 +727,6 @@ article {
 /* ---------- */
 /* ---------- */
 /* ---------- */
-/* WHATSAPP BUTTON SETTINGS */
-/* ---------- */
-/* ---------- */
-/* ---------- */
-/* ---------- */
-/* ---------- */
-
-.whatsapp_link {
-	display: inline-block;
-	transition: none !important;
-	box-shadow: none !important;
-	text-decoration: none !important;
-}
-
-.whatsapp_link:hover {
-	text-decoration: none !important;
-}
-
-.whatsapp_icon {
-	display: inline;
-	vertical-align: middle;
-	width: 36px;
-	height: 36px;
-	max-width: 36px;
-	max-height: 36px;
-}
-
-.whatsapp_text {
-	display: inline;
-	vertical-align: middle;
-}
-
-/* ---------- */
-/* ---------- */
-/* ---------- */
-/* ---------- */
-/* ---------- */
 /* SPECIAL BLOCKS */
 /* ---------- */
 /* ---------- */
@@ -728,56 +734,17 @@ article {
 /* ---------- */
 /* ---------- */
 
-/* ---------- */
-/* ---------- */
-/* HERO REGUIB BLOCKS GENERAL */
-/* ---------- */
-/* ---------- */
+/* Two col "I'd be glad to teach you about SEO" */
 
-/* homepage three col blocks */
-
-.region--first-hero .layout--threecol-section {
-	display: flex;
-	align-items: center;
-	margin-bottom: var(--minoris);
-	text-align: center;
-}
-
-/* first hero homepage block-1 */
-
-#block-globalrs-hyrw .block__content {
-	padding: var(--majoris);
-	background: linear-gradient( rgba(0, 0, 0, 0.10), rgba(0, 0, 0, 0.10) ), url("https://benaharoni.com/sites/default/files/2023-10/ben_aharoni_homepage_hero_image.jpg");
-	background-size: cover;
-	background-position: top;
-	background-repeat: no-repeat;
-}
-
-#block-globalrs-hyrw .block__content * {
-	text-align: center;
-	color: #fff;
-}
-
-/* first hero homepage block-2 */
-
-#block-globalrs-blwqprtymhyrwyzyrtqsrbdphbyt {
+.block-block-content4b2d0509-c3c8-4da1-819d-930d08706ed7 {
 	padding: var(--majoris);
 }
 
-/* first hero homepage block-3 */
-
-#block-globalrs-blwqtwknlywnbsyhtmzytmhwshmqdmtrymbdphbyt > div.block__content > div {
-	padding: var(--majoris);
-	background: linear-gradient( rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75) ), url("https://benaharoni.com/sites/default/files/2023-11/ben_aharoni_homepage_after_hero_regular.jpg");
-	background-size: cover;
-	background-position: top;
-	background-repeat: no-repeat;
-}
-
-#block-globalrs-blwqtwknlywnbsyhtmzytmhwshmqdmtrymbdphbyt .block__content * {
-	text-align: center;
-	color: #fff;
-}
+/* ---------- */
+/* ---------- */
+/* HERO REGION BLOCKS GENERAL */
+/* ---------- */
+/* ---------- */
 
 /* ---------- */
 /* ---------- */
@@ -812,7 +779,7 @@ article {
 /* footer block short about */
 
 #block-globalrs-blwqyswqymnwspymmwpybmgwwnzwrym-2 {
-	margin-top: 0 !important;
+	margin-top: 0;
 	padding: var(--minoris);
 }
 
@@ -852,23 +819,167 @@ article {
 /* ---------- */
 /* ---------- */
 
-/* homepage block 1 */
+/* homepage three col blocks */
 
-#block-globalrs-content > div > article > div > div:nth-child(2) {
-	margin-bottom: var(--majoris);
+.region--first-hero .layout--threecol-section {
+	display: flex;
+	align-items: center;
+	margin-bottom: var(--minoris);
+	text-align: center;
 }
 
-/* homepage block 2 */
+/* first hero homepage block 1 */
 
-.path-frontpage .node__content .layout--twocol-section--50-50 {
+#block-globalrs-hyrw .block__content {
+	padding: var(--majoris);
+	background: linear-gradient( rgba(0, 0, 0, 0.10), rgba(0, 0, 0, 0.10) ), url("https://benaharoni.com/sites/default/files/2023-10/ben_aharoni_homepage_hero_image.jpg");
+	background-size: cover;
+	background-position: top;
+	background-repeat: no-repeat;
+}
+
+#block-globalrs-hyrw .block__content * {
+	text-align: center;
+	color: #fff;
+}
+
+#block-globalrs-hyrw > div.block__content > div > p > a {
+	margin: var(--majoris) auto 0 !important; /* similar to margin: 0 auto 0 */
+}
+
+/* first hero homepage block 2 */
+
+#block-globalrs-blwqprtymhyrwyzyrtqsrbdphbyt {
+	padding: var(--majoris);
+}
+
+/* first hero homepage block 3 */
+
+#block-globalrs-blwqtwknlywnbsyhtmzytmhwshmqdmtrymbdphbyt > div.block__content > div {
+	padding: var(--majoris);
+	background: linear-gradient( rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75) ), url("https://benaharoni.com/sites/default/files/2023-11/ben_aharoni_homepage_after_hero_regular.jpg");
+	background-size: cover;
+	background-position: top;
+	background-repeat: no-repeat;
+}
+
+#block-globalrs-blwqtwknlywnbsyhtmzytmhwshmqdmtrymbdphbyt .block__content * {
+	text-align: center;
+	color: #fff;
+}
+
+/* first hero homepage block 4 */
+
+#block-globalrs-blwqtknymhrwnymbnwsmshrlqtrwnybdphbyt {
+	padding: var(--majoris);
 	margin-top: var(--majoris);
 	margin-bottom: var(--majoris);
-	padding: var(--majoris);
+	background: var(--s);
 }
 
-/* homepage block 3 */
-
-#block-globalrs-content > div > article > div > div:nth-child(6) {
+#block-globalrs-blwqtknymhrwnymbnwsmshrlqtrwnybdphbyt > div.block__content > div.layout.layout--onecol > div > div > div > div > h2 {
 	margin-bottom: var(--majoris);
-	padding: var(--majoris);
+}
+
+#block-globalrs-blwqtknymhrwnymbnwsmshrlqtrwnybdphbyt li.views-field-title {
+	width: max-content;
+}
+
+#block-globalrs-blwqtknymhrwnymbnwsmshrlqtrwnybdphbyt > div.block__content > div.layout.layout--twocol-section.layout--twocol-section--50-50 > div.layout__region.layout__region--second {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+/* homepage layout blocks */
+
+.path-frontpage .node__content .block {
+	padding: var(--minoris);
+}
+
+@media screen and (min-width:480px) {
+	.path-frontpage .node__content .block p {
+		margin-right: 0;
+		margin-left: 0;
+		padding-right: 100px;
+		padding-left: 100px;
+	}
+}
+
+/* ---------- */
+/* ---------- */
+/* ---------- */
+/* ---------- */
+/* ---------- */
+/* CONTACT WIDGET AND DYNAMIC YEAR ENDER SETTINGS */
+/* ---------- */
+/* ---------- */
+/* ---------- */
+/* ---------- */
+/* ---------- */
+
+.cbwtphone_wrapper {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: fixed;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 2147483647;
+	max-height: var(--contactWidget);
+	height: var(--contactWidget);
+	text-decoration: none;
+	font-size: 120%;
+	font-weight: bold;
+	background: linear-gradient(-160deg,#2494db 0%,#0d7ab8 78.66%);
+}
+
+.cbwtphone_wrapper a {
+	color: #fff;
+}
+.cbwtphone_wrapper a:hover {
+	color: #000 !important;
+}
+.cbwtphone_wrapper a:focus {
+	color: #fff !important;
+}
+.cbwtphone_wrapper a:active {
+	color: #fff !important;
+}
+.cbwtphone_wrapper a:visited {
+	color: #fff;
+}
+
+.whatsapp_link {
+	display: inline-block;
+	height: var(--contactWidget);
+	max-height: var(--contactWidget);
+	transition: none !important;
+	box-shadow: none !important;
+	text-decoration: none !important;
+}
+
+.whatsapp_link:hover {
+	text-decoration: none !important;
+}
+
+.whatsapp_icon {
+	display: inline;
+	vertical-align: middle;
+	width: var(--contactWidget);
+	height: var(--contactWidget);
+	max-width: var(--contactWidget);
+	max-height: var(--contactWidget);
+}
+
+.whatsapp_text {
+	display: inline;
+	vertical-align: middle;
+}
+
+.globalrs_dynamic_year {
+	min-height: var(--dynamicYear);
+	font-weight: bold;
+	color: #fff
 }
