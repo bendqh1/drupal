@@ -12,7 +12,7 @@
 * http://example.com SHOULD REDIRECT TO https://example.com
 * http://www.example.com SHOULD REDIRECT TO https://www.example.com
 
-This should be tested **both** from desktopcomp/laptopcomp AND from comptablet/compphone
+This should be tested **both** from desktop/laptop AND from comptablet/compphone
 
 ## Load order and speed tests
 
