@@ -25,6 +25,12 @@
 	display: none; /* fix feed-icon flowing above text */
 }
 
+@media screen and (max-width: 999px) {
+	.grid-full:has(.two_new_sidebars_based_on_original_one) {
+	  display: block !important;
+	}
+}
+
 /* ---------- */
 /* ---------- */
 /* ---------- */
@@ -92,7 +98,7 @@ h1 {
 }
 
 h2:first-child, h3:first-child, h4:first-child, h5:first-child, h6:first-child {
-	margin-top: var(--minoris);
+	margin-top: 0;
 }
 
 h2, h3, h4, h5, h6 {
@@ -101,9 +107,8 @@ h2, h3, h4, h5, h6 {
 }
 
 h2:last-child, h3:last-child, h4:last-child, h5:last-child, h6:last-child {
-	margin-bottom: var(--minoris);
+	margin-bottom: 0;
 }
-
 
 /*
 p, b, i, u, strong {	
@@ -132,44 +137,6 @@ p, .text-content p, .cke_editable p {
 p:last-child {
 	font-weight: normal;
 }
-
-@media screen and (max-width: 480px) {
-	ul {
-		margin-block-start: 0;
-		margin-block-end: 0;
-		margin-inline-start: 0;
-		margin-inline-end: 0;
-		padding-inline-start: 0; 
-	}	
-}
-
-@media screen and (min-width: 480px) {
-	.user-logged-in #toolbar-bar, .user-logged-in .toolbar-menu li {
-		margin-right: 10px;
-	}
-}
-
-/*
-ul, ol, li {
-	margin-top: 0;
-	margin-bottom: 0;
-	margin-right: 0;
-	margin-left: 0;
-
-	padding-top: 0;
-	padding-bottom: 0;
-	padding-right: 0;
-	padding-left: 0;
-}
-*/
-
-/*
-ul, ol {
-	THIS MAY CAUSE DRUPAL LISTS TO BREAK !!!
-	list-style-position: inside;
-	THIS MAY CAUSE DRUPAL LISTS TO BREAK !!!
-}
-*/
 
 li::marker {
 	font-weight: bold;
@@ -424,70 +391,100 @@ article {
 /* ---------- */
 /* ---------- */
 
+.grid-full .two_new_sidebars_based_on_original_one {
+	display: block !important;
+}
+
 main {
 	margin-bottom: var(--majoris);
 }
 
-.region--sidebar {
+/* delete olivero redundant lines near menu links */
+.menu--sidebar .menu__link::after {
+	display: none;
+}
+
+/* ---------- */
+/* ---------- */
+/* ---------- */
+/* ---------- */
+/* ---------- */
+/* SIDEBAR_FIRST REGION SETTINGS */
+/* ---------- */
+/* ---------- */
+/* ---------- */
+/* ---------- */
+/* ---------- */
+
+.region--sidebar-first {
+	height: max-content;
+	margin-top: 0;
+	margin-bottom: var(--majoris);
+	margin-right: var(--majoris);
+	margin-left: var(--majoris);
+}
+
+/* ---------- */
+/* ---------- */
+/* ---------- */
+/* ---------- */
+/* ---------- */
+/* SIDEBAR_SECOND REGION SETTINGS */
+/* ---------- */
+/* ---------- */
+/* ---------- */
+/* ---------- */
+/* ---------- */
+
+.region--sidebar-second {
 	margin-top: 0;
 	margin-bottom: 0;
-	margin-right: var(--minoris);
-	margin-left: var(--minoris);
+	margin-right: var(--majoris);
+	margin-left: var(--majoris);
 
-	padding-top: 0;
-	padding-bottom: 0;
-	/* padding-right: var(--minoris); */
-	/* padding-left: var(--minoris); */
+	padding: var(--minoris) !important;
 	
-	background: var(--s);
-}
-
-.region--sidebar * {
 	text-align: center;
+
+	background: whitesmoke;
 }
 
-.region--sidebar img:not(.whatsapp_icon) {
+.region--sidebar-second img:not(.whatsapp_icon) {
 	margin-top: 0;
 	margin-right: 0;
 	margin-bottom: var(--minoris) !important;
 	margin-left: var(--minoris) !important;
 }
 
-@media screen and (max-width: 480px) {
-	.region--sidebar {
-		/*
-		border-top: 2px solid var(--p);
-		border-bottom: 2px solid var(--p);
-		*/
-		padding: var(--minoris);
-	}
-}
-
-.region--sidebar .block:first-child {
-	margin-bottom: 0;
-	padding-bottom: 0;
-}
-
-.region--sidebar .block {
+.region--sidebar-second .block:first-child {
 	margin-top: 0;
-	margin-bottom: 0;
+	padding-top: 0;
+}
+
+.region--sidebar-second .block {
+	margin-top: var(--majoris);
+	margin-bottom: var(--majoris);
 	padding-top: 0;
 	padding-bottom: 0;
 }
 
-.region--sidebar .block:last-child {
-	margin-bottom: var(--minoris);
-	padding-bottom: var(--minoris);
+.region--sidebar-second .block:last-child {
+	margin-bottom: 0;
+	padding-bottom: 0;
 }
 
-.region--sidebar .block__title {
+.region--sidebar-second .block__title {
 	font-size: 2em;
 	line-height: 1.25em;
 }
 
-/* delete olivero redundant lines near menu links */
-.menu--sidebar .menu__link::after {
-	display: none;
+.region--sidebar-second .menu__item {
+	list-style-type: none;
+}
+
+#block-globalrs-tmwntdpmwrhprtylqydwmtrym > div > div > p:nth-child(2) > img {
+	margin-top: var(--majoris);
+	margin-bottom: var(--majoris);
 }
 
 /* ---------- */
@@ -881,7 +878,7 @@ main {
 #block-globalrs-blwqtknymhrwnymbnwsmshrlqtrwnybdphbyt {
 	padding: var(--majoris);
 	margin-top: var(--majoris);
-	margin-bottom: var(--majoris);
+	margin-bottom: var(--majoris) !important;
 	background: var(--s);
 }
 
