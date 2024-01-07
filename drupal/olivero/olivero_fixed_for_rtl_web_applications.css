@@ -98,7 +98,7 @@ h1 {
 }
 
 h2:first-child, h3:first-child, h4:first-child, h5:first-child, h6:first-child {
-	margin-top: 0;
+	margin-top: var(--minoris);
 }
 
 h2, h3, h4, h5, h6 {
@@ -107,7 +107,7 @@ h2, h3, h4, h5, h6 {
 }
 
 h2:last-child, h3:last-child, h4:last-child, h5:last-child, h6:last-child {
-	margin-bottom: 0;
+	margin-bottom: var(--minoris);
 }
 
 /*
@@ -135,6 +135,7 @@ p, .text-content p, .cke_editable p {
 }
 
 p:last-child {
+	margin-bottom: var(--minoris) !important;
 	font-weight: normal;
 }
 
@@ -246,6 +247,23 @@ article {
 /* ---------- */
 
 /**/
+
+/* ---------- */
+/* ---------- */
+/* ---------- */
+/* ---------- */
+/* ---------- */
+/* SPECIFIC BLOCK SETTINGS */
+/* ---------- */
+/* ---------- */
+/* ---------- */
+/* ---------- */
+/* ---------- */
+
+#block-globalrs-blwqmwdwlrymwrhprtylqydwmtrymmwpybdpymmswgdpqydwmwrgny > div.block__content > div.layout.layout--twocol-section.layout--twocol-section--50-50 {
+	margin-top: var(--majoris);
+	margin-bottom: var(--majoris)
+}
 
 /* ---------- */
 /* ---------- */
