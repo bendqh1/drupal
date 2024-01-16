@@ -1,4 +1,4 @@
-Changing the name of a taxonomy term
+## Changing the name of a taxonomy term
 
 I have a taxonomy term named **A** in about 25 nodes and I want to change its name to **B**.
 
