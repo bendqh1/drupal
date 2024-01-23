@@ -28,6 +28,6 @@ By the way I areadly went to `Advanced > Relationships > Content with Term` and 
 
 Filtering the block of the view by `/taxonomy/term/*` wildcard helped.
 
-## How to add a prefix to terms of a given vocabulary
+## How to add a prefix to all taxonomy terms of a given vocabulary
 
 * https://drupal.stackexchange.com/questions/318215/how-to-add-a-prefix-to-all-taxonomy-terms-of-a-given-vocabulary
