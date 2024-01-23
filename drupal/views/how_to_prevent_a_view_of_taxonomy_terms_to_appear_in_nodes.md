@@ -1,4 +1,4 @@
-I have created a view of taxonomy terms with the terms filitered by published and sorted by random.
+I have created a view of taxonomy terms with the terms filitered by **published** and sorted by **random**.
 
 My problem is that this view block appears both in nodes and in taxonomy term pages while I need it to appear in taxonomy term pages alone.
 
