@@ -10,4 +10,4 @@ By the way I have areadly went to Advanced > Relationships > Content with Term a
 
 ## Solution
 
-Filtering the block of the view by `/taxonomy/term/*` wildcard helped.
+Filtering **the block** of the view by `/taxonomy/term/*` wildcard helped.
