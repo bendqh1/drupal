@@ -4,7 +4,7 @@ I wish that any `term` will have a prefix like `articles in the topic of`, so to
 
 How to do that?
 
-Answer:
+## Answer:
 
 Configure contextual filter: Content: Has taxonomy term ID
 
