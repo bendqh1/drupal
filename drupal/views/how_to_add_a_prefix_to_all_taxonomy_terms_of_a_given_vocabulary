@@ -1,0 +1,15 @@
+I wish that any `term` will have a prefix like `articles in the topic of`, so to get:
+
+`Articles in the topic of term`.
+
+How to do that?
+
+Answer:
+
+Configure contextual filter: Content: Has taxonomy term ID
+
+When the filter value is in the URL or a default is provided
+
+Override title:
+
+מאמרים בנושא {{ arguments.tid }}
