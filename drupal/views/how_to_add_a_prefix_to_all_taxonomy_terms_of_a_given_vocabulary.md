@@ -13,3 +13,7 @@ How to do that?
 When the filter value is in the URL or a default is provided
 
 מאמרים בנושא {{ arguments.tid }}
+
+## Notes
+
+* https://drupal.stackexchange.com/questions/318215/how-to-add-a-prefix-to-all-taxonomy-terms-of-a-given-vocabulary
