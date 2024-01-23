@@ -6,10 +6,10 @@ How to do that?
 
 ## Answer:
 
-Configure contextual filter: Content: Has taxonomy term ID
+**Configure contextual filter: Content: Has taxonomy term ID**.
+
+**Override title:**
 
 When the filter value is in the URL or a default is provided
-
-Override title:
 
 מאמרים בנושא {{ arguments.tid }}
