@@ -114,6 +114,12 @@ vendor/bin/drush status # Validate new version
 # composer update || "drupal/core-*" --with-all-dependencies
 ```
 
+### Website isn't upgraded to last Drupal core version
+
+```composer why-not drupal/core 10.2.2```
+
+Check for conflicts and instructions.
+
 ### Could not delete default.settings.php
 
 > Could not delete /public_html/example.com/web/sites/default/default.settings.php:
