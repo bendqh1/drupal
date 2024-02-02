@@ -4,6 +4,7 @@ Add this to `"$HOME"/.bashrc`.
 export -f drupal_upgrade
 
 drupal_upgrade() {
+    vendor/bin/drush status
     chmod u+w web/sites/default
     composer update
     vendor/bin/drush updatedb
