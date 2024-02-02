@@ -102,6 +102,7 @@ composer remove 'drupal/context:^5.0@RC'
 ## Minor upgrade
 
 ```shell
+vendor/bin/drush status # Validate current version
 cd WEB_APPLICATION_DIR_NAME
 chmod u+w web/sites/default
 composer update
