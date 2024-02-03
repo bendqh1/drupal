@@ -123,9 +123,9 @@ Run:
 source "$HOME"/.bashrc 2>/dev/null
 ```
 
-### Website isn't upgraded to last Drupal core version
+### Drupal isn't upgraded to the last Drupal core version (but to an earlier version)
 
-```composer why-not drupal/core 10.2.2```
+```composer why-not drupal/core LATEST_DRUPAL_CORE_VERSION```
 
 Check for conflicts and instructions.
 
@@ -133,8 +133,12 @@ If Drush is too old:
 
 ```shell
 composer remove drush/drush
+chmod u+w web/sites/default
 composer update
+chmod u-w web/sites/default
 composer require drush/drush
+vendor/bin/drush updatedb
+vendor/bin/drush cache:rebuild
 ```
 
 ### Could not delete default.settings.php
