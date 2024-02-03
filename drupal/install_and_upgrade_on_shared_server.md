@@ -101,17 +101,26 @@ composer remove 'drupal/context:^5.0@RC'
 
 ## Minor upgrade
 
+Add this to `"$HOME"/.bashrc`.
+
 ```shell
-vendor/bin/drush status # Validate current version
-cd WEB_APPLICATION_DIR_NAME
-chmod u+w web/sites/default
-composer update
-vendor/bin/drush updatedb
-vendor/bin/drush cache:rebuild
-chmod u-w web/sites/default
-vendor/bin/drush status # Validate new version
-# chmod commands explanation below.
-# composer update || "drupal/core-*" --with-all-dependencies
+export -f drupal_upgrade
+
+drupal_upgrade() {
+	vendor/bin/drush status # Validate current version
+	chmod u+w web/sites/default
+	composer update
+	vendor/bin/drush updatedb
+	vendor/bin/drush cache:rebuild
+	chmod u-w web/sites/default
+	vendor/bin/drush status # Validate new version
+}
+```
+
+Run:
+
+```shell
+source "$HOME"/.bashrc 2>/dev/null
 ```
 
 ### Website isn't upgraded to last Drupal core version
