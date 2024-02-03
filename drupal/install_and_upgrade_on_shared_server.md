@@ -120,6 +120,14 @@ vendor/bin/drush status # Validate new version
 
 Check for conflicts and instructions.
 
+If Drush is too old:
+
+```shell
+composer remove drush/drush
+composer update
+composer require drush/drush
+```
+
 ### Could not delete default.settings.php
 
 > Could not delete /public_html/example.com/web/sites/default/default.settings.php:
