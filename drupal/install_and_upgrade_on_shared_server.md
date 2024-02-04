@@ -101,7 +101,7 @@ composer remove 'drupal/context:^5.0@RC'
 
 ## Minor upgrade
 
-Add this to `"$HOME"/.bashrc`.
+Add to `"$HOME"/.bashrc`.
 
 ```shell
 export -f drupal_upgrade
