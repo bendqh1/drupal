@@ -107,6 +107,7 @@ Add to `"$HOME"/.bashrc`.
 export -f drupal_upgrade
 
 drupal_upgrade() {
+	composer show drupal/core --latest | grep 'latest'
 	vendor/bin/drush status # Validate current version
 	chmod u+w web/sites/default
 	composer update
