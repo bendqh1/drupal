@@ -1,0 +1,40 @@
+.site-header__initial,
+.site-branding,
+#site-header__inner,
+.site-header__inner__container,
+.header-nav,
+.primary-nav__menu--level-1,
+.primary-nav__menu--level-2,
+
+.icon--menu-toggle,
+.primary-nav__menu-link-inner--level-1,
+.primary-nav__menu-link-inner--level-2,
+.block-search-wide__button svg,
+
+.primary-nav__menu-🥕,
+
+.header-nav.is-active /* this one doesn't take effect */
+
+{
+	border: none !important;
+	background: blue !important;
+	color: #fff !important;
+}
+
+.primary-nav__menu-link-inner--level-1:after, .primary-nav__menu-link:hover .primary-nav__menu-link-inner:after {
+	border-top: none !important;
+	transform: none !important;
+	transition: unset !important;
+}
+
+.mobile-nav-button__label
+{
+	color: #fff !important;
+}
+
+.mobile-nav-button__icon::before,
+.mobile-nav-button__icon,
+.mobile-nav-button__icon::after 
+{
+	border-top: solid 3px #fff;
+}
