@@ -1,0 +1,21 @@
+// ==UserScript==
+// @name         Drupal ltr
+// @match        https://example.com/node/651
+
+// ==/UserScript==
+
+/* select all elements without a CSS class */
+
+window.setInterval( ()=>{
+    document.querySelector('*').style.direction = "ltr";
+}, 1);
+
+	/* select all elements with a css class */
+
+	window.setInterval( ()=>{
+	    document.querySelector('.text-align-left').style.direction = "ltr";
+	}, 1);
+	
+	window.setInterval( ()=>{
+	    document.querySelector('.ck-editor__editable').style.direction = "ltr";
+	}, 1);
