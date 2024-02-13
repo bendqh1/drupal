@@ -1,3 +1,5 @@
+You may need to wrap the following code snippets in `window.setTimeout( ()=>{CODE}, 1000);`.
+
 ## Click Edit primary tab
 
 ```js
