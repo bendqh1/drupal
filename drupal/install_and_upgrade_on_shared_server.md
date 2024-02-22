@@ -108,13 +108,13 @@ export -f drupal_upgrade
 
 drupal_upgrade() {
 	composer show drupal/core --latest | grep 'latest'
-	vendor/bin/drush status # Validate current version
+	vendor/bin/drush status # Validate current Drupal version
 	chmod u+w web/sites/default
 	composer update
 	vendor/bin/drush updatedb
 	vendor/bin/drush cache:rebuild
 	chmod u-w web/sites/default
-	vendor/bin/drush status # Validate new version
+	vendor/bin/drush status # Validate new Drupal version
 }
 ```
 
