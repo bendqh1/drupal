@@ -1,0 +1,34 @@
+/* ---------- */
+/* ---------- */
+/* ---------- */
+/* ---------- */
+/* ---------- */
+/* NEW HEADER SETTINGS */
+/* ---------- */
+/* ---------- */
+/* ---------- */
+/* ---------- */
+/* ---------- */
+
+.region--new-header .layout--twocol-section {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	background: blue;
+}
+
+.region--new-header .layout__region--second {
+	padding: var(--majoris);
+	text-align: left;
+}
+
+.region--new-header .site-branding {
+	display: flex;
+	align-items: center;
+	margin: 0;
+	background: unset;
+}
+
+.region--new-header .site-branding__inner {
+	margin: 0;
+}
