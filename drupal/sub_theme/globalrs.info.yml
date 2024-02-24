@@ -1,7 +1,0 @@
-name: globalrs
-type: theme
-core_version_requirement: ^8 || ^9
-description: Global resources
-base theme: olivero
-libraries:
-  - globalrs/resources
