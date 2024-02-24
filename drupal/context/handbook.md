@@ -1,6 +1,6 @@
 ## Context condition by role with reaction by theme causes website to partially crash
 
-As indicated by `vendor/bin/drush watchdog:show` the problem was in a twig file of the Basic theme because when I have changed in `/themes/contrib/basic/templates/layout/html.html.twig` from this:
+As indicated by `drush watchdog:show` the problem was in a twig file of the Basic theme because when I have changed in `/themes/contrib/basic/templates/layout/html.html.twig` from this:
 
 ```twig
 <!DOCTYPE html>
