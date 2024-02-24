@@ -1,6 +1,0 @@
-resources:
-  js:
-    behavior.js: {}
-  css:
-    theme:
-      style.css: {}
