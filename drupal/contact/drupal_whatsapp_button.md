@@ -1,17 +1,15 @@
-Add this to the HTML if you don't want to add a button by mere JavaScript:
+Add these data.
 
-## HTML
+## HTML in main JavaScript file
 
 ```html
-<aside class="cbwtphone_wrapper" style="display: flex; align-items: center; justify-content: center; position: fixed; right: 0; bottom: 0; left: 0; z-index: 2147483647; text-decoration: none; font-size: 120%; font-weight: bold; background: linear-gradient(-160deg,#2494db 0%,#0d7ab8 78.66%)">
-	<a href="https://wa.me/NUMBER" style="display: inline; text-decoration: none;">
-		<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/1024px-WhatsApp.svg.png" style="display: inline; width: 50px; height: 50px; vertical-align: middle;"></img>
-		<span style="display: inline; vertical-align: middle; color: #fff;">WhatsApp Call</span>
-	</a>
+document.body.insertAdjacentHTML('beforeend', `
+<aside class="cbwtphone_wrapper">
 </aside>
+`)
 ```
 
-## CSS
+## CSS for a floating button wrapper
 
 ```css
 .cbwtphone_wrapper {
@@ -23,25 +21,58 @@ Add this to the HTML if you don't want to add a button by mere JavaScript:
 	bottom: 0;
 	left: 0;
 	z-index: 2147483647;
-        max-height: 36px;
+	max-height: var(--contactWidget);
+	height: var(--contactWidget);
 	text-decoration: none;
 	font-size: 120%;
 	font-weight: bold;
-	background: linear-gradient(-160deg,#2494db 0%,#0d7ab8 78.66%)
+	background: linear-gradient(-160deg,#2494db 0%,#0d7ab8 78.66%);
 }
-.cbwtphone_link {
-	display: inline;
-	text-decoration: none;
-}
-.cbwtphone_icon {
-	display: inline;
-	width: 50px;
-	height: 50px;
-	vertical-align: middle;
-}
-.cbwtphone_text {
-	display: inline;
-	vertical-align: middle;
+
+.cbwtphone_wrapper a {
 	color: #fff;
+}
+.cbwtphone_wrapper a:hover {
+	color: #000 !important;
+}
+.cbwtphone_wrapper a:focus {
+	color: #fff !important;
+}
+.cbwtphone_wrapper a:active {
+	color: #fff !important;
+}
+.cbwtphone_wrapper a:visited {
+	color: #fff;
+}
+```
+
+## CSS for a WhatsApp button inside a floating button wrapper
+
+```css
+.whatsapp_link {
+	display: inline-block;
+	height: var(--contactWidget);
+	max-height: var(--contactWidget);
+	transition: none !important;
+	box-shadow: none !important;
+	text-decoration: none !important;
+}
+
+.whatsapp_link:hover {
+	text-decoration: none !important;
+}
+
+.whatsapp_icon {
+	display: inline;
+	vertical-align: middle;
+	width: var(--contactWidget);
+	height: var(--contactWidget);
+	max-width: var(--contactWidget);
+	max-height: var(--contactWidget);
+}
+
+.whatsapp_text {
+	display: inline;
+	vertical-align: middle;
 }
 ```
