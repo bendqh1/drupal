@@ -6,7 +6,7 @@ Add to `"$HOME"/.bashrc`
 PATH=$PATH:./vendor/bin
 ```
 
-source `"$HOME/.bashrc"`.
+`source "$HOME/.bashrc"`.
 
 ## Setup Drupal
 
