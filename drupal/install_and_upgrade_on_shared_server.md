@@ -1,8 +1,12 @@
 ## Add Drush alias from PATH environment variable
 
+Add to `"$HOME"/.bashrc`
+
 ```shell
-export PATH=$PATH:/vendor/bin/drush
+PATH=$PATH:./vendor/bin
 ```
+
+source `"$HOME/.bashrc"`.
 
 ## Setup Drupal
 
