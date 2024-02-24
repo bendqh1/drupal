@@ -9,7 +9,7 @@ In cases of shared hosting a support ticket to the team to check this might be n
 
 ## Watchdog
 
-* `vendor/bin/drush watchdog:show` may output something like this:
+* `drush watchdog:show` may output something like this:
 
 ```
 ------- -------------- ---------------- ---------- -------------------------------------------------------------------------------------------
