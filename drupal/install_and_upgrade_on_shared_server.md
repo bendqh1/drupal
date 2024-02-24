@@ -1,6 +1,6 @@
 ## Add Drush alias from PATH environment variable
 
-Add to `"$HOME"/.bashrc`
+Add to `"$HOME"/.bashrc`:
 
 ```shell
 PATH=$PATH:./vendor/bin
