@@ -7,7 +7,7 @@
 ## Reset a user password with Drush
 
 ```shell
-vendor/bin/drush user:password USERNAME "SOMEPASSWORD"
+drush user:password USERNAME "SOMEPASSWORD"
 ```
 
 ## In case there are no minimal URLs
@@ -23,7 +23,7 @@ https://www.drupal.org/docs/develop/development-tools/disable-caching
 ### Flush all caches
 
 ```shell
-vendor/bin/drush cache-rebuild
+drush cache-rebuild
 ```
 
 ## Common modules
