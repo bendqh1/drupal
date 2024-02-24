@@ -26,32 +26,32 @@ composer create-project drupal/recommended-project:9.0.0 WEB_APPLICATION_DIR_NAM
 cd WEB_APPLICATION_DIR_NAME
 composer require drush/drush
 composer update
-vendor/bin/drush updatedb
+drush updatedb
 ```
 
 ## Setup a theme
 
 ```shell
 composer update
-vendor/bin/drush updatedb
+drush updatedb
 composer require drupal/THEME_NAME
-vendor/bin/drush theme:enable THEME_NAME
+drush theme:enable THEME_NAME
 ```
 
 ## Setup a module
 
 ```shell
 composer update
-vendor/bin/drush updatedb
+drush updatedb
 composer require drupal/MODULE_NAME
-vendor/bin/drush en MODULE_NAME
+drush en MODULE_NAME
 ```
 
 ### Setup the module layout_builder_modal
 
 ```shell
 composer require 'drupal/layout_builder_modal:^1.2'
-vendor/bin/drush en layout_builder_modal
+drush en layout_builder_modal
 ```
 
 ### Setup the module Context
@@ -60,16 +60,16 @@ Use a command like this (check for updates in https://www.drupal.org/project/con
 
 ```shell
 composer require 'drupal/context:^5.0@RC'
-vendor/bin/drush en context
-vendor/bin/drush en context_ui
+drush en context
+drush en context_ui
 ```
 
 ## Unsetup a theme
 
 ```shell
 composer update
-vendor/bin/drush updatedb
-vendor/bin/drush theme:uninstall THEME_NAME
+drush updatedb
+drush theme:uninstall THEME_NAME
 composer remove drupal/THEME_NAME
 ```
 
@@ -77,15 +77,15 @@ composer remove drupal/THEME_NAME
 
 ```shell
 composer update
-vendor/bin/drush updatedb
-vendor/bin/drush un MODULE_NAME
+drush updatedb
+drush un MODULE_NAME
 composer remove drupal/MODULE_NAME
 ```
 
 ### Unsetup the module layout_builder_modal
 
 ```shell
-vendor/bin/drush un layout_builder_modal
+drush un layout_builder_modal
 composer remove 'drupal/layout_builder_modal:^1.2'
 ```
 
@@ -94,8 +94,8 @@ composer remove 'drupal/layout_builder_modal:^1.2'
 Use a command like this (check for updates in https://www.drupal.org/project/context):
 
 ```shell
-vendor/bin/drush un context_ui
-vendor/bin/drush un context
+drush un context_ui
+drush un context
 composer remove 'drupal/context:^5.0@RC'
 ```
 
@@ -108,13 +108,13 @@ export -f drupal_upgrade
 
 drupal_upgrade() {
 	composer show drupal/core --latest | grep 'latest'
-	vendor/bin/drush status # Validate current Drupal version
+	drush status # Validate current Drupal version
 	chmod u+w web/sites/default
 	composer update
-	vendor/bin/drush updatedb
-	vendor/bin/drush cache:rebuild
+	drush updatedb
+	drush cache:rebuild
 	chmod u-w web/sites/default
-	vendor/bin/drush status # Validate new Drupal version
+	drush status # Validate new Drupal version
 }
 ```
 
@@ -138,8 +138,8 @@ chmod u+w web/sites/default
 composer update
 chmod u-w web/sites/default
 composer require drush/drush
-vendor/bin/drush updatedb
-vendor/bin/drush cache:rebuild
+drush updatedb
+drush cache:rebuild
 ```
 
 ### Could not delete default.settings.php
@@ -169,8 +169,8 @@ chmod 666 web/sites/default/*settings.php
 chmod 666 web/sites/default/*services.yml
 composer require 'drupal/core-recommended:^10' 'drupal/core-composer-scaffold:^10' 'drupal/core-project-message:^10' --update-with-dependencies --no-update
 composer update
-vendor/bin/drush updatedb
-vendor/bin/drush cache:rebuild
+drush updatedb
+drush cache:rebuild
 chmod 755 web/sites/default
 chmod 644 web/sites/default/*settings.php
 chmod 644 web/sites/default/*services.yml
