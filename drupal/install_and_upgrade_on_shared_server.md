@@ -116,8 +116,6 @@ composer remove 'drupal/context:^5.0@RC'
 Add to `"$HOME"/.bashrc`.
 
 ```shell
-export -f drupal_upgrade
-
 drupal_upgrade() {
 	composer show drupal/core --latest | grep 'latest'
 	drush status # Validate current Drupal version
@@ -128,6 +126,8 @@ drupal_upgrade() {
 	chmod u-w web/sites/default
 	drush status # Validate new Drupal version
 }
+
+export -f drupal_upgrade
 ```
 
 Run:
