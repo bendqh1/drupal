@@ -1,5 +1,7 @@
 ## Add Drush alias from PATH environment variable
 
+To prevent executing vendor/bin/drush all the time do:
+
 Add to `"$HOME"/.bashrc`:
 
 ```shell
