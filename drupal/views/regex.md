@@ -1,4 +1,10 @@
-## Select a set of nodes to display in a view:
+## Select a set of nodes to display in a view
+
+```regex
+692|694|695|696|697|698
+```
+
+## Force ordinality when selecting a set of nodes to display in a view
 
 ```regex
 ^(66|661|664|666)$
