@@ -4,8 +4,9 @@ Add these data.
 
 ```html
 document.body.insertAdjacentHTML('beforeend', `
-<aside class="cbwtphone_wrapper">
-</aside>
+	<aside class="cbwtphone_wrapper">
+		<a href="WHATSAPP_NUMBER" class="whatsapp_text">שיחת וואטסאפ<img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="whatsapp_call_icon" class="whatsapp_icon"></img></a>
+	</aside>
 `)
 ```
 
