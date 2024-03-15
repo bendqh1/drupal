@@ -1,19 +1,22 @@
 Add these data.
 
-## HTML in main JavaScript file
+## JavaScript file HTML
 
-```html
+```js
 document.body.insertAdjacentHTML('beforeend', `
-	<aside class="cbwtphone_wrapper">
-		<a href="WHATSAPP_NUMBER" class="whatsapp_text">שיחת וואטסאפ<img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="whatsapp_call_icon" class="whatsapp_icon"></img></a>
+	<aside class="voip_wrapper">
+	<a href="https://wa.me/972584750900" class="voip_link">
+	    <span class="voip_text">שיחת וואטסאפ</span>
+	    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="voip_call_icon" class="voip_icon"></img>
+	</a>
 	</aside>
 `)
 ```
 
-## CSS for a floating button wrapper
+## CSS
 
 ```css
-.cbwtphone_wrapper {
+.voip_wrapper {
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -27,52 +30,37 @@ document.body.insertAdjacentHTML('beforeend', `
 	text-decoration: none;
 	font-size: 120%;
 	font-weight: bold;
-	background: linear-gradient(-160deg,#2494db 0%,#0d7ab8 78.66%);
+	background: var(--primaryColor);
 }
 
-.cbwtphone_wrapper a {
-	color: #fff;
-}
-.cbwtphone_wrapper a:hover {
-	color: #000 !important;
-}
-.cbwtphone_wrapper a:focus {
-	color: #fff !important;
-}
-.cbwtphone_wrapper a:active {
-	color: #fff !important;
-}
-.cbwtphone_wrapper a:visited {
-	color: #fff;
-}
-```
-
-## CSS for a WhatsApp button inside a floating button wrapper
-
-```css
-.whatsapp_link {
+.voip_link {
 	display: inline-block;
 	height: var(--contactWidget);
 	max-height: var(--contactWidget);
 	transition: none !important;
 	box-shadow: none !important;
 	text-decoration: none !important;
+	color: #fff;
 }
 
-.whatsapp_link:hover {
+.voip_link:hover {
 	text-decoration: none !important;
+	color: #000;
 }
 
-.whatsapp_icon {
+.voip_icon {
 	display: inline;
 	vertical-align: middle;
+
 	width: var(--contactWidget);
 	height: var(--contactWidget);
 	max-width: var(--contactWidget);
 	max-height: var(--contactWidget);
+
+	margin-right: 5px;
 }
 
-.whatsapp_text {
+voip_text {
 	display: inline;
 	vertical-align: middle;
 }
