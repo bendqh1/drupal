@@ -31,3 +31,5 @@ I didn't find a simple way to add a class with Twig so I have added it with HTML
   {{ page.example }}
 </div>
 ```
+
+To test the webpage change flush all caches with Drush and flush all web browser cache.
