@@ -62,7 +62,7 @@ drush en MODULE_NAME
 ### Setup the module `convert_bundles`
 
 ```shell
-composer require drupal/convert_bundles
+composer require 'drupal/convert_bundles:^2.0@beta'
 drush en convert_bundles
 ```
 
