@@ -59,14 +59,14 @@ composer require drupal/MODULE_NAME
 drush en MODULE_NAME
 ```
 
-### Setup the module layout_builder_modal
+### Setup the module `convert_bundles`
 
 ```shell
-composer require 'drupal/layout_builder_modal:^1.2'
-drush en layout_builder_modal
+composer require 'drupal/convert_bundles
+drush en convert_bundles
 ```
 
-### Setup the module Context
+### Setup the module `context`
 
 Use a command like this (check for updates in https://www.drupal.org/project/context):
 
