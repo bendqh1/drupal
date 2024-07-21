@@ -156,6 +156,10 @@ I was wrong.<br>
 the taxonomy-term-page did mentioned this node.<br>
 I didn't notice that due to it having only one value, the value text was very generic and short `תכנים אחרונים` and no link styling was directly apparent.
 
+## Is it possible to use Drupal to host an online asset?
+
+* https://drupal.stackexchange.com/questions/318011/is-it-possible-to-use-drupal-to-host-an-online-asset
+
 ### Chapters in articles
 
 * הערות כלליות (עם ul)
