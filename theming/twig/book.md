@@ -33,3 +33,9 @@ I didn't find a simple way to add a class with Twig so I have added it with HTML
 ```
 
 To test the webpage change flush all caches with Drush and flush all web browser cache.
+
+## Add a dynamic year ender to a footer Twig file
+
+```twig
+<span class="globalrs_dynamic_year">{{ 'now' | date('Y') }}</span>
+```
