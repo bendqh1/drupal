@@ -5,7 +5,7 @@ If you are using the default taxonomy term view:
 1. Go to `admin/structure/views/view/taxonomy_term`.
 2. Do a <kbd>CTRL</kbd>+<kbd>F</kbd> search with `When the filter value IS in the URL or a default is provided`.
 3. Click on "Override Title".
-4. Change title accordingly.
+4. Change `{{ arguments.tid }}` to say `Articles in {{ arguments.tid }}`.
 
 ### Notes
 
