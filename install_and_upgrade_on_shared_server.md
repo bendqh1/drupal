@@ -92,11 +92,11 @@ drush un MODULE_NAME
 composer remove drupal/MODULE_NAME
 ```
 
-### Unsetup the module layout_builder_modal
+### Unsetup the module `convert_bundles`
 
 ```shell
-drush un layout_builder_modal
-composer remove 'drupal/layout_builder_modal:^1.2'
+drush en convert_bundles
+composer remove 'drupal/convert_bundles:^2.0@beta'
 ```
 
 ### Unsetup the module Context
