@@ -79,8 +79,7 @@ drush en context_ui
 ## Unsetup a theme
 
 ```shell
-composer update
-drush updatedb
+# minor upgrade
 drush theme:uninstall THEME_NAME
 composer remove drupal/THEME_NAME
 ```
@@ -88,8 +87,7 @@ composer remove drupal/THEME_NAME
 ## Unsetup a module
 
 ```shell
-composer update
-drush updatedb
+# minor upgrade
 drush un MODULE_NAME
 composer remove drupal/MODULE_NAME
 ```
