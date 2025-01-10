@@ -1,5 +1,7 @@
 ## Question
 
+**How can I bulk-add a field to all content types and bulk-delete a field from all content types?**
+
 In **10.3.10** I have approximately thirty content types and there is a boolean field I wish to bulk-add to all these content types, and may need to bulk-delete from all content types in the future.
 
 How can I bulk-add a field to all content types and bulk-delete a field from all content types?
