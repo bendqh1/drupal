@@ -151,7 +151,9 @@ A problem common when hosting Drupal on shared hosting.
 
 If, from `php -v` and from `composer -vvv about` the PHP version is higher then listed, then a resetting the PHP version to the highest version possible for an entire Cpanel (and probably also for a specific domain in Cpanel) is needed. Other action/s may be needed as well. The web hosting support staff should take care of this.
 
+<br>
 <hr>
+<br>
 
 ## Fix Trusted Hosts error
 
@@ -217,7 +219,9 @@ chmod 644 web/sites/default/*settings.php
 
 > While D10 is considered a "minor" update from D9 in terms of what actually changed (remaining APIs mostly the same), it's still a major version bump. `composer update` only does minor and patch version bumps. Any major version bumps need `composer require`. Following semver guidelines, **API removal** counts towards a major version bump because that's a potentially breaking change.
 
+<br>
 <hr>
+<br>
 
 ## Major upgrade
 
