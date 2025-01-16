@@ -115,6 +115,7 @@ Add to `"$HOME"/.bashrc`.
 
 ```shell
 drupal_upgrade() {
+drush cache:rebuild
 echo -e "\033[43m\033[30m If you haven't already, then go to the website directory and run this. \033[0m"
 composer show drupal/core --latest | grep 'latest'
 drush status # Validate current Drupal version
@@ -172,20 +173,7 @@ If, from `php -v` and from `composer -vvv about` the PHP version is higher then 
 ```shell
 # Backup database
 # Backup filetree
-
-cd WEB_APPLICATION_DIR
 # Do minor upgrade
-drush cache:rebuild
-chmod 777 web/sites/default
-chmod 666 web/sites/default/*settings.php
-chmod 666 web/sites/default/*services.yml
-composer require 'drupal/core-recommended:^10' 'drupal/core-composer-scaffold:^10' 'drupal/core-project-message:^10' --update-with-dependencies --no-update
-composer update
-drush updatedb
-drush cache:rebuild
-chmod 755 web/sites/default
-chmod 644 web/sites/default/*settings.php
-chmod 644 web/sites/default/*services.yml
 ```
 
 ## Upgrading an old Drupal manually
