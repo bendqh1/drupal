@@ -115,16 +115,16 @@ Add to `"$HOME"/.bashrc`.
 
 ```shell
 drupal_upgrade() {
-drush cache:rebuild
-echo -e "\033[43m\033[30m If you haven't already, then go to the website directory and run this. \033[0m"
-composer show drupal/core --latest | grep 'latest'
-drush status # Validate current Drupal version
-chmod u+w web/sites/default
-composer update
-drush updatedb
-drush cache:rebuild
-chmod u-w web/sites/default
-drush status # Validate new Drupal version
+	echo -e "\033[43m\033[30m If you haven't already, then go to the website directory and run this. \033[0m"
+	drush cache:rebuild
+	composer show drupal/core --latest | grep 'latest'
+	drush status # Validate current Drupal version
+	chmod u+w web/sites/default
+	composer update
+	drush updatedb
+	chmod u-w web/sites/default
+	drush status # Validate new Drupal version
+	drush cache:rebuild
 }
 
 export -f drupal_upgrade
