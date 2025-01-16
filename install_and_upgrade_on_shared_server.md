@@ -151,17 +151,7 @@ A problem common when hosting Drupal on shared hosting.
 
 If, from `php -v` and from `composer -vvv about` the PHP version is higher then listed, then a resetting the PHP version to the highest version possible for an entire Cpanel (and probably also for a specific domain in Cpanel) is needed. Other action/s may be needed as well. The web hosting support staff should take care of this.
 
-## Major upgrade
-
-```shell
-# Backup database
-# Backup filetree
-# Do minor upgrade
-```
-
-## Upgrading an old Drupal manually
-
-Small old Drupal websites (versions 1-7) of up to say 10 webpages are best upgraded manually by saving webpage copy (right mouse click >> Save as HTML named `1.html` up to say `10.html` with the directories) and then pasting data from copies in a fresh Drupal.
+<hr>
 
 ## Fix Trusted Hosts error
 
@@ -226,3 +216,19 @@ chmod 644 web/sites/default/*settings.php
 * https://unix.stackexchange.com/questions/730301/understanding-the-composer-commands-for-upgrading-drupal-9-to-drupal-10
 
 > While D10 is considered a "minor" update from D9 in terms of what actually changed (remaining APIs mostly the same), it's still a major version bump. `composer update` only does minor and patch version bumps. Any major version bumps need `composer require`. Following semver guidelines, **API removal** counts towards a major version bump because that's a potentially breaking change.
+
+<hr>
+
+## Major upgrade
+
+```shell
+# Backup database
+# Backup filetree
+# Do minor upgrade
+```
+
+## Upgrading an old Drupal manually
+
+Small old Drupal websites (versions 1-7) of up to say 10 webpages are best upgraded manually by saving webpage copy (right mouse click >> Save as HTML named `1.html` up to say `10.html` with the directories) and then pasting data from copies in a fresh Drupal.
+
+
