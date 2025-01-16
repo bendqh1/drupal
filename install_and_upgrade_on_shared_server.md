@@ -175,6 +175,7 @@ If, from `php -v` and from `composer -vvv about` the PHP version is higher then 
 
 cd WEB_APPLICATION_DIR
 # Do minor upgrade
+drush cache:rebuild
 chmod 777 web/sites/default
 chmod 666 web/sites/default/*settings.php
 chmod 666 web/sites/default/*services.yml
