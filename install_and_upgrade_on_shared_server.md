@@ -57,23 +57,7 @@ composer update
 drush updatedb
 composer require drupal/MODULE_NAME
 drush en MODULE_NAME
-```
-
-### Setup the module `convert_bundles`
-
-```shell
-composer require 'drupal/convert_bundles:^2.0@beta'
-drush en convert_bundles
-```
-
-### Setup the module `context`
-
-Use a command like this (check for updates in https://www.drupal.org/project/context):
-
-```shell
-composer require 'drupal/context:^5.0@RC'
-drush en context
-drush en context_ui
+# perhaps drupal/convert_bundles:^2.0@beta instead of drupal/convert_bundles
 ```
 
 ## Unsetup a theme
