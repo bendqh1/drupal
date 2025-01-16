@@ -31,7 +31,7 @@ If you get:
 
 change the PHP library from `libmysqlclient` to `MySQLnd` -- that is, enabling `nd_pdo_mysql` instead of `pdo_mysql`.
 
-### Setup specific Drupal
+### Setup a specific Drupal
 
 ```shell
 composer create-project drupal/recommended-project:9.0.0 WEB_APPLICATION_DIR_NAME
