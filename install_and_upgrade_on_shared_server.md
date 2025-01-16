@@ -115,7 +115,7 @@ Add to `"$HOME"/.bashrc`.
 
 ```shell
 drupal_upgrade() {
-echo -e "\033[43m If you haven't already, then go to the website directory and run this. \033[0m"
+echo -e "\033[43m\033[30m If you haven't already, then go to the website directory and run this. \033[0m"
 composer show drupal/core --latest | grep 'latest'
 drush status # Validate current Drupal version
 chmod u+w web/sites/default
