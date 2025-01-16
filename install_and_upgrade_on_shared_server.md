@@ -57,7 +57,6 @@ composer update
 drush updatedb
 composer require drupal/MODULE_NAME
 drush en MODULE_NAME
-# perhaps drupal/convert_bundles:^2.0@beta instead of drupal/convert_bundles
 ```
 
 ## Unsetup a theme
