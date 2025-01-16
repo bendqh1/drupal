@@ -119,7 +119,9 @@ Run:
 source "$HOME"/.bashrc 2>/dev/null
 ```
 
-### Drupal isn't upgraded to the last Drupal core version (but to an earlier version)
+### Minor upgrade error handling
+
+#### Drupal isn't upgraded to the last Drupal core version (but to an earlier version)
 
 ```composer why-not drupal/core LATEST_DRUPAL_CORE_VERSION```
 
@@ -137,7 +139,7 @@ drush updatedb
 drush cache:rebuild
 ```
 
-### Could not delete default.settings.php
+#### Could not delete default.settings.php
 
 > Could not delete /public_html/example.com/web/sites/default/default.settings.php:
 
@@ -145,7 +147,7 @@ Drupal users often need to run `chmod u+w web/sites/default` before `composer up
 
 [More information here](https://drupal.stackexchange.com/questions/314209/when-does-system-requirements-function-runs).
 
-### "Composer detected issues in your platform: Your Composer dependencies require a PHP version ">= x.x.x"
+#### "Composer detected issues in your platform: Your Composer dependencies require a PHP version ">= x.x.x"
 
 A problem common when hosting Drupal on shared hosting.
 
