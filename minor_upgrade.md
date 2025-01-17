@@ -3,6 +3,7 @@ Add to `"$HOME"/.bashrc`.
 ```shell
 drupal_upgrade() {
 	echo -e "\033[43m\033[30m If you haven't already, then go to the website directory and run this. \033[0m"
+
 	composer remove drush/drush
 	chmod u+w web/sites/default
 	composer update
