@@ -139,33 +139,6 @@ chmod 644 web/sites/default/*settings.php
 
 > While D10 is considered a "minor" update from D9 in terms of what actually changed (remaining APIs mostly the same), it's still a major version bump. `composer update` only does minor and patch version bumps. Any major version bumps need `composer require`. Following semver guidelines, **API removal** counts towards a major version bump because that's a potentially breaking change.
 
-<br>
-<hr>
-<br>
-
-## Major upgrade
-
-```shell
-# Backup database
-# Backup filetree
-# Do minor upgrade
-
-chmod 777 web/sites/default
-chmod 666 web/sites/default/*settings.php
-chmod 666 web/sites/default/*services.yml
-composer require 'drupal/core-recommended:^11' 'drupal/core-composer-scaffold:^11' 'drupal/core-project-message:^11' --update-with-dependencies --no-update
-composer require 'drush/drush:^13' --no-update
-composer update --dry-run
-composer update "drupal/core-*" drush/drush --with-all-dependencies --dry-run
-composer install
-drush updatedb:status
-drush updatedb
-drush cache:rebuild
-chmod 755 web/sites/default
-chmod 644 web/sites/default/*settings.php
-chmod 644 web/sites/default/*services.yml
-```
-
 ## Upgrading an old Drupal manually
 
 Small old Drupal websites (versions 1-7) of up to say 10 webpages are best upgraded manually by saving webpage copy (right mouse click >> Save as HTML named `1.html` up to say `10.html` with the directories) and then pasting data from copies in a fresh Drupal.
