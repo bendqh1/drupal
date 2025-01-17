@@ -99,6 +99,14 @@ Add to `"$HOME"/.bashrc`.
 ```shell
 drupal_upgrade() {
 	echo -e "\033[43m\033[30m If you haven't already, then go to the website directory and run this. \033[0m"
+	composer remove drush/drush
+	chmod u+w web/sites/default
+	composer update
+	chmod u-w web/sites/default
+	composer require drush/drush
+	drush updatedb
+	drush cache:rebuild
+
 	drush cache:rebuild
 	composer show drupal/core --latest | grep 'latest'
 	drush status # Validate current Drupal version
@@ -123,20 +131,11 @@ source "$HOME"/.bashrc 2>/dev/null
 
 #### Drupal isn't upgraded to the last Drupal core version (but to an earlier version)
 
+This error shouldn't happen if Drush is removed and re-required but if it happens:
+
 ```composer why-not drupal/core LATEST_DRUPAL_CORE_VERSION```
 
 Check for conflicts and instructions.
-
-If Drush is too old:
-
-```shell
-composer remove drush/drush
-chmod u+w web/sites/default
-composer update
-chmod u-w web/sites/default
-composer require drush/drush
-drush updatedb
-drush cache:rebuild
 ```
 
 #### Could not delete default.settings.php
