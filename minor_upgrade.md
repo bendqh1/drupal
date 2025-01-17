@@ -37,10 +37,11 @@ source "$HOME"/.bashrc 2>/dev/null
 
 This error shouldn't happen if Drush is removed and re-required but if it happens:
 
-```composer why-not drupal/core LATEST_DRUPAL_CORE_VERSION```
+```
+composer why-not drupal/core LATEST_DRUPAL_CORE_VERSION
+```
 
 Check for conflicts and instructions.
-```
 
 #### Could not delete default.settings.php
 
