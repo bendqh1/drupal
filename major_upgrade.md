@@ -12,7 +12,7 @@ chmod 666 web/sites/default/*settings.php
 chmod 666 web/sites/default/*services.yml
 ```
 
-## Preview requiring changes and make them if there are no errors
+## Preview `require` changes and make them if there are no errors
 
 ```shell
 composer require 'drupal/core-recommended:^11' 'drupal/core-composer-scaffold:^11' 'drupal/core-project-message:^11' -with-all-dependencies --dry-run
@@ -20,7 +20,7 @@ composer require 'drupal/core-recommended:^11' 'drupal/core-composer-scaffold:^1
 composer require 'drupal/core-recommended:^11' 'drupal/core-composer-scaffold:^11' 'drupal/core-project-message:^11' -with-all-dependencies
 ```
 
-## Preview upgrade changes and make them if there are no errors
+## Preview `upgrade` changes and make them if there are no errors
 
 ```shell
 composer update --dry-run ## dry-run means preview so if there are no errors, proceed.
