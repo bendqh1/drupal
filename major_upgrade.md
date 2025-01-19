@@ -1,12 +1,12 @@
 ## General process
 
-Preperations
+### Preperations
 
 * Backup database
 * Backup filetree
 * Do minor upgrade
 
-Permissions
+### Permissions
 
 ```shell
 chmod 777 web/sites/default
@@ -14,7 +14,7 @@ chmod 666 web/sites/default/*settings.php
 chmod 666 web/sites/default/*services.yml
 ```
 
-## Preview `require` changes and make them if there are no errors
+### Preview `require` changes and make them if there are no errors
 
 ```shell
 composer require 'drupal/core-recommended:^11' 'drupal/core-composer-scaffold:^11' 'drupal/core-project-message:^11' -with-all-dependencies --dry-run
@@ -22,7 +22,7 @@ composer require 'drupal/core-recommended:^11' 'drupal/core-composer-scaffold:^1
 composer require 'drupal/core-recommended:^11' 'drupal/core-composer-scaffold:^11' 'drupal/core-project-message:^11' -with-all-dependencies
 ```
 
-## Preview `upgrade` changes and make them if there are no errors
+### Preview `upgrade` changes and make them if there are no errors
 
 ```shell
 composer update --dry-run ## dry-run means preview so if there are no errors, proceed.
@@ -32,7 +32,7 @@ drush updatedb
 drush cache:rebuild
 ```
 
-## Shell
+### Permissions
 
 ```shell
 chmod 755 web/sites/default
