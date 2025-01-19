@@ -40,9 +40,7 @@ chmod 644 web/sites/default/*settings.php
 chmod 644 web/sites/default/*services.yml
 ```
 
-## In case of mismatches
-
-If you encounter various mismatches when upgrading Drupal you may want to consider restarting your composer.json and composer.lock files:
+## In case of several version mismatches one may want to restart the project's Composer files
 
 ```shell
 cd $web_application_dir
