@@ -11,3 +11,33 @@ drush en convert_bundles
 drush un convert_bundles
 composer remove 'drupal/convert_bundles:^2.0@beta'
 ```
+
+## Patching
+
+### Install CWE-GANS patching tool for your project
+
+```shell
+composer require cweagans/composer-patches
+```
+
+### Edit `composer.json`
+
+```json
+"extra": {
+  "patches": {
+    "drupal/convert_bundles": {
+      "Patch for issue [description]": "https://git.drupalcode.org/project/convert_bundles/-/commit/ff84148fcfad099d2d89dda6c8733044013caed7.patch"
+    }
+  }
+}
+```
+
+### Apply the patch
+
+```shell
+composer install
+```
+
+### Enable the module
+
+drush en convert_bundles
