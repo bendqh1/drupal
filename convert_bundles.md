@@ -14,6 +14,11 @@ composer remove 'drupal/convert_bundles:^2.0@beta'
 
 ## Patching
 
+### Get latest patch
+
+1. Find latest patch at: [https://git.drupalcode.org/project/convert_bundles/-/commits](https://git.drupalcode.org/project/convert_bundles/-/commits).
+2. Isolate latest path executable
+
 ### Install CWE-GANS patching tool for your project
 
 ```shell
