@@ -10,7 +10,9 @@ If there is need of patching, then patch and proceed.
 
 ## Enabling
 
+```shell
 drush en convert_bundles
+```
 
 ## Uninstallation
 
