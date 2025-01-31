@@ -6,7 +6,7 @@ composer require 'drupal/convert_bundles:^2.0@beta'
 
 ## Patching (if needed)
 
-If there is need of patching, then patch and proceed.
+If there is need of patching, then patch in the way you prefer, and then proceed.
 
 ## Enabling
 
