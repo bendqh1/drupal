@@ -14,7 +14,7 @@ drush php-eval '
     try {
       $node = Node::load($nid);
 
-      if ($node && $node->getType() == 'article') {
+      if ($node && $node->getType() == 'EXISTING_NODE_TYPE_COMES_HERE') {
         $node->set('type', 'NEW_NODE_TYPE_COMES_HERE');
         $node->save();
       }
