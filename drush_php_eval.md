@@ -4,29 +4,21 @@ No PHP opener and PHP closer are needed when running `drush php-eval` commands b
 
 ```php
 drush php-eval '
-  // Import the necessary classes for working with nodes and handling entity storage exceptions
   use Drupal\node\Entity\Node;
-  use Drupal\Core\Entity\EntityStorageException;
+  use Drupal\Core\Entity\EntityStorageException; # Use the standard exception handler;
 
-  // Define the list of specific node IDs that you want to update
-  $node_ids_to_update = [123, 456, 789]; // Replace with the actual node IDs you want to change
+  $node_ids_to_update = [NID_COMES_HERE]; // Multiple should be separated by at least one comma.
 
   // Loop through each node ID to update it
   foreach ($node_ids_to_update as $nid) {
     try {
-      // Load the node by its ID (nid)
       $node = Node::load($nid);
 
-      // Check if the node exists and is of the correct type before attempting to update
-      if ($node && $node->getType() == 'article') {  // Ensure it's the correct original node type
-        // Set the new node type ('blog')
-        $node->set('type', 'blog');
-        
-        // Save the updated node
+      if ($node && $node->getType() == 'article') {
+        $node->set('type', 'NEW_NODE_TYPE_COMES_HERE');
         $node->save();
       }
     } catch (EntityStorageException $e) {
-      // Log any errors that occur during the node saving process
       \Drupal::logger('my_module')->error($e->getMessage());
     }
   }
