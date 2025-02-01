@@ -18,6 +18,7 @@ drush php-eval '
         $node->set('type', 'NEW_NODE_TYPE_COMES_HERE');
         $node->save();
       }
+
     } catch (EntityStorageException $e) {
       \Drupal::logger('my_module')->error($e->getMessage());
     }
