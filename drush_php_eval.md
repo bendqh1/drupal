@@ -7,7 +7,7 @@ drush php-eval '
   use Drupal\node\Entity\Node;
   use Drupal\Core\Entity\EntityStorageException; # Use the standard exception handler;
 
-  $node_ids_to_update = [NID_COMES_HERE]; // Multiple should be separated by at least one comma.
+  $node_ids_to_update = [NID_COMES_HERE]; // Multiple NIDs should be separated by at least one comma.
 
   // Loop through each node ID to update it
   foreach ($node_ids_to_update as $nid) {
