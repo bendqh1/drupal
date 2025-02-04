@@ -7,9 +7,9 @@ drush php-eval '
 use Drupal\node\Entity\Node;
 use Drupal\Core\Entity\EntityStorageException;
 
-$any_node_id_to_update = [NID_COMES_HERE];
+$node_id_to_update = [NID_COMES_HERE];
 
-foreach ($any_node_id_to_update as $nid) {
+foreach ($node_id_to_update as $nid) {
     try {
     $node = Node::load($nid);
     
