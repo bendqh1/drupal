@@ -5,7 +5,7 @@ Although an array, one at a time is the best scenario.
 ```php
 drush php-eval '
 use Drupal\node\Entity\Node;
-use Drupal\Core\Entity\EntityStorageException;
+use Drupal\Core\Logger\LoggerChannelInterface
 
 $node_id_to_update = [NID_COMES_HERE];
 $node_id_to_update = array_values(array_filter($node_id_to_update, 'is_numeric'));
@@ -21,8 +21,8 @@ if (count($node_id_to_update) === 1) {
             $node->save();
         }
 
-    } catch (EntityStorageException $e) {
-        \Drupal::logger('my_module')->error($e->getMessage());
+    } catch (LoggerChannelInterface $e) {
+        \Drupal::logger('my_module')->error('Error loading node: @message', ['@message' => $e->getMessage()]);
     }
 } else {
     \Drupal::logger("my_module")->error("Array should contain exactly one numeric node ID.");
