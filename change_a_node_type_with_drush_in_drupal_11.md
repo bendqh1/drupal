@@ -13,7 +13,7 @@ if (is_numeric($nid)) {
         $node = Node::load($nid);
 
         if ($node) {
-            // Check if the node type matches the expected one
+            // Check if the node type matches the expected one and isn't null;
             if ($node->getType() == 'EXISTING_NODE_TYPE_COMES_HERE') {
                 $node->set('type', 'NEW_NODE_TYPE_COMES_HERE');
                 $node->save();
