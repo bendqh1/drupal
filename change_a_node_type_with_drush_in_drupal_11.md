@@ -5,7 +5,7 @@ No PHP opener and PHP closer are needed when running `drush php-eval` commands b
 ```php
 drush php-eval '
 use Drupal\node\Entity\Node;
-use Drupal\Core\Entity\EntityStorageException; # Use the standard exception handler;
+use Drupal\Core\Entity\EntityStorageException;
 
 $node_ids_to_update = [NID_COMES_HERE];
 
