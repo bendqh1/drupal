@@ -9,7 +9,9 @@ In Drupal **11** or greater, I want to change a node type with Drush `php-eval` 
 This may be a way to do so:
 
 ```
-drush php-eval '$node = \Drupal\node\Entity\Node::load(1); $node->setType("new_content_type")->save();'
+drush php-eval '
+    $node = \Drupal\node\Entity\Node::load(1);
+    $node->setType("new_content_type")->save();'
 ```
 
 Firstly, is it a correct way and secondly if it is indeed correct, how then would you improve it by means of error prevention and handling.
