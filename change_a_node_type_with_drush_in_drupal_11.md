@@ -8,8 +8,9 @@ use Drupal\node\Entity\Node;
 use Drupal\Core\Logger\LoggerChannelInterface
 
 $node_id_to_update = [NID_COMES_HERE];
+$node_id_to_update = array_values(array_filter($node_id_to_update, 'is_numeric'));
 
-if (count($node_id_to_update = array_values(array_filter($node_id_to_update, 'is_numeric'))) === 1) {
+if (count($node_id_to_update) === 1) {
     $nid = $node_id_to_update[0];
     
     try {
