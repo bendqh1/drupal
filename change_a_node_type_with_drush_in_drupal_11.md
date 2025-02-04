@@ -3,29 +3,30 @@ Although an array, one at a time is the best scenario.
 ## Command
 
 ```php
-drush php-eval '
 use Drupal\node\Entity\Node;
-use Drupal\Core\Logger\LoggerChannelInterface
+use Drupal\Core\Logger\LoggerChannelInterface;
 
-$node_id_to_update = [NID_COMES_HERE];
-$node_id_to_update = array_values(array_filter($node_id_to_update, 'is_numeric'));
+$nid = NID_COMES_HERE;  // Directly assign the numeric node ID.
 
-if (count($node_id_to_update) === 1) {
-    $nid = $node_id_to_update[0];
-    
+if (is_numeric($nid)) {
     try {
         $node = Node::load($nid);
 
-        if ($node && $node->getType() == 'EXISTING_NODE_TYPE_COMES_HERE') {
-            $node->set('type', 'NEW_NODE_TYPE_COMES_HERE');
-            $node->save();
+        if ($node) {
+            // Check if the node type matches the expected one
+            if ($node->getType() == 'EXISTING_NODE_TYPE_COMES_HERE') {
+                $node->set('type', 'NEW_NODE_TYPE_COMES_HERE');
+                $node->save();
+            } else {
+                \Drupal::logger('my_module')->error('Node type mismatch for node ID: @nid', ['@nid' => $nid]);
+            }
+        } else {
+            \Drupal::logger('my_module')->error('Node not found for ID: @nid', ['@nid' => $nid]);
         }
 
     } catch (\Exception $e) {
         \Drupal::logger('my_module')->error('Error loading node: @message', ['@message' => $e->getMessage()]);
     }
-} else {
-    \Drupal::logger("my_module")->error("Array should contain exactly one numeric node ID.");
 }
 '
 ```
