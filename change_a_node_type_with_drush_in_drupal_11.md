@@ -8,19 +8,24 @@ use Drupal\node\Entity\Node;
 use Drupal\Core\Entity\EntityStorageException;
 
 $node_id_to_update = [NID_COMES_HERE];
+$node_id_to_update = array_values(array_filter($node_id_to_update, 'is_numeric'));
 
-foreach ($node_id_to_update as $nid) {
+if (count($node_id_to_update) === 1) {
+    $nid = $node_id_to_update[0];
+    
     try {
-    $node = Node::load($nid);
-    
-    if ($node && $node->getType() == 'EXISTING_NODE_TYPE_COMES_HERE') {
-        $node->set('type', 'NEW_NODE_TYPE_COMES_HERE');
-        $node->save();
-    }
-    
+        $node = Node::load($nid);
+
+        if ($node && $node->getType() == 'EXISTING_NODE_TYPE_COMES_HERE') {
+            $node->set('type', 'NEW_NODE_TYPE_COMES_HERE');
+            $node->save();
+        }
+
     } catch (EntityStorageException $e) {
-    \Drupal::logger('my_module')->error($e->getMessage());
+        \Drupal::logger('my_module')->error($e->getMessage());
     }
+} else {
+    \Drupal::logger("my_module")->error("Array should contain exactly one numeric node ID.");
 }
 '
 ```
