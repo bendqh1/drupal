@@ -1,5 +1,25 @@
 No PHP opener and PHP closer are needed when running `drush php-eval` commands because drush assumes PHP anyway.
 
+## Discussion
+
+### Question
+
+In Drupal **11** or greater, I want to change a node type with Drush `php-eval` command.
+
+This may be a way to do so:
+
+```
+drush php-eval '$node = \Drupal\node\Entity\Node::load(1); $node->setType("new_content_type")->save();'
+```
+
+Firstly, is it a correct way and secondly if it is indeed correct, how then would you improve it by means of error prevention and handling.
+
+### Answer
+
+The approach you're suggesting to change a node's content type in Drupal 11 using drush php-eval is mostly correct, but it could benefit from improvements for error prevention and handling.
+
+The rest of the answer is inaplicable.
+
 ## Command
 
 ```php
