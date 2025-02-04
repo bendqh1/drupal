@@ -1,6 +1,6 @@
 No PHP opener and PHP closer are needed when running `drush php-eval` commands because drush assumes PHP anyway.
 
-## Plain command
+## Command
 
 ```php
 drush php-eval '
@@ -25,4 +25,4 @@ foreach ($node_ids_to_update as $nid) {
 '
 ```
 
-We can also put it in a Bash heredoc, but a plain PHP command here in a markdown file can be more readable or more colorful.
+We can also put it all in a Bash heredoc, but a plain PHP command here in a markdown file can be more readable or more colorful.
