@@ -21,7 +21,7 @@ if (count($node_id_to_update) === 1) {
             $node->save();
         }
 
-    } catch (LoggerChannelInterface $e) {
+    } catch (\Exception $e) {
         \Drupal::logger('my_module')->error('Error loading node: @message', ['@message' => $e->getMessage()]);
     }
 } else {
