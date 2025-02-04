@@ -25,4 +25,6 @@ foreach ($node_ids_to_update as $nid) {
 '
 ```
 
-We can also put it all in a Bash heredoc, but a plain PHP command here in a markdown file can be more readable or more colorful.
+## Notes
+
+* We can also put it all in a Bash heredoc, but a plain PHP command here in a markdown file can be more readable or more colorful.
