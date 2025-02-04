@@ -28,5 +28,5 @@ foreach ($node_ids_to_update as $nid) {
 ## Notes
 
 * We can also put it all in a Bash heredoc, but a plain PHP command here in a markdown file can be more readable or more colorful.
-* Instead of `Drupal\Core\Entity\EntityStorageException`, you may want the more general `\Drupal\Core\Entity\EntityException` (ensure to change in both places).
+* We can use the general `\Drupal\Core\Entity\EntityException` or the more specific `Drupal\Core\Entity\EntityStorageException` (we should ensure to change in both places).
 * * The Drupal logger channel name `my_module` doesn't necessarily reflect a custom module; it's just a placeholder string that could be changed to any other placeholder string such as `my_custom_log_channel`.
