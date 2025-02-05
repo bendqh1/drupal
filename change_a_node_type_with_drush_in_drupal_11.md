@@ -9,7 +9,7 @@ use Drupal\Core\Logger\LoggerChannelInterface;
 
 $nid = NID_COMES_HERE;  // Directly assign the numeric node ID.
 
-if (is_numeric($nid)) {
+if (!empty($nid) && is_numeric($nid)) {
     try {
         $node = Node::load($nid);
 
@@ -19,14 +19,14 @@ if (is_numeric($nid)) {
                 $node->set('type', 'NEW_NODE_TYPE_COMES_HERE');
                 $node->save();
             } else {
-                \Drupal::logger('my_module')->error('Node type mismatch for node ID: @nid', ['@nid' => $nid]);
+                \Drupal::logger('change_node_type_with_drush')->error('Node type mismatch for node ID: @nid', ['@nid' => $nid]);
             }
         } else {
-            \Drupal::logger('my_module')->error('Node not found for ID: @nid', ['@nid' => $nid]);
+            \Drupal::logger('change_node_type_with_drush')->error('Node not found for ID: @nid', ['@nid' => $nid]);
         }
 
     } catch (\Exception $e) {
-        \Drupal::logger('my_module')->error('Error loading node: @message', ['@message' => $e->getMessage()]);
+        \Drupal::logger('change_node_type_with_drush')->error('Error loading node: @message', ['@message' => $e->getMessage()]);
     }
 }
 '
