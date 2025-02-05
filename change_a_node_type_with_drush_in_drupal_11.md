@@ -35,7 +35,8 @@ if (!empty($nid) && is_numeric($nid)) {
 
 ## Notes
 
-* No PHP opener and PHP closer are needed when running `drush php-eval` commands because drush assumes PHP anyway.
-* We can also put it all in a Bash heredoc, but a plain PHP command here in a markdown file can be more readable or more colorful.
-* We can use the general `\Drupal\Core\Entity\EntityException` or the more specific `Drupal\Core\Entity\EntityStorageException` (we should ensure to change in both places).
-* The Drupal logger channel name `my_module` doesn't necessarily reflect a custom module; it's just a placeholder string that could be changed to any other placeholder string such as `my_custom_log_channel`.
+1. No PHP opener and PHP closer are needed when running `drush php-eval` commands because drush assumes PHP anyway.
+1. We can also put it all in a Bash heredoc, but a plain PHP command here in a markdown file can be more readable or more colorful.
+1. We can use the general `\Drupal\Core\Entity\EntityException` or the more specific `Drupal\Core\Entity\EntityStorageException` (we should ensure to change in both places).
+1. The Drupal logger channel name `my_module` doesn't necessarily reflect a custom module; it's just a placeholder string that could be changed to any other placeholder string such as `my_custom_log_channel`.
+1. When you change the node type using the code, Drupal automatically handles the necessary updates in the related tables (e.g., node, node_revision, and node_field_data) upon saving the node. Direct database changes would require you to update those tables manually, but with Drupal's API, it takes care of this for you behind the scenes.
