@@ -25,8 +25,8 @@ if (!empty($nid) && is_numeric($nid)) {
             \Drupal::logger('change_node_type_with_drush')->error('Node not found for ID: @nid', ['@nid' => $nid]);
         }
 
-    } catch (\Exception $e) {
-        \Drupal::logger('change_node_type_with_drush')->error('Error loading node: @message', ['@message' => $e->getMessage()]);
+    catch (\Exception $e) {
+        \Drupal::logger('change_node_type_with_drush')->error('Error loading node with ID @nid: @message', ['@nid' => $nid, '@message' => $e->getMessage()]);
     }
 }
 '
