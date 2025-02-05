@@ -4,6 +4,7 @@ Although an array, one at a time is the best scenario.
 
 ```php
 drush php-eval '
+
 use Drupal\node\Entity\Node;
 use Drupal\Core\Logger\LoggerChannelInterface;
 
@@ -25,10 +26,11 @@ if (!empty($nid) && is_numeric($nid)) {
             \Drupal::logger('change_node_type_with_drush')->error('Node not found for ID: @nid', ['@nid' => $nid]);
         }
 
-    catch (\Exception $e) {
+    } catch (\Exception $e) {
         \Drupal::logger('change_node_type_with_drush')->error('Error loading node with ID @nid: @message', ['@nid' => $nid, '@message' => $e->getMessage()]);
     }
 }
+
 '
 ```
 
