@@ -19,14 +19,14 @@ if (!empty($nid) && is_numeric($nid)) {
                 $node->set('type', 'NEW_NODE_TYPE_COMES_HERE');
                 $node->save();
             } else {
-                \Drupal::logger('change_node_type_with_drush')->error('Node type mismatch for node ID: @nid', ['@nid' => $nid]);
+                \Drupal::logger('my_change_node_type_module')->error('Node type mismatch for node ID: @nid', ['@nid' => $nid]);
             }
         } else {
-            \Drupal::logger('change_node_type_with_drush')->error('Node not found for ID: @nid', ['@nid' => $nid]);
+            \Drupal::logger('my_change_node_type_module')->error('Node not found for ID: @nid', ['@nid' => $nid]);
         }
 
     } catch (\Exception $e) {
-        \Drupal::logger('change_node_type_with_drush')->error('Error loading node with ID @nid: @message', ['@nid' => $nid, '@message' => $e->getMessage()]);
+        \Drupal::logger('my_change_node_type_module')->error('Error loading node with ID @nid: @message', ['@nid' => $nid, '@message' => $e->getMessage()]);
     }
 }
 
