@@ -3,6 +3,7 @@ Although an array, one at a time is the best scenario.
 ## Command
 
 ```php
+drush php-eval '
 use Drupal\node\Entity\Node;
 use Drupal\Core\Logger\LoggerChannelInterface;
 
