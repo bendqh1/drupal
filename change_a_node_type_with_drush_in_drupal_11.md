@@ -20,7 +20,7 @@ if (!empty($nid) && is_numeric($nid)) {
                 $node->save();
             } else {
                 \Drupal::logger('my_change_node_type_module')
-                    ->error('Node type mismatch for node ID: @nid', ['@nid' => $nid]);
+                    ->error('Node type mismatch: @nid', ['@nid' => $nid]);
             }
         } else {
             \Drupal::logger('my_change_node_type_module')
