@@ -12,7 +12,7 @@ use Drupal\Core\Logger\LoggerChannelInterface;
 
 $nid = NID_COMES_HERE;
 
-if (!empty($nid) && is_numeric($nid)) {
+if (!empty($nid) && is_numeric($nid) && $nid > 0) {
     try {
         $node = Node::load($nid);
 
