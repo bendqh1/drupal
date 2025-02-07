@@ -8,6 +8,8 @@ drush php-eval '
 use Drupal\node\Entity\Node;
 use Drupal\Core\Logger\LoggerChannelInterface;
 
+# Manually check for the relevant Drupal node ID to work with and isolate this node ID by copying it to the clipboard.
+
 $nid = NID_COMES_HERE;
 
 if (!empty($nid) && is_numeric($nid)) {
