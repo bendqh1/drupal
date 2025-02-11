@@ -5,14 +5,10 @@ Although an array, one at a time is the best scenario.
 ```php
 drush php-eval "
 
+# After manually check for the relevant Drupal node ID to work with, and then isolate this node ID by copying it to the clipboard, do the following:
+
 use Drupal\node\Entity\Node;
 use Drupal\Core\Logger\LoggerChannelInterface;
-
-#
-#
-# Manually check for the relevant Drupal node ID to work with, and then isolate this node ID by copying it to the clipboard;
-#
-#
 
 $nid = NID_COMES_HERE;
 
