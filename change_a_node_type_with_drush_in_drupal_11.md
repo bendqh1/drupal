@@ -1,6 +1,4 @@
-Although an array, one at a time is the best scenario.
-
-`does_not_appear_in_views`
+I convert node types of various nodes to the node type `does_not_appear_in_views`.
 
 ## Command
 
