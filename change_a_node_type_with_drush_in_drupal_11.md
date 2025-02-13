@@ -5,7 +5,7 @@ I convert node types of various nodes to the node type `does_not_appear_in_views
 ```php
 drush php-eval "
 
-# After manually check for the relevant Drupal node ID to work with, and then isolate this node ID by copying it to the clipboard, do the following:
+# Copy NID to clipboard;
 
 use Drupal\node\Entity\Node;
 use Drupal\Core\Logger\LoggerChannelInterface;
