@@ -18,7 +18,7 @@ if (!empty($nid) && is_numeric($nid) && $nid > 0) {
 
         if ($node) {
             if ($node->getType() === 'EXISTING_NODE_TYPE_COMES_HERE') {
-                $node->set('type', 'NEW_NODE_TYPE_COMES_HERE');
+                $node->set('type', 'does_not_appear_in_views');
                 $node->save();
             } else {
                 \Drupal::logger('my_change_node_type_module')
