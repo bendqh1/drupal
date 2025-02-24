@@ -33,9 +33,9 @@ if (!empty($nid) && is_numeric($nid) && $nid > 0) {
 
 ## Notes
 
-1. If the code was one line then `drush php-eval` was also good.
-1. Drush php-eval strings must be quoted with double quotes.
-1. No PHP opener and PHP closer are needed when running `drush php-eval` commands because drush assumes PHP anyway.
+1. If the code was one line then `drush php-eval "CODE"` was also good.
+    * Drush php-eval strings must be quoted with double quotes.
+    * No PHP opener and PHP closer are needed when running `drush php-eval` commands because drush assumes PHP anyway.
 1. We can also put it all in a Bash heredoc, but a plain PHP command here in a markdown file can be more readable or more colorful.
 1. We can use the general `\Drupal\Core\Entity\EntityException` or the more specific `Drupal\Core\Entity\EntityStorageException` (we should ensure to change in both places).
 1. The Drupal logger channel name `my_module` doesn't necessarily reflect a custom module; it's just a placeholder string that could be changed to any other placeholder string such as `my_custom_log_channel`.
