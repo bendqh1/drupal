@@ -1,4 +1,4 @@
-Create the file cnt.php` (Change Node Type) with the following code and run it with `drush php-script`
+Create the file `cnt.php` (Change Node Type) with the following code and run it with `drush php-script`
 
 ## Command
 
