@@ -1,4 +1,4 @@
-Create a file with the following code and run it with `drush php-script`
+Create the file `change_node_type.php` with the following code and run it with `drush php-script`
 
 ## Command
 
