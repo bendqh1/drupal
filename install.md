@@ -139,8 +139,12 @@ chmod 644 web/sites/default/*settings.php
 
 > While D10 is considered a "minor" update from D9 in terms of what actually changed (remaining APIs mostly the same), it's still a major version bump. `composer update` only does minor and patch version bumps. Any major version bumps need `composer require`. Following semver guidelines, **API removal** counts towards a major version bump because that's a potentially breaking change.
 
+## Installing a non stable and non beta version of a module
+
+One can install a dev version in case of no other option (and no desire to patch an old stable or beta release).
+
+We can go to `drupal.org/project/MODULE_NAME_COMES_HERE/releases` and get such releases.
+
 ## Upgrading an old Drupal manually
 
 Small old Drupal websites (versions 1-7) of up to say 10 webpages are best upgraded manually by saving webpage copy (right mouse click >> Save as HTML named `1.html` up to say `10.html` with the directories) and then pasting data from copies in a fresh Drupal.
-
-
