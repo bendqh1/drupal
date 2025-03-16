@@ -24,8 +24,7 @@ Short answer. Only steps. No commentary.
 ### One way
 
 1. Go to `/admin/config/regional/language/detection`.
-1. Enable **Language detection by user preferences** and set it to detect the language based on the user's language preference.
-1. Configure accordingly.
+1. Enable language detection by all options.
 1. Flush all caches.
 
 ### Another way
