@@ -1,4 +1,6 @@
-Drupal 11 website in Hebrew (RTL) with Olivero as the main theme and no contribution moduloes and no code customizations.
+## Question
+
+### Drupal 11 website in Hebrew (RTL) with Olivero as the main theme and no contribution moduloes and no code customizations.
 
 * Olivero supports both Hebrew and Enlgish (both RTL and LTR).
 * English is already enabled for the website alongside Hebrew.
@@ -8,7 +10,7 @@ I want that if a node is in English (LTR), then the theme would appear as if the
 
 How could I achieve this situation without CSS changes?
 
-## Notes
+#### Notes
 
 * If possible, then I would prefer a backend solution over JavaScript.
 * Language negotiation by domain isn't feasible in this case.
@@ -17,14 +19,16 @@ How could I achieve this situation without CSS changes?
 
 Short answer. Only steps. No commentary.
 
-## One way
+## Answer
+
+### One way
 
 1. Go to `/admin/config/regional/language/detection`.
 1. Enable **Language detection by user preferences** and set it to detect the language based on the user's language preference.
 1. Configure accordingly.
 1. Flush all caches.
 
-## Another way
+### Another way
 
 1. Keep **Hebrew** as the default language for the website in `/admin/config/regional/language/configure`.
 2. Go to `/admin/config/regional/language/detection`.
