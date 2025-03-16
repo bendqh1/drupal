@@ -12,22 +12,13 @@ My problem is that the first node that I have created with this content type is 
 
  ## Answer
 
- To change the language of an existing node in Drupal 10.3, you'll need to manually update the language field for that node, as changing the language of the content type doesn't automatically update the language of existing nodes.
-
-Here's how you can change the language of your node from Thai to English:
-
-Step-by-step guide:
-Edit the Node:
-
-Go to the Content page (/admin/content).
-Locate the node that you want to change the language for.
-Click the Edit button for that node.
-Change the Language:
+Locate the node that you want to change the language for and click the Edit button.
 
 In the node edit form, you should see a field labeled Language (this may be on the sidebar or at the top of the page, depending on your theme and admin configuration).
 If the language field is visible, you can directly change it from Thai to English (or whatever language you prefer).
 If you don't see the language field, it might be hidden. In that case, you need to adjust the language settings for nodes.
-Language Settings for Nodes (if the language field is not visible):
+
+### If the language field is not visible
 
 Go to Configuration > Regional and Language > Content language and translation (/admin/config/regional/content-language).
 Ensure that English (el) is enabled for the content type.
