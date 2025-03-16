@@ -14,9 +14,9 @@ My problem is that the first node that I have created with this content type is 
 
 Locate the node that you want to change the language for and click the Edit button.
 
-In the node edit form, you should see a field labeled Language (this may be on the sidebar or at the top of the page, depending on your theme and admin configuration).
+In the node edit form, you should see a field labeled Language.<br>
+This may be on the sidebar or at the top of the page, depending on your theme and admin configuration).<br>
 If the language field is visible, you can directly change it from Thai to English (or whatever language you prefer).
-If you don't see the language field, it might be hidden. In that case, you need to adjust the language settings for nodes.
 
 ### If the language field is not visible
 
@@ -25,5 +25,5 @@ Ensure that English (el) is enabled for the content type.
 Under the Language settings section, verify that "Allow content language to be selected" is checked. This will ensure that the language field is visible when editing nodes.
 Save the Node:
 
-After changing the language, make sure to save the node.
+After changing the language, make sure to save the node.<br>
 The node's language will now be set to English, and it will align with any newer nodes created with the English language.
