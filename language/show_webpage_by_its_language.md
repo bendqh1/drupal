@@ -26,14 +26,3 @@ Short answer. Only steps. No commentary.
 1. Go to `/admin/config/regional/language/detection`.
 1. Enable language detection by all options.
 1. Flush all caches.
-
-### Another way
-
-1. Keep **Hebrew** as the default language for the website in `/admin/config/regional/language/configure`.
-2. Go to `/admin/config/regional/language/detection`.
-3. Enable **Language detection by user preferences** and set it to detect the language based on the user's language preference.
-4. Set the "English" language detection rule higher in the order to ensure it takes precedence for users who have chosen English.
-5. Go to `/admin/structure/block`.
-6. Edit the "Language Switcher" block and place it in a region, ensuring it's accessible for users to switch the language.
-7. Under `/admin/config/people/accounts`, ensure users have the option to choose their preferred language (Hebrew or English).
-8. Make sure to clear the cache.
