@@ -25,5 +25,6 @@ Ensure that English (el) is enabled for the content type.
 Under the Language settings section, verify that "Allow content language to be selected" is checked. This will ensure that the language field is visible when editing nodes.
 Save the Node:
 
-After changing the language, make sure to save the node.<br>
-The node's language will now be set to English, and it will align with any newer nodes created with the English language.
+### Chapter notes
+
+* If, after saving the node, no change is apparent; try to flush all caches.
