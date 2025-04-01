@@ -6,7 +6,7 @@ it appears from checking both aliases in web browsers after flushing all caches 
 
 What to do?
 
-###
+---
 
 Just as you give Hebrew pages an English alias thus give Thai pages an English alias.
 
