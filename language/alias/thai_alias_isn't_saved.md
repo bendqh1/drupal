@@ -1,5 +1,3 @@
-## Thai alias isn't saved
-
 In 10.3.1 core without the module [Redirect][1] I have created a content type and set its language to Thai. 
 I then created a node for that content type and gave it a Thai alias like `/ก-ข`. 
 The alias wasn't saved and even changing it to an English alias like `/a-b` isn't saved. 
