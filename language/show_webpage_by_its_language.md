@@ -1,3 +1,5 @@
+Language detection is a dangerous tool as it may cause the creation of a new sub-alias for each alias, doubling the webpage detections by search engines. I suggest to avoid it if it's not necessary.
+
 ## Question
 
 ### Drupal 11 website in Hebrew (RTL) with Olivero as the main theme and no contribution moduloes and no code customizations.
