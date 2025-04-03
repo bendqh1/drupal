@@ -2,14 +2,14 @@
 
 Try:
 
-* `cat /var/log/apache2/error_log` or `cat /usr/local/apache/logs/error_log`
-* `php --info | grep error`
+```shell
+cat /var/log/apache2/error_log
+cat /usr/local/apache/logs/error_log
+php --info | grep error
+drush watchdog:show
+```
 
-In cases of shared hosting a support ticket to the team to check this might be needed.
-
-## Watchdog
-
-* `drush watchdog:show` may output something like this:
+`drush watchdog:show` may show:
 
 ```
 ------- -------------- ---------------- ---------- -------------------------------------------------------------------------------------------
@@ -19,7 +19,7 @@ In cases of shared hosting a support ticket to the team to check this might be n
                                                      /home/USERNAME/WEB_APPLICATION_ROOT/example.com/web/themes/contrib/basic/templates/layout/html.html.twig).
 ```
 
-The theme I made the Context reaction about is named Basic, so this is probably related.
+The theme I made the Context condition-reaction about is named Basic, so this is probably related.
 
 ### `watchdog` SQL table
 
