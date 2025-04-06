@@ -1,3 +1,5 @@
+#  Question post
+
 In Drupal 11.1.5 core without any contribution themes or modules and without any customizations.
 
 ## My problem
@@ -33,3 +35,43 @@ I have already disabled *Language Detection* and then flushed all caches but it 
 ## My question
 
 How to solve that problem?
+
+---
+
+# Answer post
+
+## 1. Set Up a Global Redirect for Language URLs
+Since you don't want to use manual redirects or PathAuto, you can configure **Global Redirect** to handle these non-existent language URLs. The idea is to set up a rule that automatically redirects any language-prefixed URL to the base URL without the language prefix.
+
+Here’s how you can do that:
+- Go to **Configuration** > **Search and metadata** > **URL redirects**.
+- Create a **Redirect** rule where the **Source** is `/*/*` (which matches any URL with a language prefix), and the **Redirect** is `/`.
+- This would ensure that any URL like `/en/example-node-alias_1` is redirected to `/example-node-alias_1` automatically.
+
+## Web server rewrite rules
+
+### Apache
+
+```apache
+RewriteEngine On
+RewriteCond %{REQUEST_URI} ^/([a-z]{2})/(.*)$
+RewriteRule ^ /%2 [R=301,L]
+```
+
+### Nginx
+
+```nginx
+if ($request_uri ~ ^/([a-z]{2})/(.*)$) {
+    return 301 /$2;
+}
+```
+
+## Prevent Google from Indexing Language URLs Permanently
+
+```shell
+Disallow: /en/
+Disallow: /ar/
+Disallow: /fa/
+```
+
+.
