@@ -70,7 +70,7 @@ Disallow: /fa/
 
 Add to settings.php or similar file the following or similar code.
 
-```
+```php
 // Redirect language-prefixed URLs
 $request_uri = $_SERVER['REQUEST_URI'];
 if (preg_match('/^\/([a-z]{2})\/(.*)$/', $request_uri, $matches)) {
