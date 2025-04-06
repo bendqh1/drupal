@@ -40,7 +40,7 @@ How to solve that problem?
 
 # Answer post
 
-## 1. Web server rewrite rules
+## 1) Web server rewrite rules
 
 ### Apache
 
@@ -58,7 +58,7 @@ if ($request_uri ~ ^/([a-z]{2})/(.*)$) {
 }
 ```
 
-## 2. Prevent Google from Indexing Language URLs Permanently
+## 2) Prevent Google from Indexing Language URLs Permanently
 
 ```shell
 Disallow: /en/
@@ -66,4 +66,15 @@ Disallow: /ar/
 Disallow: /fa/
 ```
 
-.
+## 3) Use PHP redirects
+
+Add to settings.php or similar file the following or similar code.
+
+```
+// Redirect language-prefixed URLs
+$request_uri = $_SERVER['REQUEST_URI'];
+if (preg_match('/^\/([a-z]{2})\/(.*)$/', $request_uri, $matches)) {
+  $url = '/' . $matches[2];
+  drupal_goto($url, array('query' => $_GET));
+}
+```
