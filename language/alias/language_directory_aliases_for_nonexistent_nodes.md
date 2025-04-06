@@ -8,7 +8,7 @@ Therefore, people now arrive to non existing nodes in my website, such as:
 /fa/example-node-alias_3?language_content_entity=fa
 ```
 
-Instead of:
+Instead of arriving to nodes such as:
 
 ```
 /example-node-alias_1
@@ -16,9 +16,9 @@ Instead of:
 /example-node-alias_3
 ```
 
+My problem is not caused by mere query strings; were it only query strings, the user would have been redirected to the alias without them).<br>
+Rather, my problem is caused by language directories in URLs.
 
-My problem is not caused by mere query strings (were it only query strings, the user would have been redirected to the alias without them)
-rather
-my problem is caused by language directories in URLs.
+Totally disabling language detection and then flushing all caches didn't help and also, installing the Redirect module also didn't help.
 
 How to solve that problem?
