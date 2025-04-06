@@ -1,4 +1,8 @@
-In Drupal 11.1.5 my problem is that after activating *Language Detection* with all options enabled, thousands of new language-directory-aliases (`/en/alias` or `/ar/alias` etc.) have been detected in my website by Google Search Console **for each node**, altough no new nodes were created. 
+In Drupal 11.1.5 core without any contribution themes or modules and without any customizations.
+
+## My problem
+
+My problem is that after activating *Language Detection* with all options enabled, thousands of new language-directory-aliases such as `/en/alias` or `/ar/alias` etc. have been detected in my website by Google Search Console **for each node**, altough no new nodes were created. 
 
 Therefore, people now arrive to non-existing nodes in my website, such as:
 
