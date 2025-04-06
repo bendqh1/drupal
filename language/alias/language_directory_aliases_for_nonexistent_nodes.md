@@ -48,7 +48,7 @@ Here’s how you can do that:
 - Create a **Redirect** rule where the **Source** is `/*/*` (which matches any URL with a language prefix), and the **Redirect** is `/`.
 - This would ensure that any URL like `/en/example-node-alias_1` is redirected to `/example-node-alias_1` automatically.
 
-## Web server rewrite rules
+## 2. Web server rewrite rules
 
 ### Apache
 
@@ -66,7 +66,7 @@ if ($request_uri ~ ^/([a-z]{2})/(.*)$) {
 }
 ```
 
-## Prevent Google from Indexing Language URLs Permanently
+## 3. Prevent Google from Indexing Language URLs Permanently
 
 ```shell
 Disallow: /en/
