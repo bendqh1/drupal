@@ -40,15 +40,7 @@ How to solve that problem?
 
 # Answer post
 
-## 1. Set Up a Global Redirect for Language URLs
-Since you don't want to use manual redirects or PathAuto, you can configure **Global Redirect** to handle these non-existent language URLs. The idea is to set up a rule that automatically redirects any language-prefixed URL to the base URL without the language prefix.
-
-Here’s how you can do that:
-- Go to **Configuration** > **Search and metadata** > **URL redirects**.
-- Create a **Redirect** rule where the **Source** is `/*/*` (which matches any URL with a language prefix), and the **Redirect** is `/`.
-- This would ensure that any URL like `/en/example-node-alias_1` is redirected to `/example-node-alias_1` automatically.
-
-## 2. Web server rewrite rules
+## 1. Web server rewrite rules
 
 ### Apache
 
@@ -66,7 +58,7 @@ if ($request_uri ~ ^/([a-z]{2})/(.*)$) {
 }
 ```
 
-## 3. Prevent Google from Indexing Language URLs Permanently
+## 2. Prevent Google from Indexing Language URLs Permanently
 
 ```shell
 Disallow: /en/
