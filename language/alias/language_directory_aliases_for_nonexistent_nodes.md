@@ -44,10 +44,19 @@ How to solve that problem?
 
 ### Apache
 
+Go to `example.com/web/.htaccess` and under:
+
+```apache
+<IfModule mod_rewrite.c>
+  RewriteEngine on
+```
+
+Add:
+
 ```apache
 RewriteEngine On
-RewriteCond %{REQUEST_URI} ^/([a-z]{2})/(.*)$
-RewriteRule ^ /%2 [R=301,L]
+  RewriteCond %{REQUEST_URI} ^/([a-z]{2})/(.*)$
+  RewriteRule ^ /%2 [R=301,L]
 ```
 
 ### Nginx
