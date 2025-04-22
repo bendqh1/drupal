@@ -11,9 +11,11 @@ Short answer.
 
 ## Answer
 
+```shell
 drush ev "
 \$state = Drupal::state();
 \$state->set('system.performance.disable_cache', TRUE);
 \$state->set('system.performance.cache_disable_expire', time() + 300);
 "
 drush cr
+```
