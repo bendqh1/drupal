@@ -11,26 +11,26 @@ The following core language modules are enabled:
 
 ## More background data
 
-* I don't use URL language prefixes.
 * I don't use the Language Detection feature and I also don't want to use it due to past unexpected creation of various robotic aliases for nodes.
+* I don't want to install a module to solve that, mostly because it's not a common problem and long term maintenance might be a problem for me personally.
+* I don't use URL language prefixes and don't want to use them for accessibility and aesthetic reasons (I don't like shortenings like `ar` or `en` and would also want to avoid the notion of "should I have written `arabic` or `english` instead of `ar` or `en`?").
 
 ## My problem
 
-If I create a node and set its language to English and also give it an alias in English (such as `/example-alias-1`), then I get an error according to which "the page wasn't found".
+If I create a node and set its language to English and also give it an alias in English (such as `/example-alias-1`), then I get an error according to which **"the page wasn't found"**.
 
 I can access the node by its node ID (NID) and also edit the node by that NID from `/node/940/edit?destination=/admin/content` but when I try to access the node by its alias, I get the error.
 
 The website otherwise works fine and there is no special error in Cron, Watchdog, etc.
 
-Flushing all caches didn't solve the problem.
-
 ### More about this problem
 
+* Flushing all caches didn't solve the problem.
 * There is no indication that this problem is a matter of permissions.
 
 ## Things I have tried to solve this problem
 
-1. By default, Drupal aliases can only be given to nodes of the default language unless determined otherwise at `/admin/config/regional/content-language` where I have unchecked both "Content" and "Alias", saved the webpage, and flushed all caches, but both options ("Content" and "Alias") keep being rechecked automatically, and it may be a bug.
+1. By default, Drupal aliases can only be given to nodes of the default language unless determined otherwise at `/admin/config/regional/content-language` where I have unchecked both "Content" and "Alias", saved the changes, and flushed all caches, but both options ("Content" and "Alias") keep being rechecked automatically, and it may be a bug.
 1. At `/admin/config/search/path` I have changed the language of any relevant alias to `- Not specified -` and then I could access the node from the alias regularly without the error, but, this approach is repetitive and I don't think it's efficient.
 1. A possible radically different approach might be to just "change attitude" and not giving aliases to nodes in languages different than the default language at all.
 
