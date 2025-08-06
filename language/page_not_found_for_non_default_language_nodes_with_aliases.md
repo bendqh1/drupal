@@ -18,5 +18,5 @@ A good approach is just avoiding giving language prefix for aliases of the defau
 
 ## Notes
 
+* It is possible to force Drupal to respect a non default language alias from the **Drupal path alias interface** (`/admin/config/search/path`) but it has to be done manually for each alias.
 * The [Language Neutral Aliases](https://www.drupal.org/project/language_neutral_aliases) module stops Drupal from requiring language prefixes but module dependency may not be correct in the long term.
-* There should be a way to force Drupal to respect an alias without a language prefix but it has to be done manually for each alias and I won't prefer that over a standard language prefix.
