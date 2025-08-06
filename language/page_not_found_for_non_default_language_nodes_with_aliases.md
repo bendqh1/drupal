@@ -16,6 +16,7 @@ The list of alias language prefixes in Drupal is predefined and it can be hard t
 
 A good approach is just avoiding giving language prefix for aliases of the default language but do giving them for non-default langage aliases (SEOwise it may be good to give for both).
 
----
+## Notes
 
-We can always make an exception for a non-default language alias via te
+* The [Language Neutral Aliases](https://www.drupal.org/project/language_neutral_aliases) module stops Drupal from requiring language prefixes but module dependency may not be correct in the long term.
+* * There should be a way to force Drupal to respect an alias without a language prefix but it has to be done manually for each alias and I won't prefer that over a standard language prefix.
