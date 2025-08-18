@@ -1,6 +1,6 @@
 Set the node language to English (preferably automatically by the node type).
 
-Set the `<h1>` of the **node** to `direction: ltr`.
+Use CSS to set the `<h1>` of the **node** to `direction: ltr`.
 
 Use JavaScript to make the **node edit page** LTR in everything.
 
