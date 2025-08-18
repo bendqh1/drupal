@@ -1,3 +1,5 @@
+<details>
+    <summary>Click Me</summary>
 Drupal 11.2.2 core with an Olivero sub-theme just for some custom CSS and JavaScript and with Arabic as default language and English as secondary language.
 
 I have created a content type (node type) named "**English pages**" and set its language to `English`.
@@ -48,4 +50,6 @@ document.body.classList.contains(
     document.body.setAttribute("dir", "ltr");
     document.querySelector('.ck-editor__editable').setAttribute("dir", "ltr");
 }
+</details>
+
 ```
