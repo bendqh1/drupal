@@ -1,3 +1,9 @@
+Set the node language to English (preferably automatically by the node type).
+
+Set the `<h1>` of the **node** to `direction: ltr`.
+
+Use JavaScript to make the **node edit page** LTR in everything.
+
 <details>
     <summary>Click Me</summary>
 Drupal 11.2.2 core with an Olivero sub-theme just for some custom CSS and JavaScript and with Arabic as default language and English as secondary language.
@@ -52,9 +58,3 @@ document.body.classList.contains(
 }
 ```
 </details>
-
-Set the node language to English (preferably automatically by the node type).
-
-Set the `<h1>` of the **node** to `direction: ltr`.
-
-Use JavaScript to make the **node edit page** LTR in everything.
