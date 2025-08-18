@@ -5,14 +5,15 @@ Use CSS to set the `<h1>` of the **node** to `direction: ltr`.
 Use JavaScript to make the **node edit page** LTR in everything.
 
 ```js
-// ==UserScript==
-// @name         Make node edit page LTR-Left
-// @match        https://benaharoni.com/node/add/dp_ltr
-// ==/UserScript==
-
-document.querySelectorAll('*').forEach( (element)=>{
-    element.setAttribute('dir', 'all');
-});
+if (
+document.body.classList.contains(
+"page-node-type-page-in-english" || "page-node-type-page-in-chinese"
+)
+) { 
+    document.querySelectorAll('*').forEach( (element)=>{
+        element.setAttribute("dir", "ltr");
+    });
+}
 ```
 
 <details>
