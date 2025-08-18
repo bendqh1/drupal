@@ -50,9 +50,8 @@ document.body.classList.contains(
     document.body.setAttribute("dir", "ltr");
     document.querySelector('.ck-editor__editable').setAttribute("dir", "ltr");
 }
-</details>
-
 ```
+</details>
 
 Set the node language to English (preferably automatically by the node type).
 
