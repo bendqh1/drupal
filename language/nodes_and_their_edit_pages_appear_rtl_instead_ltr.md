@@ -37,12 +37,12 @@ Updating your `page.html.twig` or `html.html.twig` template to dynamically set t
 <html{{ html_attributes.addAttribute('dir', language.getDirection()) }}>
 ```
 
-Or, use JavaScript:
+We could use JavaScript but it can be buggy and appear strange to an end-human-user.
 
 ```js
 if (
 document.body.classList.contains(
-"page-node-type-page-in-english" || "page-node-type-page-in-thai"
+"page-node-type-page-in-english" || "page-node-type-page-in-chinese"
 )
 ) { 
     document.body.setAttribute("dir", "ltr");
