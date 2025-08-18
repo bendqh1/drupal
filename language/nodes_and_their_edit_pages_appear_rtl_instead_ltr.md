@@ -12,7 +12,7 @@ Use JavaScript to make the **node edit page** LTR in everything.
 
 if (
     document.body.classList.contains(
-    "page-node-type-page-in-english" || "page-node-type-page-in-chinese"
+        "page-node-type-page-in-english" || "page-node-type-page-in-chinese"
     )
 ) { 
     document.querySelectorAll('*').forEach( (element)=>{
