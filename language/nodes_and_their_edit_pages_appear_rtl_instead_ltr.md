@@ -11,6 +11,7 @@ For example, in `html.html.twig`, set:
 
 Or, use JavaScript:
 
+```js
 if (
 document.body.classList.contains(
 "page-node-type-page-in-english" || "page-node-type-page-in-thai"
@@ -19,3 +20,4 @@ document.body.classList.contains(
     document.body.setAttribute("dir", "ltr");
     document.querySelector('.ck-editor__editable').setAttribute("dir", "ltr");
 }
+```
