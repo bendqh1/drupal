@@ -5,6 +5,11 @@ Use CSS to set the `<h1>` of the **node** to `direction: ltr`.
 Use JavaScript to make the **node edit page** LTR in everything.
 
 ```js
+// ==UserScript==
+// @name         Make node edit page LTR-Left
+// @match        *://benaharoni.com/*/
+// ==/UserScript==
+
 if (
     document.body.classList.contains(
     "page-node-type-page-in-english" || "page-node-type-page-in-chinese"
