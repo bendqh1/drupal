@@ -4,6 +4,17 @@ Use CSS to set the `<h1>` of the **node** to `direction: ltr`.
 
 Use JavaScript to make the **node edit page** LTR in everything.
 
+```js
+// ==UserScript==
+// @name         Make node edit page LTR-Left
+// @match        https://benaharoni.com/node/add/dp_ltr
+// ==/UserScript==
+
+document.querySelectorAll('*').forEach( (element)=>{
+    element.setAttribute('dir', 'all');
+});
+```
+
 <details>
     <summary>Click Me</summary>
 Drupal 11.2.2 core with an Olivero sub-theme just for some custom CSS and JavaScript and with Arabic as default language and English as secondary language.
