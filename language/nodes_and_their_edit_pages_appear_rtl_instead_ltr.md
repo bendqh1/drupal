@@ -6,9 +6,9 @@ Use JavaScript to make the **node edit page** LTR in everything.
 
 ```js
 if (
-document.body.classList.contains(
-"page-node-type-page-in-english" || "page-node-type-page-in-chinese"
-)
+    document.body.classList.contains(
+    "page-node-type-page-in-english" || "page-node-type-page-in-chinese"
+    )
 ) { 
     document.querySelectorAll('*').forEach( (element)=>{
         element.setAttribute("dir", "ltr");
