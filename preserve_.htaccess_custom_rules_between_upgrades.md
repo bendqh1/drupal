@@ -1,4 +1,6 @@
-[My drupal/language directory](https://github.com/bendqh1/drupal/tree/main/language) contains lots of data structures about this problem and other problems with Right to Left - Left to Right language bilinguality problems in Drupal.
+# Preface
+
+https://github.com/bendqh1/drupal/edit/main/language/language_detection/book.md
 
 # Question
 
