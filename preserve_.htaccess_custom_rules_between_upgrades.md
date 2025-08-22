@@ -34,4 +34,5 @@ Place your custom `.htaccess` in a directory **above Drupal’s root** (e.g., `$
 
 Place the .htaccess at `$HOME/.htaccess.` It doesn't matter how many tiers up, as long as it's above `$HOME/public_html/example.com`. Apache processes .htaccess files from higher directories first.
 
-Placing the .htaccess at `$HOME/public_html/.htaccess` could work, but it risks being overwritten or ignored if Drupal's root is directly in `$HOME/public_html` or if another application in that directory has its own .htaccess. Placing it at `$HOME/.htaccess` is safer because it’s higher up, outside any application’s root, ensuring Apache processes it first and Drupal updates won’t affect it.
+Placing the .htaccess at `$HOME/public_html/.htaccess` could work, but it risks being overwritten or ignored if Drupal's root is directly in `$HOME/public_html` or if another application in that directory has its own .htaccess.<br>
+Placing it at `$HOME/.htaccess` is safer because it’s higher up, outside any application’s root, ensuring Apache processes it first and Drupal updates won’t affect it.
