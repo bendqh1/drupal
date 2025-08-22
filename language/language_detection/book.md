@@ -31,21 +31,22 @@ Instead of arriving to existing nodes such as:
 
 ## Solving both problems
 
+Place your custom `.htaccess` in a directory **above Drupal’s root** (e.g., `$HOME/.htaccess`). Apache applies `.htaccess` files from the root down, so your rules will always apply before Drupal’s `.htaccess` is processed. This way, Drupal updates never touch your custom `.htaccess`.
+
+Place the .htaccess at `$HOME/.htaccess.` It doesn't matter how many tiers up, as long as it's above `$HOME/public_html/example.com`. Apache processes .htaccess files from higher directories first.
+
+Placing the .htaccess at `$HOME/public_html/.htaccess` could work, but it risks being overwritten or ignored if Drupal's root is directly in `$HOME/public_html` or if another application in that directory has its own .htaccess.<br>
+Placing it at `$HOME/.htaccess` is safer because it’s higher up, outside any application’s root, ensuring Apache processes it first and Drupal updates won’t affect it.
+
 ### 1) Web server rewrite rules
 
 #### Apache
 
-Go to `example.com/web/.htaccess` and under:
+Add to the correct .htaccess`:
 
 ```apache
 <IfModule mod_rewrite.c>
   RewriteEngine on
-```
-
-Add:
-
-```apache
-RewriteEngine On
   RewriteCond %{REQUEST_URI} ^/([a-z]{2})/(.*)$
   RewriteRule ^ /%2 [R=301,L]
 ```
@@ -58,15 +59,7 @@ if ($request_uri ~ ^/([a-z]{2})/(.*)$) {
 }
 ```
 
-### 2) Prevent Google from Indexing Language URLs Permanently
-
-```shell
-Disallow: /en/
-Disallow: /ar/
-Disallow: /fa/
-```
-
-### 3) Use PHP redirects
+### 2) Use PHP redirects
 
 Add to settings.php or similar file the following or similar code.
 
