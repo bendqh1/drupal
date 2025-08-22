@@ -31,14 +31,14 @@ Instead of arriving to existing nodes such as:
 
 ## Solving both problems
 
-Place your custom `.htaccess` in a directory **above Drupal’s root** (e.g., `$HOME/.htaccess`). Apache applies `.htaccess` files from the root down, so your rules will always apply before Drupal’s `.htaccess` is processed. This way, Drupal updates never touch your custom `.htaccess`.
+Place custom directives in a `.htaccess` in a directory **above Drupal’s root** such as:
 
-Place the .htaccess at `$HOME/.htaccess.` It doesn't matter how many tiers up, as long as it's above `$HOME/public_html/example.com`. Apache processes .htaccess files from higher directories first.
+* **Tier 2:** `$HOME/public_html/.htaccess`
+* **Tier 1:** `$HOME/public_html/.htaccess`
 
-Placing the .htaccess at `$HOME/public_html/.htaccess` could work, but it risks being overwritten or ignored if Drupal's root is directly in `$HOME/public_html` or if another application in that directory has its own .htaccess.<br>
-Placing it at `$HOME/.htaccess` is safer because it’s higher up, outside any application’s root, ensuring Apache processes it first and Drupal updates won’t affect it.
+Drupal upgrades may rarely change the tier 2 but should never change tier 1.
 
-### 1) Web server rewrite rules
+### Directives
 
 #### Apache
 
@@ -59,7 +59,7 @@ if ($request_uri ~ ^/([a-z]{2})/(.*)$) {
 }
 ```
 
-### 2) Use PHP redirects
+### One may want to use PHP redirects instead
 
 Add to settings.php or similar file the following or similar code.
 
