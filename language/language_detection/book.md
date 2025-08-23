@@ -51,23 +51,12 @@ Add to the correct .htaccess`:
   RewriteRule ^ /%2 [R=301,L]
 ```
 
+That caused me a problem were an `/en/` page was not found because it's `/en/` language prefix that I myself added was taken down as well. Just don't use Language Detection as in Drupal 11.2.3.
+
 #### Nginx
 
 ```nginx
 if ($request_uri ~ ^/([a-z]{2})/(.*)$) {
     return 301 /$2;
-}
-```
-
-### One may want to use PHP redirects instead
-
-Add to settings.php or similar file the following or similar code.
-
-```php
-// Redirect language-prefixed URLs
-$request_uri = $_SERVER['REQUEST_URI'];
-if (preg_match('/^\/([a-z]{2})\/(.*)$/', $request_uri, $matches)) {
-  $url = '/' . $matches[2];
-  drupal_goto($url, array('query' => $_GET));
 }
 ```
