@@ -25,6 +25,7 @@
 
 ### Misc
 
+```css
 body.lang-en {
     direction: ltr;
 }
@@ -32,3 +33,4 @@ body.lang-en {
 html[lang="en"] {
     direction: ltr;
 }
+```
