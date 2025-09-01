@@ -37,18 +37,6 @@ drush cache-rebuild
 * I have also noticed that now after deletion, if I visit `/node/1` and click a link in it to `/node/2`, the URL of `/node/2` is `/node/2` instead of its alias `/node/my-second-node`.<br>
 This is not to be confused with route normalization which is redirecting to the canonical URL of any page. That includes redirecting to an alias if existing, removing trailing slashes, ensure the language prefix is set and similar clean-up.
 
-## Asset injector
-
-https://www.drupal.org/project/asset_injector/issues/3314720
-
-## Hide a Drupal homepage heading
-
-**Structure > Blocks > Content Above > 	כותרת דף > Settings > Pages > Hide for the listed pages > /node/1**
-
-## Avoid clearing cache after each CSS and/or JS change
-
-As long as you don't have JS or CSS aggregation turned on, you shouldn't have to clear cache to see your changes to existing files.
-
 ## jQuery UI
 
 If jQuery modules are deleted by mistake install them.
