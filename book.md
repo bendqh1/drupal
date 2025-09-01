@@ -26,11 +26,6 @@ https://www.drupal.org/docs/develop/development-tools/disable-caching
 drush cache-rebuild
 ```
 
-## Common modules
-
-* Redirect
-* sendgrid_integration
-
 ## Redirect module
 
 * Deleting it caused me to lose about 15 **alias-to-alias** redirects.
