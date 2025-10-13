@@ -1,4 +1,6 @@
-Use CSS to set the `<h1>` of the **node** to `direction: ltr` (if needed, because I had to do it in one case).
+Drupal 11 is designed in such a way that if the alignment and directionality of a website's default language is Right to Left, but we also add any secondary language with Left to Right alignment and directionality, then if we come to **create or edit** a node in any such secondary language, the alignment and directionality of the website **will not** change from Right to Left to Left to Right.
+
+I deal with this problem by that for each LtR language, I create at least one content type with the following similar name pattern `ltr_page_english_SOMETHING` where `SOMETHING` is a placeholder for more information like `general` or `physics` or `chemistry`.
 
 Use JavaScript to make the **node edit page** LTR in everything.
 
@@ -8,21 +10,24 @@ Use JavaScript to make the **node edit page** LTR in everything.
 // @match        *://benaharoni.com/*/
 // ==/UserScript==
 
-if (
-    document.body.classList.contains(
-        "page-node-type-page-in-english" ||
-        "page-node-type-page-in-thai"
-    )
-) {
-    document.querySelectorAll('*').forEach( (element)=>{
-        element.setAttribute("dir", "ltr");
+if (document.body.className.includes('ltr_')) {
+    document.querySelectorAll('*').forEach(el => {
+        el.style.textAlign = 'left';
+        el.setAttribute('dir', 'ltr');
+    });
+
+    document.querySelectorAll('.ck-editor__editable').forEach(el => {
+        el.style.textAlign = 'left';
+        el.setAttribute('dir', 'ltr');
+
+        const style = document.createElement('style');
+        style.textContent = `
+            p, h1, h2, h3, h4, h5, h6 {
+            direction: ltr !important;
+            text-align: left !important;
+            }
+        `;
+        el.appendChild(style);
     });
 }
-```
-
-Or:
-
-```
-document.body.setAttribute("dir", "ltr");
-document.querySelector('.ck-editor__editable').setAttribute("dir", "ltr");
 ```
