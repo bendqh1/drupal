@@ -33,7 +33,7 @@ if (!empty($nid) && is_numeric($nid) && $nid > 0) {
 
 ## Notes
 
-1. If the code was one line then `drush php-eval "CODE"` was also good.
+1. `drush php-eval "CODE"` doesn't fit here because it only supports single-line codes.
     * Drush php-eval strings must be quoted with double quotes.
     * No PHP opener and PHP closer are needed when running `drush php-eval` commands because drush assumes PHP anyway.
 1. We can also put it all in a Bash heredoc, but a plain PHP command here in a markdown file can be more readable or more colorful.
