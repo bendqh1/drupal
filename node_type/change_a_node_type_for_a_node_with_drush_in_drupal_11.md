@@ -15,7 +15,7 @@ if (!empty($nid) && is_numeric($nid) && $nid > 0) {
         $node = Node::load($nid);
 
         if ($node) {
-                $node->set('type', 'does_not_appear_in_views');
+                $node->set('type', 'NEW_CONTENT_TYPE_NAME_COMES_HERE');
                 $node->save();
         } else {
             \Drupal::logger('my_change_node_type_module')
