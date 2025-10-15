@@ -24,3 +24,16 @@ Because that changing the database directly is never a good idea, first consider
 * If being done for a later Drupal version, perhaps there will be a simpler way without changing the database.
 
 Only if none of these is possible, do the change manually. I suggest consulting an AI tool about how to do it correctly, either from CLUI or GUI.
+
+### A way I found
+
+1. **Backup** your database.
+2. In **`node_type`**: change `type` from `old_machine_name` to `new_machine_name`.
+3. In **`field_config`**: update rows where `bundle = old_machine_name` → `new_machine_name`.
+4. In **`config`**:  
+   - Find `name = node.type.old_machine_name`  
+   - Change `name` to `node.type.new_machine_name`  
+   - In `data`, replace all `old_machine_name` with `new_machine_name`.
+5. In **`node_field_data`**: update rows where `type = old_machine_name` → `new_machine_name`.
+6. **Skip** `node_field_revision` — no revisions in use.
+7. **Clear cache** via Drush (`drush cr`) or manually delete cache files.
