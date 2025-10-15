@@ -3,7 +3,7 @@
 ## Installation
 
 ```shell
-composer require 'drupal/convert_bundles:^2.0@beta'
+composer require 'drupal/convert_bundles:^3.0@alpha'
 ```
 
 ## Patching (if needed)
