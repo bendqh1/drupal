@@ -22,3 +22,7 @@ drush en convert_bundles
 drush un convert_bundles
 composer remove 'drupal/convert_bundles:^2.0@beta'
 ```
+
+## Notes
+
+* Backup of database is needed before starting to work with the module.
