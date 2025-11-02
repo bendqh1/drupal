@@ -34,4 +34,4 @@ if (document.body.className.includes('ltr_')) {
 
 ## Notes
 
-* If there is a need in changing some node types (content types) then as of 11/03/2025 it can be done with the module [Convert Bundles](https://www.drupal.org/project/convert_bundles).
+* If there is a need in changing some node types (content types) then as of 11/03/2025 it can be done with the module [Convert Bundles](https://www.drupal.org/project/convert_bundles) and for installing modules read [install.md](https://github.com/bendqh1/drupal/blob/main/install.md)
