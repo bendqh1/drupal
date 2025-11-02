@@ -59,6 +59,13 @@ composer require drupal/MODULE_NAME
 drush en MODULE_NAME
 ```
 
+Sometimes with this pattern:
+
+```
+composer require 'drupal/convert_bundles:^3.0@alpha'
+drush en drupal/convert_bundles
+```
+
 ## Unsetup a theme
 
 ```shell
