@@ -1,0 +1,70 @@
+/* it's harder to control a first-child then a last-child */
+
+.region--sidebar {
+	padding: var(--majoris);
+	background: var(--greyColor);
+	text-align: center;
+}
+
+@media screen and (max-width: 999px) {
+	.region--sidebar {
+		margin-top: var(--majoris); /* prevent touching the contact page comprised solely of blocks */
+	}
+}
+
+/* block titles */
+
+.region--sidebar .block__title {
+	font-size: 2em;
+	line-height: 1.25em;
+}
+
+/* remove sidebar menus list style type */
+
+.region--sidebar .menu__item {
+	list-style-type: none;
+}
+
+/* remove olivero sidelines for sidebar menu links */
+
+.menu--sidebar .menu__link--link {
+	max-width: max-content;
+	margin: 0 auto 0;
+}
+
+.menu--sidebar .menu__link::after {
+	display: none;
+}
+
+/* remove general spacing for sidebar menus which pushes menu links to the left */
+
+.menu--level-1 {
+	margin: 0 !important;
+}
+
+/* view links in sidebar */
+
+.region--sidebar .views-field-title {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+/* ---------- */
+/* ---------- */
+/* ---------- */
+/* ---------- */
+/* ---------- */
+/* SIDEBAR IMAGE BLOCK */
+/* ---------- */
+/* ---------- */
+/* ---------- */
+/* ---------- */
+/* ---------- */
+
+/* 
+I no longer put small topic images on the top of the sidebar unless I have two sidebar regions.
+	This way I prevent possible broad mistakes of gapping between the two parts of a single sidebar.
+		From now on, I will put images small topic images only in the content above region.
+			I will hide each small topic image in case a larger topic image is available in the same webpage.
+				This will also make my small topic images to appear on top of every page.
+*/
