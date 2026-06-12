@@ -1,0 +1,18 @@
+/* time creation and creator data fix */
+
+.node__meta {
+	margin-top: var(--minoris); 
+}
+
+/* node first passage settings */
+
+.node__content p:first-of-type {
+	margin-top: 0;
+	margin-bottom: 0;
+	font-weight: bold;
+}
+
+.node__content p:last-of-type {
+	margin-top: 0;
+	margin-bottom: 0;
+}
