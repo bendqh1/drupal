@@ -7,15 +7,15 @@ resources:
       reset.css: {}
       style.css: {}
 
-      header.css: {}
-      middle.css: {}
+      header.css: {} # unused here
+      middle.css: {} # unused here
       footer.css: {}
 
       sidebar.css: {}
 
-      regions.css: {}
+      regions.css: {} # unused here
       nodes.css: {}
 
-      call_now_button.css: {}
+      call_now_button.css: {} # unused here
 
       homepage.css: {}
