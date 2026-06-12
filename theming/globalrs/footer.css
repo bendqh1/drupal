@@ -1,0 +1,31 @@
+.region--content-below {
+	margin-top: var(--majoris);
+    padding: var(--majoris);
+    background: var(--greyColor);
+}
+
+.site-footer {
+	padding: var(--majoris);
+
+	text-align: center;
+}
+
+.site-footer__inner {
+	padding: 0 !important; /* delete a huge gap --- core override --- relevant in 06/2024 */
+}
+
+.site-footer__inner {
+	justify-content: center !important;
+}
+
+.region--footer-bottom  .block__title {
+	color: var(--actionColor);
+}
+
+.region--footer-bottom  .block__content {
+	color: #fff;
+}
+
+.region--footer-bottom a:hover {
+	color: var(--primaryColor) !important;
+}
