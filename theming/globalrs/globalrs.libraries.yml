@@ -1,0 +1,21 @@
+resources:
+  js:
+    behavior.js: {}
+  css:
+    theme:
+      root.css: {}
+      reset.css: {}
+      style.css: {}
+
+      header.css: {}
+      middle.css: {}
+      footer.css: {}
+
+      sidebar.css: {}
+
+      regions.css: {}
+      nodes.css: {}
+
+      call_now_button.css: {}
+
+      homepage.css: {}
