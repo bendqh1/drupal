@@ -1,0 +1,22 @@
+name: globalrs
+type: theme
+core_version_requirement: ^9 || ^10
+description: Global resources
+base theme: olivero
+libraries:
+  - globalrs/resources
+
+regions:
+  header: Header
+  primary_menu: 'Primary menu'
+  secondary_menu: 'Secondary menu'
+  hero: 'Hero (full width)'
+  highlighted: Highlighted
+  breadcrumb: Breadcrumb
+  social: Social Bar
+  content_above: Content Above
+  content: Content
+  sidebar: 'Sidebar'
+  content_below: 'Content Below (Flex Layout)'
+  footer_top: 'Footer Top (Flex Layout)'
+  footer_bottom: 'Footer Bottom'
