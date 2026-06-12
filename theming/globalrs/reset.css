@@ -1,0 +1,45 @@
+* {
+	font-family: var(--primaryFont) !important;
+}
+
+body {
+	background-image: none !important; 
+}
+
+h1 {
+	margin-top: 0;
+	margin-bottom: var(--minoris);
+	line-height: 1em;
+}
+
+h2, h3, h4, h5, h6 {
+	margin-top: var(--minoris) !important;
+	margin-bottom: var(--minoris) !important;
+}
+
+li::marker {
+	font-weight: bold;
+}
+
+pre {
+	font-family: var(--exceptionalFont) !important;
+    padding: var(--minoris);
+	overflow:scroll;
+	background: darkblue;
+	color: #fff;
+}
+
+blockquote {
+	font-size: 1em !important;
+	line-height: 2em !important;
+}
+
+blockquote > p {
+	font-weight: normal !important;
+	font-style: italic !important;
+}
+
+hr {
+	margin: var(--minoris) auto var(--minoris);
+	border: 1px solid var(--primaryColor);
+}
