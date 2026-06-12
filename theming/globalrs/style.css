@@ -1,0 +1,57 @@
+.block {
+	margin-bottom: 0;
+}
+
+* {
+    gap: initial !important;
+}
+
+/* hero region */
+
+.colored_notice {
+    padding: var(--majoris);
+    text-align: center;
+    background: var(--secondaryColor);
+}
+
+/* admin tabs */
+
+.tabs--primary {
+	margin-top: var(--majoris) !important;
+	margin-bottom: var(--majoris) !important;
+}
+
+/* node top image margin bottom */
+
+.top_image {
+	margin-bottom: var(--majoris) !important;
+}
+
+/* if there is a node top image then remove a small topic image */
+
+body:has(.top_image) .region--content-above img {
+	display: none;
+}
+
+/* hide small topic iamges in desktop display */
+
+@media screen and (min-width: 999px) {
+    .region--content-above img {
+        display: none;
+    }
+}
+
+/* tags block */
+
+.field--name-field-qtgwryh {
+	padding: var(--majoris);
+	background: var(--secondaryColor);
+	border-radius: 10px;
+}
+
+/* tags block label */
+
+.field--name-field-qtgwryh .field__label {
+	margin-bottom: var(--minoris) !important;
+	font-size: var(--font-size-l);
+}
