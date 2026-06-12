@@ -1,0 +1,28 @@
+:root {
+
+	/* basic colors */
+
+	--primaryColor: dodgerblue;
+	--secondaryColor: linen;
+	--actionColor: darkorange;
+	--exceptionColor: lavender;
+
+	/* Black, Gray, White */
+
+	--blackColor: black;
+	--greyColor: #E8E8E8;
+	--whiteColor: white;
+
+	/* basic fonts */
+
+	--primaryFont: arial;
+	--secondaryFont: Tahoma;
+	--actionFont: alef;
+	--exceptionalFont: monospace;
+
+	/* general spacing */
+
+	--minoris: 25px;
+	--majoris: 50px;
+
+}
