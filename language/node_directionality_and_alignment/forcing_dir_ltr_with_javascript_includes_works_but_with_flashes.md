@@ -16,6 +16,7 @@ if (
 ) {
     document.querySelectorAll('*').forEach( (element)=>{
         element.setAttribute("dir", "ltr");
+        element.style.textAlign = "left";
     });
 }
 
