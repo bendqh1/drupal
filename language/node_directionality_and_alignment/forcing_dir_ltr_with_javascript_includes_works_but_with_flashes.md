@@ -15,6 +15,7 @@ I set the node to appear left to right this way:
   direction: ltr;
   text-align: left;
 }
+```
 
 My problem is that the node's **edit page** (which has the same body class of `page-node-type-ltr-page-english`) appears right to left instead of left to right.
 
