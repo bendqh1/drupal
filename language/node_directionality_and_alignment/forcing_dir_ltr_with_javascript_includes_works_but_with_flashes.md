@@ -14,7 +14,7 @@ To solve this problem, I started creating LTR content types (node types) for LTR
 
 I use this prefix to fix the directionality of the node in all instances, with the following JavaScript.
 
-For the view and edit instances I do it based on the body CSS class, such as:
+For the view and edit instances I do it based on the body CSS class, such as the following (thus it appears on the DOM tree of the webpage):
 
 ```
 page-node-type-ltr-page-english
