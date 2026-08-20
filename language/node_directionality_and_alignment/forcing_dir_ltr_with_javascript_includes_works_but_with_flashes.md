@@ -11,7 +11,7 @@ window.setInterval ( ()=>{
 
 if (
     document.body.classList.contains(
-        "page-node-type-page-in-english"
+        "page-node-type-ltr-page-english"
     )
 ) {
     document.querySelectorAll('*').forEach( (element)=>{
