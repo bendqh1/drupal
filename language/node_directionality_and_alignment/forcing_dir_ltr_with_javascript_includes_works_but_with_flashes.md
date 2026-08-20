@@ -1,12 +1,16 @@
+Drupal 11 separates the UI language from the content language; this makes creating, editing and sometimes also viewing nodes in languages with different directionality of that of the website's default language, difficult or impossible.
+
+## Case
+
 Drupal 11.4.5 with Hebrew as the default language and several left to right languages.
 
-LTR language node appear RTL in the following three instances:
+LTR language node appears RTL in the following three instances:
 
 1. Node view
 2. Node edit
 3. Node creation
 
-To solve this problem, I started creating LTR content types for LTR nodes and gave any such content type the prefix of `ltr_page_`.
+To solve this problem, I started creating LTR content types (node types) for LTR nodes and gave any such content type the prefix of `ltr_page_` (in the machine name).
 
 I use this prefix to fix the directionality of the node in all instances, with the following JavaScript.
 
