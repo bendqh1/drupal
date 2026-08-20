@@ -3,10 +3,20 @@
 ### CSS
 
 ```css
+
+body.lang-en {
+    direction: ltr;
+}
+
+html[lang="en"] {
+    direction: ltr;
+}
+
 .node.language-en {
     direction: ltr;
     text-align: left;
 }
+
 ```
 
 ### JavaScript
@@ -21,16 +31,4 @@
         element.style.textAlign = "left";
     });
 })();
-```
-
-### Misc
-
-```css
-body.lang-en {
-    direction: ltr;
-}
-
-html[lang="en"] {
-    direction: ltr;
-}
 ```
