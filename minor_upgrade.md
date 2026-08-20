@@ -64,6 +64,12 @@ composer outdated --direct
 
 If all is Drupal associated, consider running `composer update "drupal/core-*" --with-all-dependencies` and then repeat the `composer audit`.
 
+#### file_get_contents(/home/USER_DIR/public_html/WEBSITE_DIR/vendor/composer/composer/src/Composer/Repository/../InstalledVersions.php): Failed to open stream: No such file or directory
+
+That usually indicates Composer's generated InstalledVersions.php file is missing/corrupted, rather than a Drupal problem.
+
+Try `composer dump-autoload` and if it succeeds then `composer audit` but if you still get the error consider running `rm -rf vendor` and then `composer install` but if it succeeds run `composer audit` and then `composer update`.
+
 ## Notes
 
 ### Upgrading an old Drupal manually
