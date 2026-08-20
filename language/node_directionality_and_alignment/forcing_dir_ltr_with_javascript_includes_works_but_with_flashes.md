@@ -20,7 +20,7 @@ For the view and edit instances I do it based on the body CSS class, such as the
 page-node-type-ltr-page-english
 ```
 
-For the node creation instance, I do it based on the form's heading (`<h1>`), starting with Create `ltr-page-SOMETHING`.
+For the node creation instance, I do it based on the form's heading (`<h1>`), starting with `Create ltr_page_SOMETHING`.
 
 ## JavaScript
 
