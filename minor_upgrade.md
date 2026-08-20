@@ -56,11 +56,19 @@ A problem common when hosting Drupal on shared hosting.
 
 If, from `php -v` and from `composer -vvv about` the PHP version is higher then listed, then a resetting the PHP version to the highest version possible for an entire Cpanel (and probably also for a specific domain in Cpanel) is needed. Other action/s may be needed as well. The web hosting support staff should take care of this.
 
-## Upgrading an old Drupal manually
+#### `composer audit` gives "Found N security vulnerability advisories affecting N packages."
 
-Small old Drupal websites (versions 1-7) of up to say 10 webpages are best upgraded manually by saving webpage copy (right mouse click >> Save as HTML named `1.html` up to say `10.html` with the directories) and then pasting data from copies in a fresh Drupal.
+```
+composer outdated --direct
+```
+
+If all is Drupal associated, consider running `composer update "drupal/core-*" --with-all-dependencies` and then repeat the `composer audit`.
 
 ## Notes
+
+### Upgrading an old Drupal manually
+
+Small old Drupal websites (versions 1-7) of up to say 10 webpages are best upgraded manually by saving webpage copy (right mouse click >> Save as HTML named `1.html` up to say `10.html` with the directories) and then pasting data from copies in a fresh Drupal.
 
 ### 1) ChatGPT question about upgrade without version jump
 
