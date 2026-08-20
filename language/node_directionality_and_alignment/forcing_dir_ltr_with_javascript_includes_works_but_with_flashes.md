@@ -1,107 +1,52 @@
-## Question
+Drupal 11.4.5 with Hebrew as the default language and several left to right languages.
 
-In Drupal 11.4.5 with Olivero as the main theme and Hebrew as the default language and English as a second language, I have a node set to `English`.
+LTR language node appear RTL in the following three instances:
 
-The node's content type (node type) body class is `page-node-type-ltr-page-english`.
+1. Node view
+2. Node edit
+3. Node creation
 
-I set the node to appear left to right this way:
+To solve this problem, I started creating LTR content types for LTR nodes and gave any such content type the prefix of `ltr_page_`.
 
-```css
-.page-node-type-ltr-page-english {
-  direction: ltr;
-}
+I use this prefix to fix the directionality of the node in all instances, with the following JavaScript.
 
-.page-node-type-ltr-page-english .block-page-title-block {
-  direction: ltr;
-  text-align: left;
-}
+For the view and edit instances I do it based on the body CSS class, such as:
+
+```
+page-node-type-ltr-page-english
 ```
 
-My problem is that the node's **edit page** (which has the same body class of `page-node-type-ltr-page-english`) appears right to left instead of left to right.
+For the node creation instance, I do it based on the form's heading, starting with Create `ltr-page-SOMETHING`.
 
-This massive CSS didn't help:
-
-```css
-/* LTR pages and their edit forms */
-body.page-node-type-ltr-page-english {
-  direction: ltr;
-}
-
-/* Page title */
-body.page-node-type-ltr-page-english .block-page-title-block,
-body.page-node-type-ltr-page-english .page-title {
-  direction: ltr;
-  text-align: left;
-}
-
-/* Node content */
-body.page-node-type-ltr-page-english .node,
-body.page-node-type-ltr-page-english .node__content {
-  direction: ltr;
-  text-align: left;
-}
-
-/* Edit form */
-body.page-node-type-ltr-page-english .node-form,
-body.page-node-type-ltr-page-english .form-item,
-body.page-node-type-ltr-page-english .form-actions {
-  direction: ltr;
-  text-align: left;
-}
-
-/* Form controls */
-body.page-node-type-ltr-page-english input,
-body.page-node-type-ltr-page-english textarea,
-body.page-node-type-ltr-page-english select {
-  direction: ltr;
-  text-align: left;
-}
-
-body.page-node-type-ltr-page-english .node-form {
-  direction: ltr !important;
-  text-align: left !important;
-}
-
-body.page-node-type-ltr-page-english .node-form * {
-  direction: ltr;
-}
-
-body.page-node-type-ltr-page-english .layout-container,
-body.page-node-type-ltr-page-english .region-content,
-body.page-node-type-ltr-page-english .node-form,
-body.page-node-type-ltr-page-english .layout-region,
-body.page-node-type-ltr-page-english .form-item,
-body.page-node-type-ltr-page-english .form-actions {
-  direction: ltr !important;
-  text-align: left !important;
-}
-```
-
-I don't think that CSS is even the correct way to go due to dynamic JavaScript behavior of CKEditor 5.
-
-The following JavaScript seems to partially solve the problem because it brings everything in the edit webpage, including CKEditor 5, the left but it has a problem of recurring flashes of refresh from time to time; it's as if CKEditor 5 tries to bring everything to be right to left from time to time, yet the following JavaScript tried to bring everything left to right and it causes a half a second flash which makes working on the webpage practically impossible.
-
-So after about 2-4 seconds, Drupal (or CkEditor, I am not sure) will cause a "flash" of bringing everything back to `rtl`. Now then, it will immediately be back to `ltr` but the "flash" is still a bit annoying.<br>
-I force `dir="ltr"` but Drupal or CKEditor brings back `dir="rtl"` - how to solve that if at all possible?
+## JavaScript
 
 ```js
-// ==UserScript==
-// @name         LTR edit
-// @match        *://example.com/*/*
-// ==/UserScript==
+(function () {
+  const ltrClasses = [
+    'page-node-type-ltr-page-english',
+    'page-node-type-ltr-page-thai'
+  ];
 
-window.setInterval ( ()=>{
+  const isLTR =
+    ltrClasses.some(c => document.body.classList.contains(c)) ||
+    window.location.pathname.includes('ltr_page_');
 
-if (
-    document.body.classList.contains(
-        "page-node-type-ltr-page-english"
-    )
-) {
-    document.querySelectorAll('*').forEach( (element)=>{
-        element.setAttribute("dir", "ltr");
-        element.style.textAlign = "left";
-    });
-}
+  if (!isLTR) return;
 
-}, 1000);
+  const style = document.createElement('style');
+
+  style.textContent = `
+    html,
+    body,
+    body * {
+      direction: ltr !important;
+      text-align: left !important;
+    }
+  `;
+
+  document.head.appendChild(style);
+
+  document.documentElement.dir = 'ltr';
+  document.body.dir = 'ltr';
+})();
 ```
