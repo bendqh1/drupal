@@ -71,3 +71,56 @@ If, for any reason, one doesn't want to create a JavaScript file, one could wrap
 ```js
 javascript:document.head.appendChild(Object.assign(document.createElement('style'),{textContent:'*,*:before,*:after{direction:ltr!important;text-align:left!important}'}))
 ```
+
+### How to run the JS for both themes (assuming they are not the same)
+
+A plausible way to do that is using a custom module.
+
+
+In /modules/js_both_ways/ put:
+
+
+js_both_ways.info.yml
+
+```yml
+name: JS Both Ways
+type: module
+core_version_requirement: ^11
+package: Custom
+```
+
+js_both_ways.libraries.yml
+
+```yml
+admin:
+  js:
+    js/admin.js: {}
+
+frontend:
+  js:
+    js/frontend.js: {}
+```
+
+js_both_ways.php
+
+```php
+<?php
+
+/**
+ * Implements hook_page_attachments().
+ */
+function my_custom_page_attachments(array &$attachments): void {
+  $route = \Drupal::routeMatch()->getRouteObject();
+
+  if ($route && $route->getOption('_admin_route')) {
+    $attachments['#attached']['library'][] = 'my_custom/admin';
+  }
+  else {
+    $attachments['#attached']['library'][] = 'my_custom/frontend';
+  }
+}
+```
+
+```js_both_ways.js
+THE_MAIN_JS_FILE_FROM_ABOVE_COMES_HERE
+```
