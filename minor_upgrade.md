@@ -20,7 +20,7 @@ drupal_upgrade() {
 	drush status # Validate new Drupal version
 	drush cache:rebuild
 
-	echo -e "\033[43m\033[30m You probably need to run PWD in the website's root folder to get its absolute path and then add /vendor/bin/drush to it and create an alias for Drush based on that combination (in .bashrc .) \033[0m"
+	echo -e "\033[43m\033[30m You may need to run PWD in the website's root folder to get its absolute path and then add /vendor/bin/drush to it and create an alias for Drush based on that combination (in .bashrc .) \033[0m"
 }
 
 export -f drupal_upgrade
