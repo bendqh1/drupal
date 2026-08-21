@@ -9,6 +9,7 @@ In Drupal, any **alias language prefix** predefined and it can be problematic to
 
 ## Notes
 
+* A list of all Drupal alias language prefixes for version 11.4.5 can be found [here](https://git.drupalcode.org/project/drupal/-/blob/11.4.5/core/lib/Drupal/Core/Language/LanguageManager.php).
 * There is no must for aliases in the website's default language to get an **alias language prefix** but it's a best practice to do so (it will probably require redirects).
 * It is possible to force Drupal to respect a non default language alias from the **Drupal path alias interface** (`/admin/config/search/path`) but it has to be done manually for each alias.
 * The [Language Neutral Aliases](https://www.drupal.org/project/language_neutral_aliases) module stops Drupal from requiring language prefixes but module dependency may cause problems in the long run.
