@@ -100,7 +100,7 @@ frontend:
     js/frontend.js: {}
 ```
 
-### js_both_ways.php
+#### js_both_ways.php
 
 ```php
 <?php
