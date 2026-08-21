@@ -79,8 +79,7 @@ A plausible way to do that is using a custom module.
 
 In /modules/js_both_ways/ put:
 
-
-js_both_ways.info.yml
+#### js_both_ways.info.yml
 
 ```yml
 name: JS Both Ways
@@ -89,7 +88,7 @@ core_version_requirement: ^11
 package: Custom
 ```
 
-js_both_ways.libraries.yml
+#### js_both_ways.libraries.yml
 
 ```yml
 admin:
@@ -101,7 +100,7 @@ frontend:
     js/frontend.js: {}
 ```
 
-js_both_ways.php
+### js_both_ways.php
 
 ```php
 <?php
@@ -121,6 +120,8 @@ function my_custom_page_attachments(array &$attachments): void {
 }
 ```
 
-```js_both_ways.js
+#### js_both_ways.js
+
+```js
 THE_MAIN_JS_FILE_FROM_ABOVE_COMES_HERE
 ```
