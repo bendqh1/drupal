@@ -108,7 +108,7 @@ frontend:
 /**
  * Implements hook_page_attachments().
  */
-function my_custom_page_attachments(array &$attachments): void {
+function js_both_ways_page_attachments(array &$attachments): void {
   $route = \Drupal::routeMatch()->getRouteObject();
 
   if ($route && $route->getOption('_admin_route')) {
