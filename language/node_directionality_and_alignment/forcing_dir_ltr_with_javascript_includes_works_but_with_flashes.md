@@ -25,32 +25,41 @@ For the node creation instance, I do it based on the form's heading (`<h1>`), st
 ## JavaScript
 
 ```js
-(function () {
-  const ltrClasses = [
-    'page-node-type-ltr-page-english',
-    'page-node-type-ltr-page-thai'
-  ];
+[1000, 2000, 3000, 4000, 5000, 6000, 7000, 8000, 9000].forEach(delay => {
+  setTimeout(() => {
+    console.log(`[LTR] Timeout fired after ${delay}ms`, new Date().toISOString());
+    (function () {
+      const ltrClasses = [
+        'page-node-type-ltr-page-english'
+      ];
 
-  const isLTR =
-    ltrClasses.some(c => document.body.classList.contains(c)) ||
-    window.location.pathname.includes('ltr_page_');
+      const isLTR =
+        ltrClasses.some(c => document.body.classList.contains(c)) ||
+        window.location.pathname.includes('ltr_page_');
 
-  if (!isLTR) return;
+      if (!isLTR) return;
 
-  const style = document.createElement('style');
+      let style = document.getElementById('force-ltr-style');
 
-  style.textContent = `
-    html,
-    body,
-    body * {
-      direction: ltr !important;
-      text-align: left !important;
-    }
-  `;
+      if (!style) {
+        style = document.createElement('style');
+        style.id = 'force-ltr-style';
 
-  document.head.appendChild(style);
+        style.textContent = `
+          html,
+          body,
+          body * {
+            direction: ltr !important;
+            text-align: left !important;
+          }
+        `;
 
-  document.documentElement.dir = 'ltr';
-  document.body.dir = 'ltr';
-})();
+        document.head.appendChild(style);
+      }
+
+      document.documentElement.dir = 'ltr';
+      document.body.dir = 'ltr';
+    })();
+  }, delay);
+});
 ```
