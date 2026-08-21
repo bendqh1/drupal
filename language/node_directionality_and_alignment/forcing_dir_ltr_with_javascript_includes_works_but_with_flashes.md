@@ -24,6 +24,14 @@ For the node creation instance, I do it based on the form's heading (`<h1>`), st
 
 ## JavaScript
 
+If, for any reason, one doesn't want to create a JavaScript file, one could wrap the following JavaScript in a web browser bookmark and run it from the bookmark itself when situated in the creation or edit page.
+
+```js
+javascript:document.head.appendChild(Object.assign(document.createElement('style'),{textContent:'*,*:before,*:after{direction:ltr!important;text-align:left!important}'}))
+```
+
+---
+
 The following JavaScript should work if it is applied to **both** the admin theme and the website theme (whether if they are identical or not).
 
 ```js
@@ -64,12 +72,6 @@ The following JavaScript should work if it is applied to **both** the admin them
     })();
   }, delay);
 });
-```
-
-If, for any reason, one doesn't want to create a JavaScript file, one could wrap the following JavaScript in a web browser bookmark and run it from the bookmark itself when situated in the creation or edit page.
-
-```js
-javascript:document.head.appendChild(Object.assign(document.createElement('style'),{textContent:'*,*:before,*:after{direction:ltr!important;text-align:left!important}'}))
 ```
 
 ### How to run the JS for both themes (assuming they are not the same)
