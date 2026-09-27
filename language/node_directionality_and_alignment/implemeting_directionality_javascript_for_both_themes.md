@@ -62,32 +62,27 @@ Note the difference between `ltr-page-` and `ltr-page_`.
 
 ### How to run the JS for both themes (assuming they are not the same)
 
-The standard way to do this is with a custom module.
+The standard way to do this is with a custom module.<br>
+In `/modules/js_both_ways/`:
 
-In `/modules/js_both_ways/` put:
-
-#### js_both_ways.info.yml
+#### both_ways.info.yml ####
 
 ```yml
-name: JS Both Ways
+name: Both Ways
 type: module
 core_version_requirement: ^11
 package: Custom
 ```
 
-#### js_both_ways.libraries.yml
+#### both_ways.libraries.yml ####
 
 ```yml
 admin:
   js:
-    js/js_both_ways.js: {}
-
-frontend:
-  js:
-    js_b/js_both_ways.js: {}
+    js/both_ways.js: {}
 ```
 
-#### js_both_ways.module
+#### both_ways.module
 
 ```php
 <?php
@@ -95,18 +90,15 @@ frontend:
 /**
  * Implements hook_page_attachments().
  */
-function js_both_ways_page_attachments(array &$attachments): void {
+function both_ways_page_attachments(array &$attachments): void {
   $route = \Drupal::routeMatch()->getRouteObject();
 
   if ($route && $route->getOption('_admin_route')) {
-    $attachments['#attached']['library'][] = 'my_custom/admin';
-  }
-  else {
-    $attachments['#attached']['library'][] = 'my_custom/frontend';
+    $attachments['#attached']['library'][] = 'both_ways/global';
   }
 }
 ```
 
-#### js/js_both_ways.js
+#### js/both_ways.js
 
-In the module library, create the file js/js_both_ways.js and put the JavaScript in it.
+In the module library, create the file js/both_ways.js and put the JavaScript in it.
