@@ -18,6 +18,7 @@ For the view and edit instances I do it based on the body CSS class, such as the
 
 ```
 page-node-type-ltr-page-english
+page-node-type-ltr-page-thai
 ```
 
 For the node creation instance, I do it based on the form's heading (`<h1>`), starting with `ltr_page_`.
