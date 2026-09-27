@@ -101,6 +101,11 @@ function both_ways_page_attachments(array &$attachments): void {
 
 In the module library, create the file `js/both_ways.js` and put the above JavaScript in it.
 
-#### Flushing all caches
+#### Using the module
 
-After creating the custom module, flush all caches with Drush.
+Enable and flush all caches.
+
+```shell
+drush en both_ways -y
+drush cr
+```
