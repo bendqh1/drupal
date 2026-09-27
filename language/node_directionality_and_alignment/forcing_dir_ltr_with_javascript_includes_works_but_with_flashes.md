@@ -78,8 +78,7 @@ The following JavaScript should work if it is applied to **both** the admin them
 
 A plausible way to do that is using a custom module.
 
-
-In /modules/js_both_ways/ put:
+In `/modules/js_both_ways/` put:
 
 #### js_both_ways.info.yml
 
