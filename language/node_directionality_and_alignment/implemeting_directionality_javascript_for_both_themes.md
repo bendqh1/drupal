@@ -102,4 +102,4 @@ function both_ways_page_attachments(array &$attachments): void {
 
 #### js/both_ways.js ####
 
-In the module library, create the file js/both_ways.js and put the JavaScript in it.
+In the module library, create the file `js/both_ways.js` and put the above JavaScript in it.
