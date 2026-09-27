@@ -93,8 +93,10 @@ global:
  * Implements hook_page_attachments().
  */
 function both_ways_page_attachments(array &$attachments): void {
+  \Drupal::messenger()->addStatus('HOOK EXECUTED');
   $attachments['#attached']['library'][] = 'both_ways/global';
 }
+
 ```
 
 ##### js/both_ways.js
