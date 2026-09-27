@@ -28,41 +28,28 @@ For the node creation instance, I do it based on the form's heading (`<h1>`), st
 The following JavaScript should work if it is applied to **both** the admin theme and the website theme (whether if they are identical or not).
 
 ```js
-[1000, 2000, 3000, 4000, 5000, 6000, 7000, 8000, 9000].forEach(delay => {
-  setTimeout(() => {
-    console.log(`[LTR] Timeout fired after ${delay}ms`, new Date().toISOString());
-    (function () {
-      const ltrClasses = [
-        'page-node-type-ltr-page-english'
-      ];
+[1, 10, 100, 1000, 2000, 3000, 4000, 5000, 6000, 7000, 8000, 9000].forEach(function (delay) {
+  setTimeout(function () {
 
-      const isLTR =
-        ltrClasses.some(c => document.body.classList.contains(c)) ||
-        window.location.pathname.includes('ltr_page_');
+    if (
+      document.body.className.includes('ltr_page-') ||
+      window.location.pathname.includes('ltr_page_')
+    ) {
+      var style = document.createElement('style');
+      style.id = 'force-ltr-style';
 
-      if (!isLTR) return;
+      style.textContent = `
+        html,
+        body,
+        body * {
+          direction: ltr !important;
+          text-align: left !important;
+        }
+      `;
 
-      let style = document.getElementById('force-ltr-style');
+      document.head.appendChild(style);
+    }
 
-      if (!style) {
-        style = document.createElement('style');
-        style.id = 'force-ltr-style';
-
-        style.textContent = `
-          html,
-          body,
-          body * {
-            direction: ltr !important;
-            text-align: left !important;
-          }
-        `;
-
-        document.head.appendChild(style);
-      }
-
-      document.documentElement.dir = 'ltr';
-      document.body.dir = 'ltr';
-    })();
   }, delay);
 });
 ```
