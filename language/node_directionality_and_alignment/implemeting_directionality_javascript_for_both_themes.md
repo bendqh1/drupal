@@ -93,7 +93,7 @@ global:
  * Implements hook_page_attachments().
  */
 function both_ways_page_attachments(array &$attachments): void {
-  $attachments['#attached']['library'][] = 'js_both_ways/global';
+  $attachments['#attached']['library'][] = 'both_ways/global';
 }
 ```
 
