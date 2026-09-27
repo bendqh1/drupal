@@ -117,5 +117,5 @@ function js_both_ways_page_attachments(array &$attachments): void {
 #### js_both_ways.js
 
 ```js
-THE_MAIN_JS_FILE_FROM_ABOVE_COMES_HERE
+JS_COMES_HERE
 ```
