@@ -1,10 +1,11 @@
-Drupal 11 separates the UI language from the content language; this makes creating, editing and sometimes also viewing nodes in languages with different directionality of that of the website's default language, difficult or impossible.
+Drupal 11 separates the UI language from the content language.<br>
+This makes creating, editing and sometimes also viewing nodes in languages with different directionality than that of the website's default language — difficult or impossible.
 
 ## Case
 
 Drupal 11.4.5 with Hebrew as the default language and several left to right languages.
 
-LTR language node appears RTL in the following three instances:
+LTR language nodes appear RTL in the following three instances:
 
 1. Node view
 2. Node edit
@@ -12,7 +13,7 @@ LTR language node appears RTL in the following three instances:
 
 To solve this problem, I started creating LTR content types (node types) for LTR nodes and gave any such content type the prefix of `ltr_page_` (in the machine name).
 
-I use this prefix to fix the directionality of the node in all instances, with the following JavaScript.
+I use this prefix to **fix** the directionality of the node in all instances, with the following JavaScript.
 
 For the view and edit instances I do it based on the body CSS class, such as the following (thus it appears on the DOM tree of the webpage):
 
@@ -21,11 +22,11 @@ page-node-type-ltr-page-english
 page-node-type-ltr-page-thai
 ```
 
-For the node creation instance, I do it based on the form's heading (`<h1>`), starting with `ltr_page_`.
+For the node creation instance, I do it based on the URL pattern (`ltr_page_language`) but I could also do it based on the form's heading (`<h1>`), starting with `ltr_page_`.
 
-## JavaScript
+### JavaScript
 
-The following JavaScript should work if it is applied to **both** the admin theme and the website theme (whether if they are identical or not).
+The following JavaScript should work if it is applied to **both** the admin theme and the website theme (whether both are identical or not).
 
 ```js
 [1, 10, 100, 1000, 2000, 3000, 4000, 5000, 6000, 7000, 8000, 9000].forEach(function (delay) {
@@ -56,9 +57,9 @@ The following JavaScript should work if it is applied to **both** the admin them
 });
 ```
 
-### Notes
+#### JavaScript Notes
 
-Note the difference between `ltr-page-` and `ltr-page_`.
+* There is a subtle yet very important difference between `ltr-page-` and `ltr-page_`.
 
 ### How to run the JS for both themes (assuming they are not the same)
 
@@ -82,7 +83,7 @@ admin:
     js/both_ways.js: {}
 ```
 
-#### both_ways.module
+#### both_ways.module ####
 
 ```php
 <?php
@@ -99,6 +100,6 @@ function both_ways_page_attachments(array &$attachments): void {
 }
 ```
 
-#### js/both_ways.js
+#### js/both_ways.js ####
 
 In the module library, create the file js/both_ways.js and put the JavaScript in it.
