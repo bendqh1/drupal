@@ -61,12 +61,13 @@ The following JavaScript should work if it is applied to **both** the admin them
 
 * There is a subtle yet very important difference between `ltr-page-` and `ltr-page_`.
 
-### How to run the JS for both themes (assuming they are not the same)
+#### How to run the JS for both themes (assuming they are not the same)
 
-The standard way to do this is with a custom module.<br>
-In `/modules/js_both_ways/`:
+The standard way to do this is with a custom module.
 
-#### both_ways.info.yml ####
+In `/modules/both_ways/`:
+
+##### both_ways.info.yml
 
 ```yml
 name: Both Ways
@@ -75,7 +76,7 @@ core_version_requirement: ^11
 package: Custom
 ```
 
-#### both_ways.libraries.yml ####
+##### both_ways.libraries.yml
 
 ```yml
 admin:
@@ -83,7 +84,7 @@ admin:
     js/both_ways.js: {}
 ```
 
-#### both_ways.module ####
+##### both_ways.module
 
 ```php
 <?php
@@ -100,6 +101,10 @@ function both_ways_page_attachments(array &$attachments): void {
 }
 ```
 
-#### js/both_ways.js ####
+##### js/both_ways.js
 
 In the module library, create the file `js/both_ways.js` and put the above JavaScript in it.
+
+#### Flushing all caches
+
+After creating the custom module, flush all caches with Drush.
