@@ -56,6 +56,10 @@ The following JavaScript should work if it is applied to **both** the admin them
 });
 ```
 
+### Notes
+
+Note the difference between `ltr-page-` and `ltr-page_`.
+
 ### How to run the JS for both themes (assuming they are not the same)
 
 The standard way to do this is with a custom module.
