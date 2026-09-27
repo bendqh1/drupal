@@ -65,7 +65,7 @@ The following JavaScript should work if it is applied to **both** the admin them
 
 The standard way to do this is with a custom module.
 
-In `/modules/both_ways/`:
+In `/modules/custom/both_ways/`:
 
 ##### both_ways.info.yml
 
@@ -79,7 +79,7 @@ package: Custom
 ##### both_ways.libraries.yml
 
 ```yml
-admin:
+global:
   js:
     js/both_ways.js: {}
 ```
@@ -93,11 +93,7 @@ admin:
  * Implements hook_page_attachments().
  */
 function both_ways_page_attachments(array &$attachments): void {
-  $route = \Drupal::routeMatch()->getRouteObject();
-
-  if ($route && $route->getOption('_admin_route')) {
-    $attachments['#attached']['library'][] = 'both_ways/global';
-  }
+  $attachments['#attached']['library'][] = 'js_both_ways/global';
 }
 ```
 
