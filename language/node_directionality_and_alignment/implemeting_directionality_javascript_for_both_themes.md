@@ -80,14 +80,14 @@ package: Custom
 ```yml
 admin:
   js:
-    js/admin.js: {}
+    js/js_both_ways.js: {}
 
 frontend:
   js:
-    js/frontend.js: {}
+    js_b/js_both_ways.js: {}
 ```
 
-#### js_both_ways.php
+#### js_both_ways.module
 
 ```php
 <?php
@@ -107,8 +107,6 @@ function js_both_ways_page_attachments(array &$attachments): void {
 }
 ```
 
-#### js_both_ways.js
+#### js/js_both_ways.js
 
-```js
-JS_COMES_HERE
-```
+In the module library, create the file js/js_both_ways.js and put the JavaScript in it.
