@@ -32,8 +32,10 @@ The following JavaScript should work if it is applied to **both** the admin them
   setTimeout(function () {
 
     if (
-      document.body.className.includes('ltr_page-') ||
-      window.location.pathname.includes('ltr_page_')
+      // prevent the new CSS style from being added as the number of the timeouts
+      !document.getElementById('force-ltr-style') &&
+      (document.body.className.includes('ltr-page-') ||
+       window.location.pathname.includes('ltr_page_'))
     ) {
       var style = document.createElement('style');
       style.id = 'force-ltr-style';
